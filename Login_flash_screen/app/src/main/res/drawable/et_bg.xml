@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:andriod="http://schemas.android.com/apk/res/android"
+    xmlns:android="http://schemas.android.com/tools"
+    android:shape="rectangle"
+    android:ignore="NamespaceTypo">
+
+    <corners
+        andriod:bottomLeftRadius="20dp"
+        andriod:bottomRightRadius="20dp"
+        andriod:topLeftRadius="0dp"
+        andriod:topRightRadius="20dp"/>
+    <stroke
+        andriod:width="1dp"
+        andriod:color="@color/white"/>
+
+</shape>
