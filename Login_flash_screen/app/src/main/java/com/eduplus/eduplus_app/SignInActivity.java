@@ -6,7 +6,6 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.firebase.ui.auth.AuthUI;
-import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -22,17 +21,8 @@ public class SignInActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+        createSignInIntent();
 
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-
-        if(user == null)
-        {
-            createSignInIntent();
-        }
-        else
-        {
-            startActivity(new Intent(com.eduplus.eduplus_app.SignInActivity.this, MainActivity.class));
-        }
     }
 
     private void createSignInIntent() {
@@ -44,6 +34,8 @@ public class SignInActivity extends AppCompatActivity {
                 AuthUI.getInstance()
                         .createSignInIntentBuilder()
                         .setAvailableProviders(providers)
+                        .setTheme(R.style.LoginTheme)
+                        .setLogo(R.drawable.eduplus)
                         .build(),
                 RC_SIGN_IN);
     }
@@ -76,7 +68,7 @@ public class SignInActivity extends AppCompatActivity {
 //                        }
 //                    });
 
-            startActivity(new Intent(com.eduplus.eduplus_app.SignInActivity.this, MainActivity.class));
+            startActivity(new Intent(com.eduplus.eduplus_app.SignInActivity.this, HomeActivity.class));
         }
     }
 }

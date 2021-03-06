@@ -13,6 +13,8 @@ import android.widget.RelativeLayout;
 import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,26 +31,22 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if(user != null)
+        {
+            startActivity(new Intent(MainActivity.this, HomeActivity.class));
+        }
+
         rellay1 = (RelativeLayout) findViewById(R.id.rellay1);
         rellay2 = (RelativeLayout) findViewById(R.id.rellay2);
         handler.postDelayed(runnable, 2000);
 
-        Button buttonSignOut = findViewById(R.id.button2);
-        buttonSignOut.setOnClickListener(new View.OnClickListener() {
+        Button buttonSignIn = findViewById(R.id.buttonLogin);
+        buttonSignIn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                signOut();
+                startActivity(new Intent(MainActivity.this, SignInActivity.class));
             }
         });
-    }
-
-    public void signOut() {
-
-        AuthUI.getInstance()
-                .signOut(this)
-                .addOnCompleteListener(new OnCompleteListener<Void>() {
-                    public void onComplete(@NonNull Task<Void> task) {
-                        startActivity(new Intent(MainActivity.this, SignInActivity.class));
-                    }
-                });
     }
 }

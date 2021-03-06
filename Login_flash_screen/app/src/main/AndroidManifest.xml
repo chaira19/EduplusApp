@@ -9,15 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Login_flash_screen">
-        <activity android:name="com.eduplus.eduplus_app.SignInActivity">
+        <activity android:name="com.eduplus.eduplus_app.HomeActivity"></activity>
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.eduplus.eduplus_app.MainActivity">
-        </activity>
+        <activity android:name=".SignInActivity"></activity>
     </application>
 
 </manifest>
