@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProgressDashboard">
+    tools:context=".Career">
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Progress Dashboard"
-        tools:layout_editor_absoluteX="48dp"
-        tools:layout_editor_absoluteY="142dp" />
+        android:text="Career Awareness"
+        tools:layout_editor_absoluteX="138dp"
+        tools:layout_editor_absoluteY="297dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

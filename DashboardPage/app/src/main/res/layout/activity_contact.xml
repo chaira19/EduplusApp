@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProgressDashboard">
+    tools:context=".Contact">
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Progress Dashboard"
-        tools:layout_editor_absoluteX="48dp"
-        tools:layout_editor_absoluteY="142dp" />
+        android:text="Conatact Us"
+        tools:layout_editor_absoluteX="176dp"
+        tools:layout_editor_absoluteY="323dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
