@@ -68,7 +68,7 @@ public class SignInActivity extends AppCompatActivity {
 //                        }
 //                    });
 
-            startActivity(new Intent(com.eduplus.eduplus_app.SignInActivity.this, HomeActivity.class));
+            startActivity(new Intent(com.eduplus.eduplus_app.SignInActivity.this, Home.class));
         }
     }
 }

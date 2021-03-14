@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if(user != null)
         {
-            startActivity(new Intent(MainActivity.this, HomeActivity.class));
+            startActivity(new Intent(MainActivity.this, Home.class));
         }
 
         rellay1 = (RelativeLayout) findViewById(R.id.rellay1);

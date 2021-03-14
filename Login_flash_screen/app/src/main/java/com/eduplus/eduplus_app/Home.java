@@ -1,4 +1,4 @@
-package com.example.login_flash_screen;
+package com.eduplus.eduplus_app;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -29,9 +29,9 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
        setContentView(R.layout.activity_main);
 
         //Hooks
-        drawerLayout = findViewById(R.id.drawer_layout);
-        navigationView = findViewById(R.id.nav_view);
-        toolbar = findViewById(R.id.toolbar);
+        //drawerLayout = findViewById(R.id.drawer_layout);
+        //navigationView = findViewById(R.id.nav_view);
+        //toolbar = findViewById(R.id.toolbar);
 
         //Nav drawer menu
         navigationView.bringToFront();

@@ -1,4 +1,4 @@
-package com.example.login_flash_screen;
+package com.eduplus.eduplus_app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
