@@ -1,4 +1,4 @@
-package com.eduplus.dashboardpage;
+package com.example.login_flash_screen;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -15,7 +15,7 @@ import android.view.WindowManager;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     //variables
     DrawerLayout drawerLayout;
     NavigationView navigationView;
@@ -61,31 +61,31 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_home:
                 break;
             case R.id.dashboard:
-                Intent intent = new Intent(MainActivity.this, ProgressDashboard.class);
+                Intent intent = new Intent(Home.this, ProgressDashboard.class);
                 startActivity(intent);
                 break;
             case R.id.programming:
-                Intent intent1 = new Intent(MainActivity.this, Programming.class);
+                Intent intent1 = new Intent(Home.this, Programming.class);
                 startActivity(intent1);
                 break;
             case R.id.skill:
-                Intent intent2 = new Intent(MainActivity.this, Skill.class);
+                Intent intent2 = new Intent(Home.this, Skill.class);
                 startActivity(intent2);
                 break;
             case R.id.career:
-                Intent intent3 = new Intent(MainActivity.this, Career.class);
+                Intent intent3 = new Intent(Home.this, Career.class);
                 startActivity(intent3);
                 break;
             case R.id.Competitions:
-                Intent intent4 = new Intent(MainActivity.this, Competition.class);
+                Intent intent4 = new Intent(Home.this, Competition.class);
                 startActivity(intent4);
                 break;
             case R.id.feedback:
-                Intent intent5 = new Intent(MainActivity.this, Feedback.class);
+                Intent intent5 = new Intent(Home.this, Feedback.class);
                 startActivity(intent5);
                 break;
             case R.id.contact:
-                Intent intent6 = new Intent(MainActivity.this, Contact.class);
+                Intent intent6 = new Intent(Home.this, Contact.class);
                 startActivity(intent6);
                 break;
         }
