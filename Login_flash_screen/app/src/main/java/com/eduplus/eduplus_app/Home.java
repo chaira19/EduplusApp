@@ -26,12 +26,12 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         super.onCreate(savedInstanceState);
        Window g = getWindow();
        g.setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION, WindowManager.LayoutParams.TYPE_STATUS_BAR);
-       setContentView(R.layout.activity_main);
+       setContentView(R.layout.activity_home);
 
         //Hooks
-        //drawerLayout = findViewById(R.id.drawer_layout);
-        //navigationView = findViewById(R.id.nav_view);
-        //toolbar = findViewById(R.id.toolbar);
+        drawerLayout = findViewById(R.id.drawer_layout);
+        navigationView = findViewById(R.id.nav_view);
+        toolbar = findViewById(R.id.toolbar);
 
         //Nav drawer menu
         navigationView.bringToFront();

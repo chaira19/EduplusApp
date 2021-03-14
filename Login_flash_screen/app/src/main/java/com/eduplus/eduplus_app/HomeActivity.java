@@ -22,12 +22,6 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        Button buttonSignOut = findViewById(R.id.button2);
-        buttonSignOut.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                signOut();
-            }
-        });
     }
 
     public void signOut() {
