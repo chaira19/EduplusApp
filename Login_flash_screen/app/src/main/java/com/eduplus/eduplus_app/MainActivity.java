@@ -1,22 +1,23 @@
-package com.example.login_flash_screen;
+package com.eduplus.eduplus_app;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.GravityCompat;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 
-import com.google.android.material.navigation.NavigationView;
+import com.firebase.ui.auth.AuthUI;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button button;
     RelativeLayout rellay1, rellay2;
     Handler handler = new Handler();
     Runnable runnable = new Runnable() {
@@ -30,19 +31,22 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if(user != null)
+        {
+            startActivity(new Intent(MainActivity.this, HomeActivity.class));
+        }
+
         rellay1 = (RelativeLayout) findViewById(R.id.rellay1);
         rellay2 = (RelativeLayout) findViewById(R.id.rellay2);
         handler.postDelayed(runnable, 2000);
 
-        button = (Button) findViewById(R.id.loginbtn);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, Home.class);
-                startActivity(intent);
+        Button buttonSignIn = findViewById(R.id.buttonLogin);
+        buttonSignIn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, SignInActivity.class));
             }
         });
     }
-
-
 }
