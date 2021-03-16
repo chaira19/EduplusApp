@@ -27,6 +27,20 @@
             android:background="#FFFFFF"
             android:paddingBottom="10dp">
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:background="#FFA500"/>
+
+            <ImageView
+                android:id="@+id/view_back"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="112dp"
+                android:src="@drawable/ic_wave"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="0dp"
@@ -38,39 +52,77 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:navigationIcon="@drawable/menu_button_of_three_horizontal_lines" />
+                app:navigationIcon="@drawable/menu_button_of_three_horizontal_lines" >
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="40dp"
-                android:textSize="30sp"
-                app:fontFamily="@font/baloo"
-                app:layout_constraintEnd_toStartOf="@+id/imageView"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ABC Learning App"
+                    android:textFontWeight="900"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:id="@+id/toolbar_title" />
 
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                app:layout_constraintEnd_toStartOf="@+id/imageView"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView" />
+            </androidx.appcompat.widget.Toolbar>
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="0dp"
-                android:layout_height="160dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="-5dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/textView"
-                app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="90dp"
+                            android:layout_marginLeft="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/textView"
+                            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                            app:srcCompat="@drawable/profile" />
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="110dp"
+                            android:text="XYZ!"
+                            android:textSize="30sp"
+                            app:fontFamily="@font/baloo"
+                            app:layout_constraintStart_toEndOf="@+id/imageView"
+                            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="130dp"
+                            android:layout_marginLeft="-100dp"
+                            android:text="Class X, ABC Public School"
+                            app:layout_constraintStart_toEndOf="@+id/imageView"
+                            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="-15dp"
+                            android:layout_marginTop="230dp"
+                            android:elevation="10dp"
+                            app:srcCompat="@drawable/ic_increase"
+                            app:layout_constraintStart_toEndOf="@+id/textView"/>
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-350dp"
+                    android:layout_marginTop="320dp"
+                    android:text="This Month's Content"
+                    android:textColor="#000000"
+                    android:textSize="25sp"
+                    app:fontFamily="@font/baloo" />
+
+
+            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout"
@@ -81,8 +133,9 @@
                 android:padding="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView">
+                app:layout_constraintTop_toBottomOf="@+id/view_back">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
@@ -100,9 +153,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/train"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginTop="10dp"
-                            android:text="This Month content"
+                            android:layout_marginLeft="100dp"
+                            android:layout_marginTop="-60dp"
+                            android:text="Programming"
                             android:textSize="24sp"
                             app:fontFamily="@font/aclonica" />
 
@@ -110,9 +163,9 @@
                             android:id="@+id/train"
                             android:layout_width="75dp"
                             android:layout_height="75dp"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginTop="15dp"
-                            app:srcCompat="@drawable/content" />
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="25dp"
+                            app:srcCompat="@drawable/ic_html_coding" />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -145,9 +198,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/bus"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginTop="10dp"
-                            android:text="Progress Dashboard"
+                            android:layout_marginLeft="100dp"
+                            android:layout_marginTop="-60dp"
+                            android:text="Skill Development"
                             android:textSize="24sp"
                             app:fontFamily="@font/aclonica" />
 
@@ -155,9 +208,9 @@
                             android:id="@+id/bus"
                             android:layout_width="75dp"
                             android:layout_height="75dp"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginTop="15dp"
-                            app:srcCompat="@drawable/dashboard" />
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="25dp"
+                            app:srcCompat="@drawable/skill_icon" />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
@@ -188,9 +241,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/airplane"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginTop="10dp"
-                            android:text="Monthly Test Update"
+                            android:layout_marginLeft="100dp"
+                            android:layout_marginTop="-60dp"
+                            android:text="Career Awareness"
                             android:textSize="24sp"
                             app:fontFamily="@font/aclonica" />
 
@@ -198,9 +251,9 @@
                             android:id="@+id/airplane"
                             android:layout_width="75dp"
                             android:layout_height="75dp"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginTop="15dp"
-                            app:srcCompat="@drawable/test" />
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="25dp"
+                            app:srcCompat="@drawable/career_icon" />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
