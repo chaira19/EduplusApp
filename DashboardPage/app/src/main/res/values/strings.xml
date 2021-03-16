@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">DashboardPage</string>
-
-    <string name="navigation_drawer_open">Open Navigation Drawer</string>
-    <string name="navigation_drawer_close">Close Navigation Drawer</string>
-    <string name="this_month_s_content">This Month\'s Content</string>
-
-</resources>
