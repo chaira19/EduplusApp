@@ -9,6 +9,7 @@
     <ImageView
         android:layout_width="80dp"
         android:layout_height="80dp"
+        android:id="@+id/headerImage"
         android:src="@drawable/profile"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="20dp"/>
@@ -16,16 +17,16 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/headerName"
         android:fontFamily="@font/baloo"
-        android:text="Hi XYZ!"
         android:textSize="24sp"
         android:layout_marginLeft="30dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/headerSchoolName"
         android:fontFamily="@font/aclonica"
-        android:text="Welcome to ABC's learning App"
         android:layout_marginBottom="20dp"
         android:textSize="16sp"
         android:layout_marginLeft="30dp"/>
