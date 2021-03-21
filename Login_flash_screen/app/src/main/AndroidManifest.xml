@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Login_flash_screen">
-        <activity android:name="com.eduplus.eduplus_app.HomeActivity"></activity>
+        <activity android:name=".FP_W4_Module"></activity>
+        <activity android:name=".FP_W3_Module" />
+        <activity android:name=".FP_W2_Module" />
+        <activity android:name=".FP_W1_Module" />
+        <activity android:name=".HomeActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,18 +21,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignInActivity"></activity>
-        <activity android:name=".Home"></activity>
-        <activity android:name=".ProgressDashboard"></activity>
-        <activity android:name=".Programming"></activity>
-        <activity android:name=".Skill"></activity>
-        <activity android:name=".Logout"></activity>
-        <activity android:name=".Career"></activity>
-        <activity android:name=".Contact"></activity>
-        <activity android:name=".Competition"></activity>
-        <activity android:name=".Feedback"></activity>
-
-
+        <activity android:name=".SignInActivity" />
+        <activity android:name=".Home" />
+        <activity android:name=".ProgressDashboard" />
+        <activity android:name=".Programming" />
+        <activity android:name=".Skill" />
+        <activity android:name=".Logout" />
+        <activity android:name=".Career" />
+        <activity android:name=".Contact" />
+        <activity android:name=".Competition" />
+        <activity android:name=".Feedback" />
     </application>
 
 </manifest>
