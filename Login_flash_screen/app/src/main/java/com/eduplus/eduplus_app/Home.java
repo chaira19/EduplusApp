@@ -1,5 +1,15 @@
 package com.eduplus.eduplus_app;
 
+import android.content.Intent;
+import android.graphics.BitmapFactory;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.MenuItem;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.ImageView;
+import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,15 +17,18 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import android.content.Intent;
-import android.graphics.Color;
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.view.Window;
-import android.view.WindowManager;
-import android.widget.TextView;
-
+import com.firebase.ui.auth.AuthUI;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     //variables
@@ -48,6 +61,8 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
         navigationView.setCheckedItem(R.id.nav_home);
 
+        setUserData();
+
     }
 
     @Override
@@ -56,6 +71,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             drawerLayout.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
+            finishAffinity();
         }
 
     }
@@ -94,8 +110,94 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 Intent intent6 = new Intent(Home.this, Contact.class);
                 startActivity(intent6);
                 break;
+            case R.id.Logout:
+                AuthUI.getInstance()
+                        .signOut(this)
+                        .addOnCompleteListener(new OnCompleteListener<Void>() {
+                            public void onComplete(@NonNull Task<Void> task) {
+                                startActivity(new Intent(Home.this, MainActivity.class));
+                            }
+                        });
+
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void setUserData() {
+
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        // We are creating phone numbers as userIds
+        String userId = user.getPhoneNumber();
+
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        db.collection("Users").document(userId).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot document = task.getResult();
+
+                    String name = (String) document.get("Name");
+                    String schoolName = (String) document.get("SchoolName");
+                    String schoolLogoId = (String) document.get("SchoolLogoId");
+                    String photoId = (String) document.get("PhotoId");
+
+                    TextView nametxt = findViewById(R.id.headerName);
+                    nametxt.setText(name);
+
+                    TextView nameTextView = findViewById(R.id.textView);
+                    nameTextView.setText("Hi " + name + "!");
+
+                    TextView schoolNameText = findViewById(R.id.textView2);
+                    schoolNameText.setText("Welcome to " + schoolName + "'s learning App");
+
+                    setImageInImageView(findViewById(R.id.headerImage), photoId, "userImages/");
+                    setImageInImageView(findViewById(R.id.imageView), schoolLogoId, "schoolLogos/");
+                }
+                else {
+                    Log.e("Error", "Task is not successful");
+                }
+
+            }
+        });
+
+
+    }
+
+    // set image from storage
+    private void setImageInImageView(final ImageView imageView, String imageId, String imageFolder)
+    {
+        if(imageId == null || imageId.isEmpty())
+        {
+//            imageView.setImageResource(R.drawable.app_logo);
+            return;
+        }
+        else
+        {
+            FirebaseStorage storage = FirebaseStorage.getInstance();
+            StorageReference storageRef = storage.getReference();
+            StorageReference imageRef = storageRef.child(imageFolder + imageId);
+
+            imageRef.getBytes(Long.MAX_VALUE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
+            @Override
+            public void onSuccess(byte[] bytes) {
+
+                if(imageView != null)
+                {
+                    imageView.setImageBitmap(BitmapFactory.decodeByteArray(bytes, 0, bytes.length));
+                    //Glide.with(imageView).load(bytes).into(imageView);
+                }
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception exception) {
+                    Log.e("Error", "Image Task is not successful");
+                }
+            });
+        }
+////            Glide.with(this)
+////                    .load(imageRef)
+////                    .into(imageView);
+//        }
     }
 }
