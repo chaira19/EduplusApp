@@ -26,7 +26,6 @@
         <activity android:name=".ProgressDashboard" />
         <activity android:name=".Programming" />
         <activity android:name=".Skill" />
-        <activity android:name=".Logout" />
         <activity android:name=".Career" />
         <activity android:name=".Contact" />
         <activity android:name=".Competition" />
