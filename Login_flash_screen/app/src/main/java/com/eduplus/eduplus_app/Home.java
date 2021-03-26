@@ -128,9 +128,11 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
     private void setUserData() {
 
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+     //   FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         // We are creating phone numbers as userIds
-        String userId = user.getPhoneNumber();
+        //String userId = user.getPhoneNumber();
+        String userId = "+919410571687";
+
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection("Users").document(userId).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
