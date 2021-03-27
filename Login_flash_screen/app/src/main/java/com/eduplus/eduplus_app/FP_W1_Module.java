@@ -8,6 +8,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.Spanned;
+import android.text.method.LinkMovementMethod;
 import android.widget.TextView;
 
 import com.github.barteksc.pdfviewer.PDFView;
@@ -15,7 +16,7 @@ import com.github.barteksc.pdfviewer.PDFView;
 public class FP_W1_Module extends AppCompatActivity {
 
 
-    TextView t1,t2,t3;
+    TextView t1,t2,t3,t4, t5,t6,t7;
 
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -28,6 +29,11 @@ public class FP_W1_Module extends AppCompatActivity {
         t1 = (TextView) findViewById(R.id.text1);
         t2 = (TextView) findViewById(R.id.text2);
         t3 = (TextView) findViewById(R.id.text3);
+        t4 = (TextView) findViewById(R.id.text4);
+        t5 = (TextView) findViewById(R.id.text5);
+        t6 = (TextView) findViewById(R.id.text6);
+        t7 = (TextView) findViewById(R.id.text7);
+
         t1.setText(Html.fromHtml(" <p><span style=\"font-weight: 400;\">Personal finance is all about managing your money and meeting your financial goals. Let us consider an example to understand this concept:&#xA0;</span></p>\n" +
                 "        <p>&#xA0;</p>\n" +
                 "        <p><span style=\"font-weight: 400;\">Consider a scenario where you receive a pocket money of 500 INR every week. Now, you are supposed to meet all your expenses such as buying stationary, spending it on friends birthday parties, dining out with your friends, etc within this amount of money. You found out that your old cricket bat is broken and you want to buy a new one worth RS. 2000. You decided to buy the Bat next month. There are two ways you can achieve your goal:&#xA0;</span></p>\n" +
@@ -93,8 +99,52 @@ public class FP_W1_Module extends AppCompatActivity {
                 "        <li><strong>Make a Budget: </strong><span style=\"font-weight: 400;\">Budgeting helps you control your spending, track your expenses and increases your savings. It also helps you make better financial decisions, get out of debt, prepare for emergencies, and meet your long term financial goals. The 50/30/20 budgeting framework is a great example, it breaks down like this:</span></li>\n" +
                 "        </ol>", Html.FROM_HTML_MODE_COMPACT));
 
+        t4.setText(Html.fromHtml("<p><span style=\"font-weight: 400;\">Let us fit this framework in the above mentioned scenario of cricket bat:</span></p>\n" +
+                "<ul>\n" +
+                "<li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Maximum 50% of your pocket money goes towards meeting your essential requirements such as buying your stationary, commutation expenses, e.t.c&nbsp;</span></li>\n" +
+                "<li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">30% of your pocket money will cover your lifestyle expenses such as dining out,attending birthday parties, e.t.c.&nbsp;</span></li>\n" +
+                "<li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">And at least 20% of your pocket money you can save to buy a cricket bat.&nbsp;</span></li>\n" +
+                "</ul>\n" +
+                "<p>Just like the above example you can also create your own budgeting framework that fits your requirements and goals. Later in this module you will create your own budgeting framework that will help you achieve your financial goal.&nbsp;&nbsp;</p>\n" +
+                "<p>&nbsp;</p>\n" +
+                "<ul>\n" +
+                "<li><strong>Maintain your personal Savings Statement:&nbsp;</strong><span style=\"font-weight: 400;\">Your personal savings statement is nothing but a list of all your expenses and income. It helps to keep track of your expenses and maximise your savings. By comparing your current savings statement with the savings statement of your previous years, you can keep track of your financial progress. Your net expense minus your income will be your </span><strong>Net savings</strong><span style=\"font-weight: 400;\"> for that period.</span><strong><span style=\"font-weight: 400;\">&nbsp;</span></strong></li>\n" +
+                "</ul>\n" +
+                "<p><span style=\"font-weight: 400;\">&nbsp; &nbsp; &nbsp;&nbsp;</span></p>\n" +
+                "<p style=\"text-align: center;\"><span style=\"font-weight: 400;\">&nbsp;&nbsp;<strong>&nbsp;&nbsp;</strong></span><strong>Net Savings =&nbsp; Income - Expenses</strong></p>\n" +
+                "<p>&nbsp;</p>\n" +
+                "<p><span style=\"font-weight: 400;\">Let us look at the savings statement of Joe, who is a college student,&nbsp; and estimate his net savings for this month:&nbsp;</span></p>\n" +
+                "<p>&nbsp;</p>\n" +
+                "<p style=\"text-align: center;\"><strong>&nbsp;Joe&rsquo;s&nbsp; Savings Statement for the current month</strong></p>", Html.FROM_HTML_MODE_COMPACT));
 
-      //  m1pdf = (PDFView) findViewById(R.id.pdf1);
+        t5.setText(Html.fromHtml("<p><span style=\"font-weight: 400;\">Maximise your savings by calculating your current savings and &nbsp; comparing it with that of previous months</span></p>\n" +
+                "<p><span style=\"font-weight: 400;\">&nbsp;</span></p>\n" +
+                "<ul>\n" +
+                "<li><strong>Develop Saving Habits:</strong>&nbsp;&nbsp;The key to achieve your money goals is to build a collection of smaller everyday habits. Let us look at some of the smaller habits you can develop today that will eventually help you grow your money.</li>\n" +
+                "</ul>", Html.FROM_HTML_MODE_COMPACT));
+
+        t6.setText(Html.fromHtml("  <ul>\n" +
+                "<li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Reviewing your monthly bills can help you cut down on your unnecessary expenses</span></li>\n" +
+                "<li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Maximising your tax savings can help you repay your past debts</span></li>\n" +
+                "<li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">It&rsquo;s very important to set aside some money for unexpected expenses such as medical emergencies, a big car car repair, e.t.c.&nbsp;</span></li>\n" +
+                "<li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">Record everything that you purchase on a weekly basis so that you can look back on each expenditure.&nbsp;</span></li>\n" +
+                "</ul>", Html.FROM_HTML_MODE_COMPACT));
+
+        t7.setText(Html.fromHtml("<ul>\n" +
+                "<li style=\"font-weight: 400;\">\n" +
+                "<p><span style=\"font-weight: 400;\">Understanding your money personality is the first step towards financial health. We have listed down some of the extreme behaviours and the traits associated with them that people show when it comes to money. Most of the people don&rsquo;t exhibit these extremes most of the time, rather they have traits of each of these behaviours.&nbsp;</span></p>\n" +
+                "<br />\n" +
+                "<p><strong>Fun Activity:</strong><span style=\"font-weight: 400;\">&nbsp;</span></p>\n" +
+                "<p><span style=\"font-weight: 400;\">Take the questionnaire given below to identify your money personality. Answer each question as per the instruction and at the end you will receive a score that will indicate which money personality best describes you.</span></p>\n" +
+                "<p>&nbsp;</p>\n" +
+                "</li>\n" +
+                "</ul>\n" +
+                "<p style=\"text-align: center;\"><strong><span style=\"color: #339966;\"><a style=\"color: #339966;\" href=\"https://docs.google.com/forms/d/1Nd4F30T5eEx1kjyFUx5MJkKPhdtMWDtMwrr4SQ90B1o/edit\">Take the Money Personality Quiz Now!</a></span><span style=\"color: #339966;\">&nbsp;</span>&nbsp;&nbsp;</strong></p>\n" +
+                "", Html.FROM_HTML_MODE_COMPACT));
+        t7.setMovementMethod(LinkMovementMethod.getInstance());
+
+
+        //  m1pdf = (PDFView) findViewById(R.id.pdf1);
       //  m1pdf.fromAsset("Week1Module.pdf").load();
 
     }
