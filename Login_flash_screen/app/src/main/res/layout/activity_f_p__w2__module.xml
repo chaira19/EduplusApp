@@ -159,11 +159,93 @@
             android:layout_height="wrap_content"
             android:id="@+id/img2_4"
             android:layout_below="@+id/text6"
+            android:layout_centerHorizontal="true"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:src="@drawable/img2_4"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text7"
+            android:layout_below="@+id/img2_4"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:justificationMode="inter_word"
+            android:textSize="15dp"
+            android:textColor="#000000"
+            android:text="@string/fp_w2_t7"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Subheading3"
+            android:layout_below="@+id/text7"
+            android:fontFamily="@font/arial"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="20dp"
+            android:textColor="#666666"
+            android:text="Making Your Investment Portfolio"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text8"
+            android:layout_below="@+id/Subheading3"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:justificationMode="inter_word"
+            android:textSize="15dp"
+            android:textColor="#000000"
+            android:text="@string/fp_w2_t8"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/img2_5"
+            android:layout_below="@+id/text8"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/img2_5"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text9"
+            android:layout_below="@+id/img2_5"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:justificationMode="inter_word"
+            android:textSize="15dp"
+            android:textColor="#000000"
+            android:text="@string/fp_w2_t9"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/img2_6"
+            android:layout_below="@+id/text9"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/img2_6"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text10"
+            android:layout_below="@+id/img2_6"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:justificationMode="inter_word"
+            android:textSize="15dp"
+            android:textColor="#000000"
+            android:text="@string/fp_w2_t10"/>
 
     </RelativeLayout>
 

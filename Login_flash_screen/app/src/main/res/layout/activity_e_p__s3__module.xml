@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".EP_S1_Module">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/heading"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/arial"
+            android:textSize="25dp"
+            android:textColor="#000000"
+            android:text="Entrepreneurial Resources"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Subheading1"
+            android:layout_below="@+id/heading"
+            android:fontFamily="@font/arial"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="20dp"
+            android:textColor="#666666"
+            android:text="Great Entrepreneurial Stories"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text1"
+            android:layout_below="@+id/Subheading1"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:justificationMode="inter_word"
+            android:textSize="15dp"
+            android:textColor="#000000"
+            android:text="@string/ep_s3_t1"/>
+
+
+
+        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/video1"
+            android:layout_below="@+id/text1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:videoId="P4n7PVJwzjA"
+            app:autoPlay="true"
+            app:showFullScreenButton="true"
+            tools:ignore="MissingConstraints" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text2"
+            android:layout_below="@+id/video1"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:justificationMode="inter_word"
+            android:textSize="15dp"
+            android:textColor="#000000"
+            android:text="@string/ep_s3_t2"/>
+
+        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/video2"
+            android:layout_below="@+id/text2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:videoId="eBgadq0B9ME"
+            app:autoPlay="true"
+            app:showFullScreenButton="true"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Subheading2"
+            android:layout_below="@+id/video2"
+            android:fontFamily="@font/arial"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="20dp"
+            android:textColor="#666666"
+            android:text="Mediums for Entrepreneurial News"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text3"
+            android:layout_below="@+id/Subheading2"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:justificationMode="inter_word"
+            android:textSize="15dp"
+            android:textColor="#000000"
+            android:text="@string/ep_s3_t3"/>
+
+
+
+
+    </RelativeLayout>
+
+</ScrollView>
