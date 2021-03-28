@@ -1,15 +1,30 @@
 package com.eduplus.eduplus_app;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.CheckBox;
 import android.widget.Switch;
+import android.widget.TextView;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class Skill extends AppCompatActivity implements View.OnClickListener {
 
@@ -38,14 +53,65 @@ public class Skill extends AppCompatActivity implements View.OnClickListener {
         check2 = findViewById(R.id.check2);
         check3 = findViewById(R.id.check3);
 
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        String userId = user.getPhoneNumber();
+
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        db.collection("Users").document(userId).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot document = task.getResult();
+
+                    Map<String, Object> skillProgress = (Map<String, Object>)document.get("Skills");
+                    if(skillProgress != null)
+                    {
+                        Log.e("Error", "Couldn't fetch skills");
+                        Map<String, Object> finPlanProg = (Map<String, Object>)skillProgress.get("FinancialPlanning");
+                        if(finPlanProg != null)
+                        {
+                            Log.e("Error", "Couldn't fetch finplan");
+                            Map<String, Object> month1 = (Map<String, Object>)finPlanProg.get("Month1");
+                            if(month1 != null)
+                            {
+                                Log.e("Error", "Couldn't fetch month");
+                                if(month1.containsKey("Week1"))
+                                {
+                                    check.setChecked((Boolean)month1.get("Week1"));
+                                }
+                                if(month1.containsKey("Week2"))
+                                {
+                                    check1.setChecked((Boolean)month1.get("Week2"));
+                                }
+                                if(month1.containsKey("Week3"))
+                                {
+                                    check2.setChecked((Boolean)month1.get("Week3"));
+                                }
+                                if(month1.containsKey("Week4"))
+                                {
+                                    check3.setChecked((Boolean)month1.get("Week4"));
+                                }
+                            }
+                        }
+                    }
+                }
+                else {
+                    Log.e("Error", "Task is not successful");
+                }
+
+            }
+        });
+
         check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(check.isChecked()){
                     check.setTextColor(getResources().getColor(R.color.colorcheck));
+                    setMarkAsCompleted("Month1", "Week1", true);
                 }
                 else{
                     check.setTextColor(getResources().getColor(R.color.colorAccent));
+                    setMarkAsCompleted("Month1", "Week1", false);
                 }
             }
         });
@@ -55,9 +121,11 @@ public class Skill extends AppCompatActivity implements View.OnClickListener {
             public void onClick(View v) {
                 if(check1.isChecked()){
                     check1.setTextColor(getResources().getColor(R.color.colorcheck));
+                    setMarkAsCompleted("Month1", "Week2", true);
                 }
                 else{
                     check1.setTextColor(getResources().getColor(R.color.colorAccent));
+                    setMarkAsCompleted("Month1", "Week2", false);
                 }
 
             }
@@ -69,9 +137,11 @@ public class Skill extends AppCompatActivity implements View.OnClickListener {
 
                 if(check2.isChecked()){
                     check2.setTextColor(getResources().getColor(R.color.colorcheck));
+                    setMarkAsCompleted("Month1", "Week3", true);
                 }
                 else{
                     check2.setTextColor(getResources().getColor(R.color.colorAccent));
+                    setMarkAsCompleted("Month1", "Week3", false);
                 }
 
             }
@@ -83,9 +153,11 @@ public class Skill extends AppCompatActivity implements View.OnClickListener {
 
                 if(check3.isChecked()){
                     check3.setTextColor(getResources().getColor(R.color.colorcheck));
+                    setMarkAsCompleted("Month1", "Week4", true);
                 }
                 else{
                     check3.setTextColor(getResources().getColor(R.color.colorAccent));
+                    setMarkAsCompleted("Month1", "Week4", false);
                 }
 
             }
@@ -118,5 +190,26 @@ public class Skill extends AppCompatActivity implements View.OnClickListener {
                startActivity(i);
                break;
         }
+    }
+
+    public void setMarkAsCompleted(String month, String week, Boolean completed)
+    {
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+            db.collection("Users").document(user.getPhoneNumber())
+                    .update("Skills.FinancialPlanning." + month + "." + week, completed)
+                    .addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void aVoid) {
+
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+
+                        }
+                    });
     }
 }
