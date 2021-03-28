@@ -1,16 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ProgressDashboard">
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textViewHeading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Progress Dashboard"
-        tools:layout_editor_absoluteX="48dp"
-        tools:layout_editor_absoluteY="142dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:textStyle="bold"
+        android:text="Skills - Financial Planning" />
+
+    <TextView
+        android:id="@+id/textViewSubHeading1"
+        android:layout_below="@+id/textViewHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Current Month (1st) Progress" />
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewSubHeading1"
+        android:progressDrawable="@drawable/custom_proogressbar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:max="4"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/textViewSubHeading2"
+        android:layout_below="@+id/progressBar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Overall Progress" />
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:progressDrawable="@drawable/custom_proogressbar"
+        android:layout_below="@+id/textViewSubHeading2"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:max="32"
+        android:layout_centerHorizontal="true"/>
+
+
+</RelativeLayout>
