@@ -21,7 +21,7 @@ public class SignInActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        //createSignInIntent();
+        createSignInIntent();
         startActivity(new Intent(com.eduplus.eduplus_app.SignInActivity.this, Home.class));
 
     }
