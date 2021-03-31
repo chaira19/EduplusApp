@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.eduplus.eduplus_app">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Login_flash_screen">
-        <activity android:name=".CodeEditorActivity"></activity>
+        <activity android:name=".test_activity"></activity>
+        <activity android:name=".CodeEditorActivity" />
         <activity android:name=".EP_S3_Module" />
         <activity android:name=".EP_S2_Module" />
         <activity android:name=".EP_S1_Module" />
@@ -35,7 +38,5 @@
         <activity android:name=".Competition" />
         <activity android:name=".Feedback" />
     </application>
-
-    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
