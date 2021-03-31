@@ -25,9 +25,10 @@ public class ProgressDashboard extends AppCompatActivity {
         setContentView(R.layout.activity_progress_dashboard);
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        //FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
-        db.collection("Users").document(user.getPhoneNumber())
+        //db.collection("Users").document(user.getPhoneNumber())
+        db.collection("Users").document("+919410571687")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                     @Override
