@@ -57,9 +57,9 @@
 
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="40dp"
+                    android:layout_height="50dp"
                     android:layout_marginLeft="270dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginRight="30dp"
                     android:layout_alignParentRight="true"
                     android:layout_marginTop="30dp"
                     android:src="@drawable/ic_accounting" />
@@ -91,7 +91,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/week"
-                    android:layout_marginLeft="182dp"
+                    android:layout_marginLeft="175dp"
                     android:layout_marginTop="30dp"
                     android:text="Mark as Completed"
                     android:layout_marginBottom="7dp"
@@ -148,9 +148,9 @@
 
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="40dp"
+                    android:layout_height="50dp"
                     android:layout_marginLeft="270dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginRight="30dp"
                     android:layout_alignParentRight="true"
                     android:layout_marginTop="30dp"
                     android:src="@drawable/ic_accounting" />
@@ -182,7 +182,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/week1"
-                    android:layout_marginLeft="182dp"
+                    android:layout_marginLeft="175dp"
                     android:layout_marginTop="30dp"
                     android:text="Mark as Completed"
                     android:layout_marginBottom="7dp"
@@ -239,9 +239,9 @@
 
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="40dp"
+                    android:layout_height="50dp"
                     android:layout_marginLeft="270dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginRight="30dp"
                     android:layout_alignParentRight="true"
                     android:layout_marginTop="30dp"
                     android:src="@drawable/ic_accounting" />
@@ -273,7 +273,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/week2"
-                    android:layout_marginLeft="182dp"
+                    android:layout_marginLeft="175dp"
                     android:layout_marginTop="30dp"
                     android:text="Mark as Completed"
                     android:layout_marginBottom="7dp"
@@ -330,9 +330,9 @@
 
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="40dp"
+                    android:layout_height="50dp"
                     android:layout_marginLeft="270dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginRight="30dp"
                     android:layout_alignParentRight="true"
                     android:layout_marginTop="30dp"
                     android:src="@drawable/ic_accounting" />
@@ -364,7 +364,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/week3"
-                    android:layout_marginLeft="182dp"
+                    android:layout_marginLeft="175dp"
                     android:layout_marginTop="30dp"
                     android:text="Mark as Completed"
                     android:layout_marginBottom="7dp"
@@ -374,9 +374,6 @@
             </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
-
-
-
 
 
     </RelativeLayout>
