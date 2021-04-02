@@ -1,7 +1,6 @@
 package com.eduplus.eduplus_app;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -34,7 +33,7 @@ public class SkillContent extends AppCompatActivity implements View.OnClickListe
 
         switch (v.getId()){
             case R.id.np1:
-                i = new Intent(SkillContent.this, Skill.class);
+                i = new Intent(SkillContent.this, SkillFP.class);
                 startActivity(i);
                 break;
 

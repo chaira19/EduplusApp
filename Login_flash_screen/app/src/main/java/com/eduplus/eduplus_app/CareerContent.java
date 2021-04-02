@@ -33,7 +33,7 @@ public class CareerContent extends AppCompatActivity implements View.OnClickList
 
         switch (v.getId()){
             case R.id.np1:
-                i = new Intent(CareerContent.this, Career.class);
+                i = new Intent(CareerContent.this, CareerEP.class);
                 startActivity(i);
                 break;
 

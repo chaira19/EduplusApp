@@ -6,6 +6,7 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
@@ -32,11 +33,12 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import org.w3c.dom.Text;
 
-public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener{
     //variables
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
+    ImageView np, ns, nc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +47,14 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         g.setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION, WindowManager.LayoutParams.TYPE_STATUS_BAR);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
        setContentView(R.layout.activity_home);
+
+        np = (ImageView) findViewById(R.id.np);
+        ns = (ImageView) findViewById(R.id.ns);
+        nc = (ImageView) findViewById(R.id.nc);
+
+        np.setOnClickListener((View.OnClickListener) this);
+        ns.setOnClickListener((View.OnClickListener) this);
+        nc.setOnClickListener((View.OnClickListener) this);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         TextView mTitle = (TextView) toolbar.findViewById(R.id.toolbar_title);
@@ -67,6 +77,32 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
     }
 
+
+    @Override
+    public void onClick(View v) {
+
+        Intent i;
+
+        switch (v.getId()){
+            case R.id.np:
+                i = new Intent(Home.this, Programming.class);
+                startActivity(i);
+                break;
+
+            case R.id.ns:
+                i = new Intent(Home.this, SkillFP.class);
+                startActivity(i);
+                break;
+
+            case R.id.nc:
+                i = new Intent(Home.this, CareerEP.class);
+                startActivity(i);
+                break;
+
+
+        }
+    }
+
     @Override
     public void onBackPressed() {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
@@ -77,6 +113,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         }
 
     }
+
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
