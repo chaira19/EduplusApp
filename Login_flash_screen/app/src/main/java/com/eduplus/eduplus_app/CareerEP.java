@@ -4,13 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.CheckBox;
 
-public class Career extends AppCompatActivity implements View.OnClickListener  {
+public class CareerEP extends AppCompatActivity implements View.OnClickListener  {
 
     CheckBox check1, check2, check3;
     CardView ep_s1, ep_s2, ep_s3;
@@ -18,7 +17,7 @@ public class Career extends AppCompatActivity implements View.OnClickListener  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_career);
+        setContentView(R.layout.activity_career_ep);
        // getWindow().setStatusBarColor(Color.TRANSPARENT);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 
@@ -85,17 +84,17 @@ public class Career extends AppCompatActivity implements View.OnClickListener  {
 
         switch (v.getId()){
             case R.id.ep_s1:
-                i = new Intent(Career.this, EP_S1_Module.class);
+                i = new Intent(CareerEP.this, EP_S1_Module.class);
                 startActivity(i);
                 break;
 
             case R.id.ep_s2:
-                i = new Intent(Career.this, EP_S2_Module.class);
+                i = new Intent(CareerEP.this, EP_S2_Module.class);
                 startActivity(i);
                 break;
 
             case R.id.ep_s3:
-                i = new Intent(Career.this, EP_S3_Module.class);
+                i = new Intent(CareerEP.this, EP_S3_Module.class);
                 startActivity(i);
                 break;
         }

@@ -5,14 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.CheckBox;
-import android.widget.Switch;
-import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -23,10 +20,9 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import java.util.HashMap;
 import java.util.Map;
 
-public class Skill extends AppCompatActivity implements View.OnClickListener {
+public class SkillFP extends AppCompatActivity implements View.OnClickListener {
 
     CheckBox check, check1, check2, check3;
     CardView fp_w1, fp_w2, fp_w3, fp_w4;
@@ -34,7 +30,7 @@ public class Skill extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_skill);
+        setContentView(R.layout.activity_skill_fp);
         //getWindow().setStatusBarColor(Color.TRANSPARENT);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 
@@ -173,22 +169,22 @@ public class Skill extends AppCompatActivity implements View.OnClickListener {
 
        switch (v.getId()){
             case R.id.fp_w1:
-                i = new Intent(Skill.this, FP_W1_Module.class);
+                i = new Intent(SkillFP.this, FP_W1_Module.class);
                 startActivity(i);
                 break;
 
            case R.id.fp_w2:
-               i = new Intent(Skill.this, FP_W2_Module.class);
+               i = new Intent(SkillFP.this, FP_W2_Module.class);
                startActivity(i);
                break;
 
            case R.id.fp_w3:
-               i = new Intent(Skill.this, FP_W3_Module.class);
+               i = new Intent(SkillFP.this, FP_W3_Module.class);
                startActivity(i);
                break;
 
            case R.id.fp_w4:
-               i = new Intent(Skill.this, FP_W4_Module.class);
+               i = new Intent(SkillFP.this, FP_W4_Module.class);
                startActivity(i);
                break;
         }
