@@ -20,7 +20,7 @@
 
                 <item
                     android:id="@+id/programming"
-                    android:icon="@drawable/ic_html_coding"
+                    android:icon="@drawable/ic_html_coding__1_"
                     android:title="Programming" />
                 <item
                     android:id="@+id/skill"

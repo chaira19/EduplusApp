@@ -14,14 +14,59 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/v1"
+            android:background="@drawable/bg_content1"/>
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:navigationIcon="@drawable/ic_left_arrow"/>
+
+        <TextView
+            android:textSize="28dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="40dp"
+            android:layout_below="@+id/toolbar"
+            android:textColor="#ffff"
+            android:id="@+id/head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:justificationMode="inter_word"
+            android:text="Financial Planning"></TextView>
+
+        <TextView
+            android:textSize="18dp"
+            android:layout_below="@+id/head"
+            android:id="@+id/des"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="5dp"
+            android:textColor="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3 Modules | 1 Activity"></TextView>
+
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:id="@+id/fp_w1"
+            android:layout_below="@+id/v1"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="20dp"
             app:cardCornerRadius="10dp"
             android:layout_marginTop="30dp"
-            android:layout_marginRight="30dp">
+            android:layout_marginRight="20dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -108,17 +153,17 @@
             android:layout_width="match_parent"
             android:id="@+id/fp_w2"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="20dp"
             app:cardCornerRadius="10dp"
             android:layout_marginTop="30dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginRight="20dp"
             android:layout_below="@+id/fp_w1">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:background="@drawable/bg_skill2">
+                android:background="@drawable/bg_skill3">
 
 
                 <TextView
@@ -200,16 +245,16 @@
             android:id="@+id/fp_w3"
             android:layout_below="@+id/fp_w2"
             android:layout_height="173dp"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="20dp"
             app:cardCornerRadius="10dp"
             android:layout_marginTop="30dp"
-            android:layout_marginRight="30dp">
+            android:layout_marginRight="20dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:background="@drawable/bg_skill3">
+                android:background="@drawable/bg_skill2">
 
 
                 <TextView
@@ -291,10 +336,10 @@
             android:id="@+id/fp_w4"
             android:layout_below="@+id/fp_w3"
             android:layout_height="173dp"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="20dp"
             app:cardCornerRadius="10dp"
             android:layout_marginTop="30dp"
-            android:layout_marginRight="30dp">
+            android:layout_marginRight="20dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"

@@ -105,8 +105,9 @@
             <TextView
                 android:layout_width="300dp"
                 android:id="@+id/th"
+                android:textFontWeight="@android:integer/config_longAnimTime"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="250dp"
                 android:text="This Month's Content"
                 android:layout_below="@+id/toolbar"
@@ -114,147 +115,194 @@
                 android:textSize="25sp"
                 app:fontFamily="@font/baloo"/>
 
-            <LinearLayout
-                android:id="@+id/linearLayout"
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:id="@+id/card1"
                 android:layout_below="@+id/th"
-                android:layout_width="match_parent"
-                android:layout_height="175dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="20dp"
                 android:elevation="4dp"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp"
-                android:padding="10dp">
+                app:cardCornerRadius="20dp"
+                android:layout_marginRight="20dp">
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="0dp"
+                <RelativeLayout
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:elevation="4dp">
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_card2">
 
 
-                        <ImageView
-                            android:id="@+id/p"
-                            android:layout_width="75dp"
-                            android:layout_height="75dp"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="25dp"
-                            app:srcCompat="@drawable/ic_html_coding" />
+                    <ImageView
+                        android:id="@+id/p"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        app:srcCompat="@drawable/ic_html_coding" />
 
-                        <TextView
-                            android:id="@+id/textView7"
-                            android:layout_width="wrap_content"
-                            android:layout_alignLeft="@+id/p"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/p"
-                            android:layout_marginLeft="100dp"
-                            android:layout_marginTop="-60dp"
-                            android:text="Programming"
-                            android:textSize="28sp"
-                            app:fontFamily="@font/aclonica" />
-                    </RelativeLayout>
 
-                </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:textSize="28dp"
+                        android:layout_marginLeft="80dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="30dp"
+                        android:textColor="#ffff"
+                        android:id="@+id/topic"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:justificationMode="inter_word"
+                        android:text="Programming"></TextView>
 
-            </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/linearLayout2"
-                android:layout_below="@+id/linearLayout"
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/np"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="310dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_below="@+id/week"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginBottom="7dp"
+                        android:src="@drawable/ic_next"/>
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="175dp"
+                android:id="@+id/card2"
+                android:layout_below="@+id/card1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="20dp"
                 android:elevation="4dp"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp"
-                android:padding="10dp">
+                app:cardCornerRadius="20dp"
+                android:layout_marginRight="20dp">
 
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="0dp"
+                <RelativeLayout
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_card3">
 
 
-                        <ImageView
-                            android:id="@+id/s"
-                            android:layout_width="75dp"
-                            android:layout_height="75dp"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="25dp"
-                            app:srcCompat="@drawable/skill_icon" />
+                    <ImageView
+                        android:id="@+id/p1"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        app:srcCompat="@drawable/skill_icon" />
 
-                        <TextView
-                            android:id="@+id/textView3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/s"
-                            android:layout_alignLeft="@+id/s"
-                            android:layout_marginLeft="100dp"
-                            android:layout_marginTop="-60dp"
-                            android:text="Skill Development"
-                            android:textSize="28sp"
-                            app:fontFamily="@font/aclonica" />
 
-                    </RelativeLayout>
-                </androidx.cardview.widget.CardView>
-            </LinearLayout>
+                    <TextView
+                        android:textSize="25dp"
+                        android:layout_marginLeft="80dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="30dp"
+                        android:textColor="#ffff"
+                        android:id="@+id/topic1"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:justificationMode="inter_word"
+                        android:text="Skill Development"></TextView>
 
-            <LinearLayout
-                android:id="@+id/linearLayout3"
-                android:layout_below="@+id/linearLayout2"
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/ns"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="310dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_below="@+id/week"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginBottom="7dp"
+                        android:src="@drawable/ic_next"/>
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="175dp"
+                android:id="@+id/card3"
+                android:layout_below="@+id/card2"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="20dp"
                 android:elevation="4dp"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp"
-                android:padding="10dp">
+                app:cardCornerRadius="20dp"
+                android:layout_marginRight="20dp">
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="0dp"
+                <RelativeLayout
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:elevation="4dp">
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_card4">
 
 
-                        <ImageView
-                            android:id="@+id/c"
-                            android:layout_width="75dp"
-                            android:layout_height="75dp"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="25dp"
-                            app:srcCompat="@drawable/career_icon" />
+                    <ImageView
+                        android:id="@+id/p2"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="18dp"
+                        app:srcCompat="@drawable/career_icon" />
 
-                        <TextView
-                            android:id="@+id/textView9"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/c"
-                            android:layout_alignLeft="@+id/c"
-                            android:layout_marginLeft="100dp"
-                            android:layout_marginTop="-60dp"
-                            android:text="Career Awareness"
-                            android:textSize="28sp"
-                            app:fontFamily="@font/aclonica" />
 
-                    </RelativeLayout>
-                </androidx.cardview.widget.CardView>
-            </LinearLayout>
+                    <TextView
+                        android:textSize="24dp"
+                        android:layout_marginLeft="80dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="30dp"
+                        android:textColor="#ffff"
+                        android:id="@+id/topic2"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:justificationMode="inter_word"
+                        android:text="Career Awareness"></TextView>
+
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/nc"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="310dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_below="@+id/week"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginBottom="7dp"
+                        android:src="@drawable/ic_next"/>
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="300dp"
+                android:id="@+id/th1"
+                android:textFontWeight="@android:integer/config_longAnimTime"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                android:text="Dashboard Highlights"
+                android:layout_below="@+id/card3"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                app:fontFamily="@font/baloo"/>
+
 
         </RelativeLayout>
-
 
     </ScrollView>
 </androidx.drawerlayout.widget.DrawerLayout>
