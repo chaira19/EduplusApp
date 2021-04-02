@@ -89,15 +89,15 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 startActivity(intent);
                 break;
             case R.id.programming:
-                Intent intent1 = new Intent(Home.this, Programming.class);
+                Intent intent1 = new Intent(Home.this, ProgrammingContent.class);
                 startActivity(intent1);
                 break;
             case R.id.skill:
-                Intent intent2 = new Intent(Home.this, Skill.class);
+                Intent intent2 = new Intent(Home.this, SkillContent.class);
                 startActivity(intent2);
                 break;
             case R.id.career:
-                Intent intent3 = new Intent(Home.this, Career.class);
+                Intent intent3 = new Intent(Home.this, CareerContent.class);
                 startActivity(intent3);
                 break;
             case R.id.Competitions:

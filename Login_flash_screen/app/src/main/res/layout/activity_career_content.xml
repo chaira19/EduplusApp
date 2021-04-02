@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".test_activity">
+    tools:context=".CareerContent">
 
     <RelativeLayout
 
@@ -44,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:justificationMode="inter_word"
-            android:text="Skill Development"></TextView>
+            android:text="Career Awareness"></TextView>
 
         <TextView
             android:textSize="18dp"
@@ -65,7 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="20dp"
-            android:text="Skills"
+            android:text="Careers"
             android:layout_below="@+id/v1"
             android:textColor="#000000"
             android:textSize="25sp"
@@ -109,7 +109,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:justificationMode="inter_word"
-                    android:text="Financial Planning"></TextView>
+                    android:text="Entreprenuership"></TextView>
 
                 <ProgressBar
                     android:layout_width="190dp"
@@ -138,7 +138,7 @@
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:id="@+id/np"
+                    android:id="@+id/np1"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="310dp"
                     android:layout_marginRight="10dp"
@@ -177,7 +177,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="20dp"
-                    app:srcCompat="@drawable/ic_robot" />
+                    app:srcCompat="@drawable/ic_broker" />
 
 
                 <TextView
@@ -190,7 +190,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:justificationMode="inter_word"
-                    android:text="Artificial Intelligence"></TextView>
+                    android:text="Financial Broker"></TextView>
 
                 <ProgressBar
                     android:layout_width="190dp"
@@ -219,7 +219,7 @@
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:id="@+id/np"
+                    android:id="@+id/np2"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="310dp"
                     android:layout_marginRight="10dp"
