@@ -35,7 +35,8 @@ public class Skill extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_skill);
-        getWindow().setStatusBarColor(Color.TRANSPARENT);
+        //getWindow().setStatusBarColor(Color.TRANSPARENT);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 
         fp_w1 = (CardView)findViewById(R.id.fp_w1);
         fp_w2 = (CardView)findViewById(R.id.fp_w2);

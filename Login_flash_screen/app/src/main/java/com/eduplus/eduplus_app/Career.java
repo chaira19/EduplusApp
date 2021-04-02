@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.CheckBox;
 
 public class Career extends AppCompatActivity implements View.OnClickListener  {
@@ -18,7 +19,8 @@ public class Career extends AppCompatActivity implements View.OnClickListener  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_career);
-        getWindow().setStatusBarColor(Color.TRANSPARENT);
+       // getWindow().setStatusBarColor(Color.TRANSPARENT);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 
         ep_s1 = (CardView)findViewById(R.id.ep_s1);
         ep_s2 = (CardView)findViewById(R.id.ep_s2);
