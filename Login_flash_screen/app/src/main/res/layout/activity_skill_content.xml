@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".test_activity">
+    tools:context=".SkillContent">
 
     <RelativeLayout
 
@@ -96,7 +96,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="20dp"
-                    app:srcCompat="@drawable/ic_idea" />
+                    app:srcCompat="@drawable/ic_accounting" />
 
 
                 <TextView
@@ -138,7 +138,7 @@
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:id="@+id/np"
+                    android:id="@+id/np1"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="310dp"
                     android:layout_marginRight="10dp"
@@ -219,7 +219,7 @@
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:id="@+id/np"
+                    android:id="@+id/np2"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="310dp"
                     android:layout_marginRight="10dp"

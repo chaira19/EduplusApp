@@ -11,7 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Login_flash_screen">
-        <activity android:name=".test_activity"></activity>
+        <activity android:name=".CareerBroker"></activity>
+        <activity android:name=".SkillAI" />
+        <activity android:name=".ProgrammingContent" />
+        <activity android:name=".CareerContent" />
+        <activity android:name=".SkillContent" />
+        <activity android:name=".test_activity" />
         <activity android:name=".CodeEditorActivity" />
         <activity android:name=".EP_S3_Module" />
         <activity android:name=".EP_S2_Module" />

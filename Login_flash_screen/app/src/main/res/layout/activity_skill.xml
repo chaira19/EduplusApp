@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".test_activity">
+    tools:context=".Skill">
 
     <RelativeLayout
 
@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:id="@+id/v1"
-            android:background="@drawable/bg_content1"/>
+            android:background="@drawable/bg_card2"/>
 
 
         <androidx.appcompat.widget.Toolbar
@@ -72,7 +72,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:background="@drawable/bg_skill">
+                android:background="@drawable/bg_skill2">
 
 
                 <TextView
@@ -254,7 +254,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:background="@drawable/bg_skill2">
+                android:background="@drawable/bg_skill">
 
 
                 <TextView
@@ -345,7 +345,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:background="@drawable/bg_skill">
+                android:background="@drawable/bg_skill2">
 
 
                 <TextView
