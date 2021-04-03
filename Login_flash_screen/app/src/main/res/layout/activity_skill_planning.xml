@@ -21,6 +21,15 @@
             android:id="@+id/v1"
             android:background="@drawable/bg_card2"/>
 
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginRight="20dp"
+            android:layout_alignRight="@+id/v1"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/ic_risk"/>
+
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -199,7 +208,7 @@
                     android:layout_marginRight="30dp"
                     android:layout_alignParentRight="true"
                     android:layout_marginTop="30dp"
-                    android:src="@drawable/ic_accounting" />
+                    android:src="@drawable/ic_money_flow" />
 
 
                 <ImageView
@@ -290,7 +299,7 @@
                     android:layout_marginRight="30dp"
                     android:layout_alignParentRight="true"
                     android:layout_marginTop="30dp"
-                    android:src="@drawable/ic_accounting" />
+                    android:src="@drawable/ic_setup" />
 
 
                 <ImageView
@@ -381,7 +390,7 @@
                     android:layout_marginRight="30dp"
                     android:layout_alignParentRight="true"
                     android:layout_marginTop="30dp"
-                    android:src="@drawable/ic_accounting" />
+                    android:src="@drawable/ic_calendar" />
 
 
                 <ImageView
