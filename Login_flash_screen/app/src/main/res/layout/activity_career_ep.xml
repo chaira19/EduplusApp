@@ -20,6 +20,15 @@
             android:id="@+id/v1"
             android:background="@drawable/bg_card4"/>
 
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginRight="30dp"
+            android:layout_alignRight="@+id/v1"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_idea"/>
+
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -107,7 +116,7 @@
                     android:layout_marginRight="30dp"
                     android:layout_alignParentRight="true"
                     android:layout_marginTop="30dp"
-                    android:src="@drawable/ic_accounting" />
+                    android:src="@drawable/ic_launch" />
 
 
                 <ImageView
@@ -203,7 +212,7 @@
                     android:layout_marginRight="30dp"
                     android:layout_alignParentRight="true"
                     android:layout_marginTop="30dp"
-                    android:src="@drawable/ic_accounting" />
+                    android:src="@drawable/ic_businessman_with_tie" />
 
 
                 <ImageView
@@ -294,7 +303,7 @@
                     android:layout_marginRight="30dp"
                     android:layout_alignParentRight="true"
                     android:layout_marginTop="30dp"
-                    android:src="@drawable/ic_accounting" />
+                    android:src="@drawable/ic_hiring" />
 
 
                 <ImageView
