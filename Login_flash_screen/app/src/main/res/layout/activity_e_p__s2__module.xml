@@ -12,23 +12,44 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:id="@+id/v1"
+            android:background="@drawable/bg_card2"/>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:navigationIcon="@drawable/ic_left_arrow"/>
+
         <TextView
+            android:textSize="25dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/toolbar"
+            android:textColor="#ffff"
+            android:id="@+id/heading"
+            android:fontFamily="@font/arial"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:id="@+id/heading"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/arial"
-            android:textSize="25dp"
-            android:textColor="#000000"
-            android:text="Entrepreneurship as a Career"/>
+            android:justificationMode="inter_word"
+            android:text="Entrepreneurship as a Career"></TextView>
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/text1"
             android:layout_below="@+id/heading"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="30dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:justificationMode="inter_word"
@@ -42,7 +63,7 @@
             android:id="@+id/Subheading1"
             android:layout_below="@+id/text1"
             android:fontFamily="@font/arial"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:layout_marginLeft="10dp"
             android:textSize="20dp"
             android:textColor="#666666"

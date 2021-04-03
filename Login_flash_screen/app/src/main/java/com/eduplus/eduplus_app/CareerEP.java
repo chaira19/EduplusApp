@@ -1,6 +1,7 @@
 package com.eduplus.eduplus_app;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
@@ -24,6 +25,7 @@ public class CareerEP extends AppCompatActivity implements View.OnClickListener 
         ep_s1 = (CardView)findViewById(R.id.ep_s1);
         ep_s2 = (CardView)findViewById(R.id.ep_s2);
         ep_s3 = (CardView)findViewById(R.id.ep_s3);
+
 
         ep_s1.setOnClickListener(this);
         ep_s2.setOnClickListener(this);
@@ -97,6 +99,7 @@ public class CareerEP extends AppCompatActivity implements View.OnClickListener 
                 i = new Intent(CareerEP.this, EP_S3_Module.class);
                 startActivity(i);
                 break;
+
         }
     }
 }

@@ -12,17 +12,37 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:id="@+id/v1"
+            android:background="@drawable/bg_card2"/>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:navigationIcon="@drawable/ic_left_arrow"/>
 
         <TextView
+            android:textSize="28dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/toolbar"
+            android:textColor="#ffff"
+            android:id="@+id/heading"
+            android:fontFamily="@font/arial"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:id="@+id/heading"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/arial"
-            android:textSize="30dp"
-            android:textColor="#000000"
-            android:text="Introduction"/>
+            android:justificationMode="inter_word"
+            android:text="Introduction"></TextView>
+
 
         <TextView
             android:layout_width="wrap_content"
