@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:id="@+id/v1"
-            android:background="@drawable/bg_card2"/>
+            android:background="@drawable/bg_content1"/>
 
         <ImageView
             android:layout_width="80dp"
@@ -82,7 +82,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:background="@drawable/bg_skill2">
+                android:background="#F8F8F8">
 
 
                 <TextView
@@ -90,7 +90,7 @@
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp"
                     android:layout_marginTop="20dp"
-                    android:textColor="#ffff"
+                    android:textColor="#000000"
                     android:id="@+id/topic"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
@@ -104,7 +104,7 @@
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp"
                     android:layout_marginTop="5dp"
-                    android:textColor="#90FFFFFF"
+                    android:textColor="#000000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Week1 Module"></TextView>
@@ -140,7 +140,7 @@
                     android:layout_marginBottom="7dp"
                     android:textSize="15dp"
                     android:layout_marginTop="36dp"
-                    android:textColor="#ffff"/>
+                    android:textColor="#000000"/>
 
                 <CheckBox
                     android:layout_width="match_parent"
@@ -151,7 +151,7 @@
                     android:text="Mark as Completed"
                     android:layout_marginBottom="7dp"
                     android:textSize="12dp"
-                    android:textColor="#ffff"
+                    android:textColor="#000000"
                     android:id="@+id/check" />
 
 
@@ -173,7 +173,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:background="@drawable/bg_skill3">
+                android:background="#F8F8F8">
 
 
                 <TextView
@@ -181,7 +181,7 @@
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp"
                     android:layout_marginTop="20dp"
-                    android:textColor="#ffff"
+                    android:textColor="#000000"
                     android:id="@+id/topic1"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
@@ -195,7 +195,7 @@
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp"
                     android:layout_marginTop="5dp"
-                    android:textColor="#90FFFFFF"
+                    android:textColor="#000000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Week2 Module"></TextView>
@@ -231,7 +231,7 @@
                     android:layout_marginBottom="7dp"
                     android:textSize="15dp"
                     android:layout_marginTop="36dp"
-                    android:textColor="#ffff"/>
+                    android:textColor="#000000"/>
 
                 <CheckBox
                     android:layout_width="match_parent"
@@ -242,7 +242,7 @@
                     android:text="Mark as Completed"
                     android:layout_marginBottom="7dp"
                     android:textSize="12dp"
-                    android:textColor="#ffff"
+                    android:textColor="#000000"
                     android:id="@+id/check1" />
 
 
@@ -264,7 +264,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:background="@drawable/bg_skill">
+                android:background="#F8F8F8">
 
 
                 <TextView
@@ -272,7 +272,7 @@
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp"
                     android:layout_marginTop="20dp"
-                    android:textColor="#ffff"
+                    android:textColor="#000000"
                     android:id="@+id/topic2"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
@@ -286,7 +286,7 @@
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp"
                     android:layout_marginTop="5dp"
-                    android:textColor="#90FFFFFF"
+                    android:textColor="#000000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Week3 Module"></TextView>
@@ -322,7 +322,7 @@
                     android:layout_marginBottom="7dp"
                     android:textSize="15dp"
                     android:layout_marginTop="36dp"
-                    android:textColor="#ffff"/>
+                    android:textColor="#000000"/>
 
                 <CheckBox
                     android:layout_width="match_parent"
@@ -333,7 +333,7 @@
                     android:text="Mark as Completed"
                     android:layout_marginBottom="7dp"
                     android:textSize="12dp"
-                    android:textColor="#ffff"
+                    android:textColor="#000000"
                     android:id="@+id/check2" />
 
 
@@ -355,7 +355,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:background="@drawable/bg_skill2">
+                android:background="#F8F8F8">
 
 
                 <TextView
@@ -363,7 +363,7 @@
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp"
                     android:layout_marginTop="20dp"
-                    android:textColor="#ffff"
+                    android:textColor="#000000"
                     android:id="@+id/topic3"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
@@ -377,7 +377,7 @@
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp"
                     android:layout_marginTop="5dp"
-                    android:textColor="#90FFFFFF"
+                    android:textColor="#000000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Week4 Module"></TextView>
@@ -413,7 +413,7 @@
                     android:layout_marginBottom="7dp"
                     android:textSize="15dp"
                     android:layout_marginTop="36dp"
-                    android:textColor="#ffff"/>
+                    android:textColor="#000000"/>
 
                 <CheckBox
                     android:layout_width="match_parent"
@@ -424,7 +424,7 @@
                     android:text="Mark as Completed"
                     android:layout_marginBottom="7dp"
                     android:textSize="12dp"
-                    android:textColor="#ffff"
+                    android:textColor="#000000"
                     android:id="@+id/check3" />
             </RelativeLayout>
 
