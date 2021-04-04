@@ -3,28 +3,151 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ProgressDashboard">
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:id="@+id/view1"
+        android:background="#FF6368"/>
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/studentImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:civ_border_color="#ffffff"
+        app:civ_border_width="2dp"
+        app:civ_shadow="true"
+        app:civ_shadow_radius="2dp"
+        app:civ_shadow_color="#3f51b5" />
+
     <TextView
-        android:id="@+id/textViewHeading"
+        android:id="@+id/tv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="35dp"
+        android:textSize="20sp"
+        app:fontFamily="@font/baloo"
+        android:textColor="#FFFFFF"
         android:textStyle="bold"
-        android:text="Skills - Financial Planning" />
+        android:layout_toRightOf="@+id/studentImage" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/tv1"
+        android:textColor="#FFFFFF"
+        android:layout_toRightOf="@+id/studentImage"/>
+
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/tv2"
+        android:textColor="#FFFFFF"
+        android:layout_toRightOf="@+id/studentImage"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/card0"
+        android:layout_below="@+id/studentImage"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
+        android:elevation="4dp"
+        app:cardCornerRadius="5dp"
+        android:layout_marginRight="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="10pt"
+                android:text="Progress Overview"/>
+
+            <ProgressBar
+                android:id="@+id/circular_progress"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_below="@+id/textViewHeading"
+                android:indeterminate="false"
+                android:progressDrawable="@drawable/circular_progress_bar"
+                android:background="@drawable/circular_shape"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:max="12" />
+
+            <TextView
+                android:id="@+id/textViewOverall"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_below="@+id/textViewHeading"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:text="88%\nOverall Progress" />
 
     <TextView
         android:id="@+id/textViewSubHeading1"
-        android:layout_below="@+id/textViewHeading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewHeading"
         android:layout_marginTop="10dp"
-        android:text="Current Month (1st) Progress" />
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/logo1"
+        android:textColor="#000000"
+        android:text="Programming"
+        android:textSize="6pt"/>
+
+            <TextView
+                android:id="@+id/textViewRightSubHeading1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewHeading"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:textAlignment="textEnd"
+                android:layout_alignParentRight="true"
+                android:text="10%"
+                android:textSize="6pt"/>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/textViewHeading"
+                android:layout_toRightOf="@+id/circular_progress"
+                android:id="@+id/logo1"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="3dp"
+                android:src="@drawable/iconprogramming"/>
 
     <ProgressBar
         android:id="@+id/progressBar1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="5dp"
         android:layout_below="@+id/textViewSubHeading1"
+        android:layout_toRightOf="@+id/logo1"
         android:progressDrawable="@drawable/custom_proogressbar"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
         android:max="4"
@@ -32,21 +155,288 @@
 
     <TextView
         android:id="@+id/textViewSubHeading2"
-        android:layout_below="@+id/progressBar1"
+        android:layout_below="@+id/logo1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Overall Progress" />
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="5dp"
+        android:textColor="#000000"
+        android:layout_toRightOf="@+id/logo2"
+        android:textSize="6pt"
+        android:text="Skills" />
+
+            <TextView
+                android:id="@+id/textViewRightSubHeading2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/logo1"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="5dp"
+                android:textAlignment="textEnd"
+                android:layout_alignParentRight="true"
+                android:text="10%"
+                android:textSize="6pt"/>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/logo2"
+                android:layout_below="@+id/logo1"
+                android:layout_toRightOf="@+id/circular_progress"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="3dp"
+                android:src="@drawable/iconskills"/>
 
     <ProgressBar
         android:id="@+id/progressBar2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:progressDrawable="@drawable/custom_proogressbar"
+        android:layout_height="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="5dp"
+        android:progressDrawable="@drawable/custom_progressbar2"
+        android:layout_toRightOf="@+id/logo2"
         android:layout_below="@+id/textViewSubHeading2"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-        android:max="32"
+        android:max="4"
         android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/textViewSubHeading3"
+        android:layout_below="@+id/logo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/logo3"
+        android:textColor="#000000"
+        android:textSize="6pt"
+        android:text="Career" />
+
+            <TextView
+                android:id="@+id/textViewRightSubHeading3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/logo2"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="5dp"
+                android:textAlignment="textEnd"
+                android:layout_alignParentRight="true"
+                android:text="10%"
+                android:textSize="6pt"/>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/logo3"
+                android:layout_below="@+id/logo2"
+                android:layout_toRightOf="@+id/circular_progress"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="3dp"
+                android:src="@drawable/iconcareer"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar3"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="2dp"
+        android:progressDrawable="@drawable/custom_progressbar3"
+        android:layout_below="@+id/textViewSubHeading3"
+        android:layout_toRightOf="@+id/logo3"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:max="4"
+        android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textViewHeading2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card0"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:textSize="10pt"
+        android:text="Detailed Progress Analysis"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/card1"
+        android:layout_below="@+id/textViewHeading2"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="20dp"
+        android:elevation="4dp"
+        app:cardCornerRadius="20dp"
+        android:layout_marginRight="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card2">
+
+
+            <ImageView
+                android:id="@+id/p"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                app:srcCompat="@drawable/ic_html_coding" />
+
+
+            <TextView
+                android:textSize="20dp"
+                android:layout_marginLeft="80dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="30dp"
+                android:textColor="#ffff"
+                android:id="@+id/topic"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="Programming"></TextView>
+
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/np"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="310dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/week"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="7dp"
+                android:src="@drawable/ic_next"/>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/card2"
+        android:layout_below="@+id/card1"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="20dp"
+        android:elevation="4dp"
+        app:cardCornerRadius="20dp"
+        android:layout_marginRight="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card3">
+
+
+            <ImageView
+                android:id="@+id/p1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                app:srcCompat="@drawable/skill_icon" />
+
+
+            <TextView
+                android:textSize="20dp"
+                android:layout_marginLeft="80dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="30dp"
+                android:textColor="#ffff"
+                android:id="@+id/topic1"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="Skill Development"></TextView>
+
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/ns"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="310dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/week"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="7dp"
+                android:src="@drawable/ic_next"/>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/card3"
+        android:layout_below="@+id/card2"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="20dp"
+        android:elevation="4dp"
+        app:cardCornerRadius="20dp"
+        android:layout_marginRight="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card4">
+
+
+            <ImageView
+                android:id="@+id/p2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="18dp"
+                app:srcCompat="@drawable/career_icon" />
+
+
+            <TextView
+                android:textSize="20dp"
+                android:layout_marginLeft="80dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="30dp"
+                android:textColor="#ffff"
+                android:id="@+id/topic2"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="Career Awareness"></TextView>
+
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/nc"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="310dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/week"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="7dp"
+                android:src="@drawable/ic_next"/>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
 
 
 </RelativeLayout>
