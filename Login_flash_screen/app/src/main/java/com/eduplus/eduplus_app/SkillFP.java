@@ -30,7 +30,7 @@ public class SkillFP extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_skill_fp);
+        setContentView(R.layout.activity_skill_planning);
         //getWindow().setStatusBarColor(Color.TRANSPARENT);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 

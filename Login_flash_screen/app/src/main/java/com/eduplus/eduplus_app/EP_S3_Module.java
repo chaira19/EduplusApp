@@ -8,6 +8,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView;
@@ -24,7 +25,7 @@ public class EP_S3_Module extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_e_p__s3__module);
 
-        getWindow().setStatusBarColor(Color.TRANSPARENT);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 
         youTubePlayerView = findViewById(R.id.video1);
         youTubePlayerView = findViewById(R.id.video2);

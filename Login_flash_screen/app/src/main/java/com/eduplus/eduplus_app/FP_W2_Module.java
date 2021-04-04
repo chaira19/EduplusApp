@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.Html;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 public class FP_W2_Module extends AppCompatActivity {
@@ -17,6 +18,7 @@ public class FP_W2_Module extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_f_p__w2__module);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 
 
 
