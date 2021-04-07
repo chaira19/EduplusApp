@@ -53,7 +53,6 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="ABC Learning App"
                     android:textFontWeight="900"
                     android:layout_marginLeft="70dp"
                     android:textSize="20sp"
@@ -73,31 +72,40 @@
                 android:layout_below="@+id/toolbar"
                 app:civ_border_color="#ffffff"
                 app:civ_border_width="2dp"
+                android:backgroundTint="@android:color/transparent"
+                android:background="@color/transparent"
                 app:civ_shadow="true"
                 app:civ_shadow_radius="2dp"
                 app:civ_shadow_color="#3f51b5" />
 
             <TextView
                 android:id="@+id/textView"
-                android:layout_width="100dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="135dp"
-                android:layout_marginTop="45dp"
+                android:layout_marginTop="35dp"
                 android:textColor="#FFFFFF"
-                android:text="XYZ!"
                 android:textSize="30sp"
                 app:fontFamily="@font/baloo"
                 android:layout_below="@+id/toolbar" />
 
             <TextView
-                android:id="@+id/textView2"
-                android:layout_width="200dp"
+                android:id="@+id/textViewClass"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#FFFFFF"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="135dp"
-                android:text="Class X, ABC Public School"
                 android:layout_below="@+id/textView"/>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="135dp"
+                android:layout_below="@+id/textViewClass"/>
 
             <ImageView
                 android:layout_width="40dp"
@@ -109,13 +117,13 @@
                 android:layout_below="@+id/toolbar"/>
 
             <TextView
-                android:layout_width="300dp"
+                android:layout_width="wrap_content"
                 android:id="@+id/th"
                 android:textFontWeight="@android:integer/config_longAnimTime"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="245dp"
-                android:text="This Month's Content"
+                android:text="Continue where you left"
                 android:layout_below="@+id/toolbar"
                 android:textColor="#000000"
                 android:textSize="25sp"
@@ -294,18 +302,18 @@
 
             </androidx.cardview.widget.CardView>
 
-            <TextView
-                android:layout_width="300dp"
-                android:id="@+id/th1"
-                android:textFontWeight="@android:integer/config_longAnimTime"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="25dp"
-                android:text="Dashboard Highlights"
-                android:layout_below="@+id/card3"
-                android:textColor="#000000"
-                android:textSize="25sp"
-                app:fontFamily="@font/baloo"/>
+<!--            <TextView-->
+<!--                android:layout_width="300dp"-->
+<!--                android:id="@+id/th1"-->
+<!--                android:textFontWeight="@android:integer/config_longAnimTime"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:layout_marginTop="25dp"-->
+<!--                android:text="Dashboard Highlights"-->
+<!--                android:layout_below="@+id/card3"-->
+<!--                android:textColor="#000000"-->
+<!--                android:textSize="25sp"-->
+<!--                app:fontFamily="@font/baloo"/>-->
 
 
         </RelativeLayout>

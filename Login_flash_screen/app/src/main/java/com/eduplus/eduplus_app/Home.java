@@ -1,6 +1,8 @@
 package com.eduplus.eduplus_app;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -56,9 +58,6 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         ns.setOnClickListener((View.OnClickListener) this);
         nc.setOnClickListener((View.OnClickListener) this);
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        TextView mTitle = (TextView) toolbar.findViewById(R.id.toolbar_title);
-
         //Hooks
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
@@ -82,24 +81,53 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     public void onClick(View v) {
 
         Intent i;
+        SharedPreferences sharedPreferences = getBaseContext().getSharedPreferences("DATA", Context.MODE_PRIVATE);
 
         switch (v.getId()){
             case R.id.np:
-                i = new Intent(Home.this, Programming.class);
+                String progPdf = sharedPreferences.getString("pdfLink",null);
+                i = new Intent(Home.this, Prog_M1W1_Activity.class);
+                i.putExtra("pdfLink", progPdf);
                 startActivity(i);
                 break;
 
             case R.id.ns:
-                i = new Intent(Home.this, SkillFP.class);
+                String skillPage = sharedPreferences.getString("SkillPage",null);
+
+                if(skillPage == null)
+                {
+                    Log.e("Error", "is this fucking null");
+                    i = new Intent(Home.this, SkillFP.class);
+                }
+                else
+                {
+                    try {
+                        i = new Intent(Home.this, Class.forName("com.eduplus.eduplus_app." + skillPage));
+                    } catch (ClassNotFoundException e) {
+                        Log.e("Error", "attempt failed");
+                        i = new Intent(Home.this, SkillFP.class);
+                    }
+                }
                 startActivity(i);
                 break;
 
             case R.id.nc:
-                i = new Intent(Home.this, CareerEP.class);
+                String careerPage = sharedPreferences.getString("CareerPage",null);
+
+                if(careerPage == null)
+                {
+                    i = new Intent(Home.this, CareerEP.class);
+                }
+                else
+                {
+                    try {
+                        i = new Intent(Home.this, Class.forName("com.eduplus.eduplus_app." + careerPage));
+                    } catch (ClassNotFoundException e) {
+                        i = new Intent(Home.this, CareerEP.class);
+                    }
+                }
                 startActivity(i);
                 break;
-
-
         }
     }
 
@@ -177,10 +205,15 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 if (task.isSuccessful()) {
                     DocumentSnapshot document = task.getResult();
 
-                    String name = (String) document.get("Name");
+                    String name = (String) document.get("FirstName");
                     String schoolName = (String) document.get("SchoolName");
                     String schoolLogoId = (String) document.get("SchoolLogoId");
                     String photoId = (String) document.get("PhotoId");
+                    String studentClass = (String) document.get("Class");
+
+                    toolbar = (Toolbar) findViewById(R.id.toolbar);
+                    TextView mTitle = (TextView) toolbar.findViewById(R.id.toolbar_title);
+                    mTitle.setText((String)document.get("ToolbarString"));
 
                     TextView nametxt = findViewById(R.id.headerName);
                     nametxt.setText(name);
@@ -189,7 +222,10 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                     nameTextView.setText("Hi " + name + "!");
 
                     TextView schoolNameText = findViewById(R.id.textView2);
-                    schoolNameText.setText("Welcome to " + schoolName + "'s learning App");
+                    schoolNameText.setText(schoolName);
+
+                    TextView classText = findViewById(R.id.textViewClass);
+                    classText.setText("Class " + studentClass);
 
                     setImageInImageView(findViewById(R.id.headerImage), photoId, "userImages/");
                     setImageInImageView(findViewById(R.id.imageView), schoolLogoId, "schoolLogos/");

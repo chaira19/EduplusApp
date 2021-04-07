@@ -4,7 +4,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -51,7 +53,9 @@ public class ProgrammingMonth1Activity extends AppCompatActivity implements View
         check3 = findViewById(R.id.check3);
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        String userId = user.getPhoneNumber();
+        //String userId = user.getPhoneNumber();
+
+        String userId = "+919410571687";
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection("Users").document(userId).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
@@ -157,12 +161,14 @@ public class ProgrammingMonth1Activity extends AppCompatActivity implements View
     @Override
     public void onClick(View v) {
 
-        Intent i;
+        Intent i = new Intent();
+        SharedPreferences sharedPreferences = getBaseContext().getSharedPreferences("DATA", Context.MODE_PRIVATE);
+        String pdfLink = "";
 
         switch (v.getId()){
             case R.id.fp_w1:
+                pdfLink = "https://firebasestorage.googleapis.com/v0/b/eduplus-8497a.appspot.com/o/pdfs%2FM1Week1.pdf?alt=media&token=4d76e201-384f-4106-bc46-87c97201e786";
                 i = new Intent(ProgrammingMonth1Activity.this, Prog_M1W1_Activity.class);
-                startActivity(i);
                 break;
 
             case R.id.fp_w2:
@@ -171,15 +177,20 @@ public class ProgrammingMonth1Activity extends AppCompatActivity implements View
                 break;
 
             case R.id.fp_w3:
-                i = new Intent(ProgrammingMonth1Activity.this, FP_W3_Module.class);
-                startActivity(i);
+                pdfLink = "https://firebasestorage.googleapis.com/v0/b/eduplus-8497a.appspot.com/o/pdfs%2FM1Week3.pdf?alt=media&token=3f27cb1c-88dd-40a3-b32e-e6e1fbd34ecf";
+                i = new Intent(ProgrammingMonth1Activity.this, Prog_M1W1_Activity.class);
                 break;
 
             case R.id.fp_w4:
-                i = new Intent(ProgrammingMonth1Activity.this, FP_W4_Module.class);
-                startActivity(i);
+                pdfLink = "https://firebasestorage.googleapis.com/v0/b/eduplus-8497a.appspot.com/o/pdfs%2FM1W4.pdf?alt=media&token=3537ca47-b08e-431a-872f-5adf9e650255";
+                i = new Intent(ProgrammingMonth1Activity.this, Prog_M1W1_Activity.class);
                 break;
         }
+
+        sharedPreferences.edit().putString("pdfLink", pdfLink).apply();
+        sharedPreferences.edit().commit();
+        i.putExtra("pdfLink", pdfLink);
+        startActivity(i);
     }
 
     public void setMarkAsCompleted(String month, String week, Boolean completed)
