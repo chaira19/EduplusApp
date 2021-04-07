@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -146,19 +148,26 @@ public class CareerEP extends AppCompatActivity implements View.OnClickListener 
     public void onClick(View v) {
 
         Intent i;
+        SharedPreferences sharedPreferences = getBaseContext().getSharedPreferences("DATA", Context.MODE_PRIVATE);
 
         switch (v.getId()){
             case R.id.ep_s1:
+                sharedPreferences.edit().putString("CareerPage", "EP_S1_Module").apply();
+                sharedPreferences.edit().commit();
                 i = new Intent(CareerEP.this, EP_S1_Module.class);
                 startActivity(i);
                 break;
 
             case R.id.ep_s2:
+                sharedPreferences.edit().putString("CareerPage", "EP_S2_Module").apply();
+                sharedPreferences.edit().commit();
                 i = new Intent(CareerEP.this, EP_S2_Module.class);
                 startActivity(i);
                 break;
 
             case R.id.ep_s3:
+                sharedPreferences.edit().putString("CareerPage", "EP_S3_Module").apply();
+                sharedPreferences.edit().commit();
                 i = new Intent(CareerEP.this, EP_S3_Module.class);
                 startActivity(i);
                 break;

@@ -4,7 +4,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -167,23 +169,33 @@ public class SkillFP extends AppCompatActivity implements View.OnClickListener {
 
         Intent i;
 
+        SharedPreferences sharedPreferences = getBaseContext().getSharedPreferences("DATA", Context.MODE_PRIVATE);
+
        switch (v.getId()){
             case R.id.fp_w1:
+                sharedPreferences.edit().putString("SkillPage", "FP_W1_Module").apply();
+                sharedPreferences.edit().commit();
                 i = new Intent(SkillFP.this, FP_W1_Module.class);
                 startActivity(i);
                 break;
 
            case R.id.fp_w2:
+               sharedPreferences.edit().putString("SkillPage", "FP_W2_Module").apply();
+               sharedPreferences.edit().commit();
                i = new Intent(SkillFP.this, FP_W2_Module.class);
                startActivity(i);
                break;
 
            case R.id.fp_w3:
+               sharedPreferences.edit().putString("SkillPage", "FP_W3_Module").apply();
+               sharedPreferences.edit().commit();
                i = new Intent(SkillFP.this, FP_W3_Module.class);
                startActivity(i);
                break;
 
            case R.id.fp_w4:
+               sharedPreferences.edit().putString("SkillPage", "FP_W4_Module").apply();
+               sharedPreferences.edit().commit();
                i = new Intent(SkillFP.this, FP_W4_Module.class);
                startActivity(i);
                break;
