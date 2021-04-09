@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         Button buttonSignIn = findViewById(R.id.buttonLogin);
         buttonSignIn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, SignInActivity.class));
+                startActivity(new Intent(MainActivity.this, Home.class));
             }
         });
     }

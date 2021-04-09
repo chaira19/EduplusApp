@@ -9,13 +9,14 @@
     tools:context=".MainActivity"
     tools:openDrawer="start">
 
-    <com.google.android.material.navigation.NavigationView
+ <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:headerLayout="@layout/header"
         app:menu="@menu/main_menu" />
+
 
     <ScrollView
         android:layout_width="match_parent"
@@ -24,6 +25,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="230dp"
@@ -175,8 +177,8 @@
                         android:layout_height="30dp"
                         android:id="@+id/np"
                         android:layout_centerVertical="true"
-                        android:layout_marginLeft="310dp"
-                        android:layout_marginRight="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"
                         android:layout_below="@+id/week"
                         android:layout_marginTop="40dp"
                         android:layout_marginBottom="7dp"
@@ -233,8 +235,8 @@
                         android:layout_height="30dp"
                         android:id="@+id/ns"
                         android:layout_centerVertical="true"
-                        android:layout_marginLeft="310dp"
-                        android:layout_marginRight="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"
                         android:layout_below="@+id/week"
                         android:layout_marginTop="40dp"
                         android:layout_marginBottom="7dp"
@@ -290,8 +292,8 @@
                         android:layout_height="30dp"
                         android:id="@+id/nc"
                         android:layout_centerVertical="true"
-                        android:layout_marginLeft="310dp"
-                        android:layout_marginRight="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"
                         android:layout_below="@+id/week"
                         android:layout_marginTop="40dp"
                         android:layout_marginBottom="7dp"
@@ -302,18 +304,19 @@
 
             </androidx.cardview.widget.CardView>
 
-<!--            <TextView-->
-<!--                android:layout_width="300dp"-->
-<!--                android:id="@+id/th1"-->
-<!--                android:textFontWeight="@android:integer/config_longAnimTime"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginLeft="10dp"-->
-<!--                android:layout_marginTop="25dp"-->
-<!--                android:text="Dashboard Highlights"-->
-<!--                android:layout_below="@+id/card3"-->
-<!--                android:textColor="#000000"-->
-<!--                android:textSize="25sp"-->
-<!--                app:fontFamily="@font/baloo"/>-->
+
+            <TextView
+                android:layout_width="300dp"
+                android:id="@+id/th2"
+                android:textFontWeight="@android:integer/config_longAnimTime"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                android:text="Dashboard Highlights"
+                android:layout_below="@+id/card3"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                app:fontFamily="@font/baloo"/>
 
 
         </RelativeLayout>

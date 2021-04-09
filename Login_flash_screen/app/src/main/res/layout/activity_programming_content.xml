@@ -20,6 +20,15 @@
             android:id="@+id/v1"
             android:background="@drawable/bg_content1"/>
 
+        <ImageView
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginRight="15dp"
+            android:layout_alignRight="@+id/v1"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/ic_cpp"/>
+
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -139,8 +148,8 @@
                     android:layout_height="30dp"
                     android:id="@+id/clickView1"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="310dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
                     android:layout_below="@+id/week"
                     android:layout_marginTop="40dp"
                     android:layout_marginBottom="7dp"
@@ -220,8 +229,8 @@
                     android:layout_height="30dp"
                     android:id="@+id/clickView2"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="310dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
                     android:layout_below="@+id/week"
                     android:layout_marginTop="40dp"
                     android:layout_marginBottom="7dp"
@@ -300,8 +309,8 @@
                     android:layout_height="30dp"
                     android:id="@+id/clickView3"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="310dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
                     android:layout_below="@+id/week"
                     android:layout_marginTop="40dp"
                     android:layout_marginBottom="7dp"
@@ -380,8 +389,8 @@
                     android:layout_height="30dp"
                     android:id="@+id/clickView4"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="310dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
                     android:layout_below="@+id/week"
                     android:layout_marginTop="40dp"
                     android:layout_marginBottom="7dp"
@@ -460,8 +469,8 @@
                     android:layout_height="30dp"
                     android:id="@+id/clickView5"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="310dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
                     android:layout_below="@+id/week"
                     android:layout_marginTop="40dp"
                     android:layout_marginBottom="7dp"
@@ -541,8 +550,8 @@
                     android:layout_height="30dp"
                     android:id="@+id/clickView6"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="310dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
                     android:layout_below="@+id/week"
                     android:layout_marginTop="40dp"
                     android:layout_marginBottom="7dp"
@@ -621,8 +630,8 @@
                     android:layout_height="30dp"
                     android:id="@+id/clickView7"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="310dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
                     android:layout_below="@+id/week"
                     android:layout_marginTop="40dp"
                     android:layout_marginBottom="7dp"
@@ -702,8 +711,8 @@
                     android:layout_height="30dp"
                     android:id="@+id/clickView8"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="310dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
                     android:layout_below="@+id/week"
                     android:layout_marginTop="40dp"
                     android:layout_marginBottom="7dp"
@@ -713,6 +722,7 @@
 
 
         </androidx.cardview.widget.CardView>
+
     </RelativeLayout>
 
 </ScrollView>
