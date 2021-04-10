@@ -29,7 +29,7 @@ public class ProgressDashboard extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_progress_dashboard);
-
+/*
         setUserData();
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -168,5 +168,6 @@ public class ProgressDashboard extends AppCompatActivity {
                 }
             });
         }
+    }*/
     }
 }
