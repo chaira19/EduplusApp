@@ -37,6 +37,14 @@ public class CareerEP extends AppCompatActivity implements View.OnClickListener 
        // getWindow().setStatusBarColor(Color.TRANSPARENT);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
         ep_s1 = (CardView)findViewById(R.id.ep_s1);
         ep_s2 = (CardView)findViewById(R.id.ep_s2);
         ep_s3 = (CardView)findViewById(R.id.ep_s3);

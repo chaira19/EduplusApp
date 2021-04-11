@@ -1,8 +1,10 @@
 package com.eduplus.eduplus_app;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
+import android.view.View;
 import android.view.WindowManager;
 
 public class FP_W3_Module extends AppCompatActivity {

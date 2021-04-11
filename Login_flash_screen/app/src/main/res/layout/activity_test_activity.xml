@@ -50,7 +50,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:navigationIcon="@drawable/ic_left_arrow">
+            app:navigationIcon="@drawable/back">
 
             <TextView
                 android:layout_width="wrap_content"

@@ -14,7 +14,7 @@
     </group>
 
 
-    <item android:title="Study Material">
+    <item android:title="Courses">
         <menu>
             <group android:checkableBehavior="single">
 

@@ -12,12 +12,14 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import com.bumptech.glide.Glide;
@@ -35,12 +37,14 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import org.w3c.dom.Text;
 
+import java.util.Map;
+
 public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener{
     //variables
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
-    ImageView np, ns, nc;
+    CardView np, ns, nc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,9 +54,9 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
        setContentView(R.layout.activity_home);
 
-        np = (ImageView) findViewById(R.id.np);
-        ns = (ImageView) findViewById(R.id.ns);
-        nc = (ImageView) findViewById(R.id.nc);
+        np = findViewById(R.id.card1);
+        ns = findViewById(R.id.card2);
+        nc = findViewById(R.id.card3);
 
         np.setOnClickListener((View.OnClickListener) this);
         ns.setOnClickListener((View.OnClickListener) this);
@@ -74,8 +78,77 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
         setUserData();
 
+        ImageView progIcon = findViewById(R.id.progressIcon);
+        progIcon.setOnClickListener((View.OnClickListener) this);
+
+        setProgressDashboard();
+
     }
 
+    private void setProgressDashboard()
+    {
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+        db.collection("Users").document(user.getPhoneNumber());
+        db.collection("Users").document("+919410571687")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                        DocumentSnapshot doc = task.getResult();
+
+                        Map<String, Object> finPlanProg = (Map<String, Object>) ((Map<String, Object>) doc.get("Skills")).get("FinancialPlanning");
+                        Map<String, Object> entshipProg = (Map<String, Object>) ((Map<String, Object>) doc.get("Career")).get("Entrepreneurship");
+                        Map<String, Object> progProg = (Map<String, Object>) ((Map<String, Object>) doc.get("Programming"));
+
+                        int progProgramming = 0;
+                        if (progProg != null) {
+                            progProgramming = getMonthProgress((Map<String, Boolean>) progProg.get("Month1"));
+                        }
+                        int progSkills = 0;
+                        if (finPlanProg != null) {
+                            progSkills = getMonthProgress((Map<String, Boolean>) finPlanProg.get("Month1"));
+                        }
+                        int progCareer = 0;
+                        if (entshipProg != null) {
+                            progCareer = getMonthProgress((Map<String, Boolean>) entshipProg.get("Month1"));
+                        }
+
+                        final ProgressBar progressBar1 = (ProgressBar) findViewById(R.id.progressBar1);
+                        progressBar1.setProgress(progProgramming);
+
+                        final ProgressBar progressBar2 = (ProgressBar) findViewById(R.id.progressBar2);
+                        progressBar2.setProgress(progSkills);
+
+                        final ProgressBar progressBar3 = (ProgressBar) findViewById(R.id.progressBar3);
+                        progressBar3.setProgress(progCareer);
+
+                        final ProgressBar overallProgress = (ProgressBar) findViewById(R.id.circular_progress);
+                        overallProgress.setProgress(progProgramming + progSkills + progCareer);
+
+                        final TextView progTV1 = (TextView) findViewById(R.id.textViewRightSubHeading1);
+                        final TextView progTV2 = (TextView) findViewById(R.id.textViewRightSubHeading2);
+                        final TextView progTV3 = (TextView) findViewById(R.id.textViewRightSubHeading3);
+                        final TextView progTV4 = (TextView) findViewById(R.id.textViewOverall);
+
+                        progTV1.setText(((progProgramming * 100) / 4) + "%");
+                        progTV2.setText(((progSkills * 100) / 4) + "%");
+                        progTV3.setText(((progCareer * 100) / 4) + "%");
+                        progTV4.setText(((progProgramming + progSkills + progCareer) * 100) / 12 + "%\n Overall Progress");
+                    }
+                });
+    }
+
+    private int getMonthProgress(Map<String, Boolean> monthMap) {
+        int progress = 0;
+        for (Map.Entry<String, Boolean> week : monthMap.entrySet()) {
+            if (week.getValue() == true) {
+                progress++;
+            }
+        }
+        return progress;
+    }
 
     @Override
     public void onClick(View v) {
@@ -84,14 +157,17 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         SharedPreferences sharedPreferences = getBaseContext().getSharedPreferences("DATA", Context.MODE_PRIVATE);
 
         switch (v.getId()){
-            case R.id.np:
+            case R.id.progressIcon:
+                startActivity(new Intent(Home.this, ProgressDashboard.class));
+                break;
+            case R.id.card1:
                 String progPdf = sharedPreferences.getString("pdfLink",null);
                 i = new Intent(Home.this, Prog_M1W1_Activity.class);
                 i.putExtra("pdfLink", progPdf);
                 startActivity(i);
                 break;
 
-            case R.id.ns:
+            case R.id.card2:
                 String skillPage = sharedPreferences.getString("SkillPage",null);
 
                 if(skillPage == null)
@@ -111,7 +187,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 startActivity(i);
                 break;
 
-            case R.id.nc:
+            case R.id.card3:
                 String careerPage = sharedPreferences.getString("CareerPage",null);
 
                 if(careerPage == null)
@@ -128,6 +204,8 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 }
                 startActivity(i);
                 break;
+
+
         }
     }
 
@@ -205,7 +283,8 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 if (task.isSuccessful()) {
                     DocumentSnapshot document = task.getResult();
 
-                    String name = (String) document.get("FirstName");
+                    String firstName = (String) document.get("FirstName");
+                    String name = (String) document.get("Name");
                     String schoolName = (String) document.get("SchoolName");
                     String schoolLogoId = (String) document.get("SchoolLogoId");
                     String photoId = (String) document.get("PhotoId");
@@ -219,7 +298,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                     nametxt.setText(name);
 
                     TextView nameTextView = findViewById(R.id.textView);
-                    nameTextView.setText("Hi " + name + "!");
+                    nameTextView.setText("Hi " + firstName + "!");
 
                     TextView schoolNameText = findViewById(R.id.textView2);
                     schoolNameText.setText(schoolName);

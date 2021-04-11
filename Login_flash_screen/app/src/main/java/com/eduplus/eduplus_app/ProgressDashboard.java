@@ -2,10 +2,12 @@ package com.eduplus.eduplus_app;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -29,9 +31,21 @@ public class ProgressDashboard extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_progress_dashboard);
-/*
-        setUserData();
 
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+        setUserData();
+        setProgressDashboard();
+    }
+
+    private void setProgressDashboard()
+    {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
@@ -43,24 +57,21 @@ public class ProgressDashboard extends AppCompatActivity {
                     public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                         DocumentSnapshot doc = task.getResult();
 
-                        Map<String, Object> finPlanProg = (Map<String, Object>)((Map<String, Object>)doc.get("Skills")).get("FinancialPlanning");
-                        Map<String, Object> entshipProg = (Map<String, Object>)((Map<String, Object>)doc.get("Career")).get("Entrepreneurship");
-                        Map<String, Object> progProg = (Map<String, Object>)((Map<String, Object>)doc.get("Programming"));
+                        Map<String, Object> finPlanProg = (Map<String, Object>) ((Map<String, Object>) doc.get("Skills")).get("FinancialPlanning");
+                        Map<String, Object> entshipProg = (Map<String, Object>) ((Map<String, Object>) doc.get("Career")).get("Entrepreneurship");
+                        Map<String, Object> progProg = (Map<String, Object>) ((Map<String, Object>) doc.get("Programming"));
 
                         int progProgramming = 0;
-                        if(progProg != null)
-                        {
-                            progProgramming = getMonthProgress((Map<String, Boolean>)progProg.get("Month1"));
+                        if (progProg != null) {
+                            progProgramming = getMonthProgress((Map<String, Boolean>) progProg.get("Month1"));
                         }
                         int progSkills = 0;
-                        if(finPlanProg != null)
-                        {
-                            progSkills = getMonthProgress((Map<String, Boolean>)finPlanProg.get("Month1"));
+                        if (finPlanProg != null) {
+                            progSkills = getMonthProgress((Map<String, Boolean>) finPlanProg.get("Month1"));
                         }
                         int progCareer = 0;
-                        if(entshipProg != null)
-                        {
-                            progCareer = getMonthProgress((Map<String, Boolean>)entshipProg.get("Month1"));
+                        if (entshipProg != null) {
+                            progCareer = getMonthProgress((Map<String, Boolean>) entshipProg.get("Month1"));
                         }
 
                         final ProgressBar progressBar1 = (ProgressBar) findViewById(R.id.progressBar1);
@@ -80,21 +91,21 @@ public class ProgressDashboard extends AppCompatActivity {
                         final TextView progTV3 = (TextView) findViewById(R.id.textViewRightSubHeading3);
                         final TextView progTV4 = (TextView) findViewById(R.id.textViewOverall);
 
-                        progTV1.setText(((progProgramming*100)/4) + "%");
-                        progTV2.setText(((progSkills*100)/4) + "%");
-                        progTV3.setText(((progCareer*100)/4) + "%");
-                        progTV4.setText(((progProgramming + progSkills + progCareer)*100)/12 + "%\n Overall Progress");
+                        progTV1.setText(((progProgramming * 100) / 4) + "%");
+                        progTV2.setText(((progSkills * 100) / 4) + "%");
+                        progTV3.setText(((progCareer * 100) / 4) + "%");
+                        progTV4.setText(((progProgramming + progSkills + progCareer) * 100) / 12 + "%\n Overall Progress");
+
+                        final TextView modCom = (TextView) findViewById(R.id.mod_total2);
+                        modCom.setText((progProgramming + progSkills + progCareer) + "");
                     }
                 });
     }
 
-    private int getMonthProgress(Map<String, Boolean> monthMap)
-    {
+    private int getMonthProgress(Map<String, Boolean> monthMap) {
         int progress = 0;
-        for(Map.Entry<String,Boolean> week :  monthMap.entrySet())
-        {
-            if(week.getValue() == true)
-            {
+        for (Map.Entry<String, Boolean> week : monthMap.entrySet()) {
+            if (week.getValue() == true) {
                 progress++;
             }
         }
@@ -105,7 +116,7 @@ public class ProgressDashboard extends AppCompatActivity {
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         //We are creating phone numbers as userIds
-         String userId = user.getPhoneNumber();
+        String userId = user.getPhoneNumber();
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection("Users").document(userId).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
@@ -118,18 +129,17 @@ public class ProgressDashboard extends AppCompatActivity {
                     String schoolName = (String) document.get("SchoolName");
                     String photoId = (String) document.get("PhotoId");
 
-                    TextView nameTextView = findViewById(R.id.tv1);
-                    nameTextView.setText(name.toUpperCase());
+//                    TextView nameTextView = findViewById(R.id.tv1);
+//                    nameTextView.setText(name.toUpperCase());
 
-                    TextView schoolNameText = findViewById(R.id.tv2);
-                    schoolNameText.setText(schoolName.toUpperCase());
-
-                    TextView classTextView = findViewById(R.id.tv3);
-                    classTextView.setText("CLASS X");
-
-                    setImageInImageView(findViewById(R.id.studentImage), photoId, "userImages/");
-                }
-                else {
+//                    TextView schoolNameText = findViewById(R.id.tv2);
+//                    schoolNameText.setText(schoolName.toUpperCase());
+//
+//                    TextView classTextView = findViewById(R.id.tv3);
+//                    classTextView.setText("CLASS X");
+//
+//                    setImageInImageView(findViewById(R.id.studentImage), photoId, "userImages/");
+                } else {
                     Log.e("Error", "Task is not successful");
                 }
 
@@ -138,15 +148,11 @@ public class ProgressDashboard extends AppCompatActivity {
     }
 
     // set image from storage
-    private void setImageInImageView(final ImageView imageView, String imageId, String imageFolder)
-    {
-        if(imageId == null || imageId.isEmpty())
-        {
+    private void setImageInImageView(final ImageView imageView, String imageId, String imageFolder) {
+        if (imageId == null || imageId.isEmpty()) {
 //            imageView.setImageResource(R.drawable.app_logo);
             return;
-        }
-        else
-        {
+        } else {
             FirebaseStorage storage = FirebaseStorage.getInstance();
             StorageReference storageRef = storage.getReference();
             StorageReference imageRef = storageRef.child(imageFolder + imageId);
@@ -155,8 +161,7 @@ public class ProgressDashboard extends AppCompatActivity {
                 @Override
                 public void onSuccess(byte[] bytes) {
 
-                    if(imageView != null)
-                    {
+                    if (imageView != null) {
                         imageView.setImageBitmap(BitmapFactory.decodeByteArray(bytes, 0, bytes.length));
                         //Glide.with(imageView).load(bytes).into(imageView);
                     }
@@ -168,6 +173,5 @@ public class ProgressDashboard extends AppCompatActivity {
                 }
             });
         }
-    }*/
     }
 }

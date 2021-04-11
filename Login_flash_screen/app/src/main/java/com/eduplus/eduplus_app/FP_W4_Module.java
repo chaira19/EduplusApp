@@ -2,10 +2,12 @@ package com.eduplus.eduplus_app;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.os.Build;
 import android.os.Bundle;
 import android.text.Html;
+import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
 
@@ -19,6 +21,14 @@ public class FP_W4_Module extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_f_p__w4__module);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         t1 = (TextView) findViewById(R.id.text1);
         t2 = (TextView) findViewById(R.id.text2);
