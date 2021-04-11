@@ -25,20 +25,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="230dp"
+            <RelativeLayout
                 android:id="@+id/v1"
-                android:background="@drawable/bg_content1"/>
-
-            <ImageView
-                android:id="@+id/view_back"
                 android:layout_width="match_parent"
-                android:layout_below="@+id/v1"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="-120dp"
-                android:src="@drawable/ic_wave2"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:layout_height="260dp"
+                android:background="@drawable/backtest" />
+
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -109,10 +101,10 @@
                 android:layout_below="@+id/textViewClass"/>
 
             <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_marginLeft="320dp"
-                android:layout_marginTop="180dp"
+                android:layout_marginTop="130dp"
                 android:elevation="10dp"
                 app:srcCompat="@drawable/ic_increase"
                 android:layout_below="@+id/toolbar"/>
@@ -123,7 +115,7 @@
                 android:textFontWeight="@android:integer/config_longAnimTime"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="245dp"
+                android:layout_marginTop="220dp"
                 android:text="Continue where you left"
                 android:layout_below="@+id/toolbar"
                 android:textColor="#000000"

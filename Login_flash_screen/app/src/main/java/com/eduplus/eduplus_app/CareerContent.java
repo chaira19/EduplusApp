@@ -37,12 +37,6 @@ public class CareerContent extends AppCompatActivity implements View.OnClickList
                 startActivity(i);
                 break;
 
-            case R.id.np2:
-                i = new Intent(CareerContent.this, CareerBroker.class);
-                startActivity(i);
-                break;
-
-
         }
     }
 }

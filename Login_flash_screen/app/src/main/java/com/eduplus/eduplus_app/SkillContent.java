@@ -37,12 +37,6 @@ public class SkillContent extends AppCompatActivity implements View.OnClickListe
                 startActivity(i);
                 break;
 
-            case R.id.np2:
-                i = new Intent(SkillContent.this, SkillAI.class);
-                startActivity(i);
-                break;
-
-
         }
     }
 }
