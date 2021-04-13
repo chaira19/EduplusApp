@@ -1,16 +1,218 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Competition">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/intraSchoolTV1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Intra School Contests" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardElevation="2dp"
+            android:id="@+id/intraSchoolCard1"
+            android:layout_below="@+id/intraSchoolTV1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:background="#FFFFFF">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/intraSchoolCard1TV1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textStyle="bold"
+                    android:text="Upcoming Contest" />
+
+
+                <TextView
+                    android:id="@+id/intraSchoolCard1TV2"
+                    android:layout_below="@+id/intraSchoolCard1TV1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Syllabus" />
+
+                <TextView
+                    android:id="@+id/intraSchoolCard1TV3"
+                    android:layout_below="@+id/intraSchoolCard1TV2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Duration" />
+
+                <TextView
+                    android:id="@+id/intraSchoolCard1TV4"
+                    android:layout_below="@+id/intraSchoolCard1TV3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Date and Time" />
+
+                <TextView
+                    android:id="@+id/intraSchoolCard1TV5"
+                    android:layout_below="@+id/intraSchoolCard1TV4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Pattern" />
+
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardElevation="2dp"
+        android:id="@+id/intraSchoolCard2"
+        android:layout_below="@+id/intraSchoolCard1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFFFFF">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/intraSchoolCard2TV1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:text="Past Performance" />
+
+
+            <TextView
+                android:id="@+id/intraSchoolCard2TV2"
+                android:layout_below="@+id/intraSchoolCard2TV1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Overall Percentage" />
+
+            <TextView
+                android:id="@+id/intraSchoolCard2TV3"
+                android:layout_below="@+id/intraSchoolCard2TV2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Overall School Rank" />
+
+            <TextView
+                android:id="@+id/intraSchoolCard2TV4"
+                android:layout_below="@+id/intraSchoolCard2TV3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Overall National Rank" />
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/interSchoolTV1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Inter School Competitions"
-        tools:layout_editor_absoluteX="124dp"
-        tools:layout_editor_absoluteY="302dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:textStyle="bold"
+        android:layout_below="@+id/intraSchoolCard2"
+        android:layout_marginTop="20dp"
+        android:text="Inter School Competitions" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardElevation="2dp"
+        android:layout_marginTop="5dp"
+        android:id="@+id/interSchoolCard1"
+        android:layout_below="@+id/interSchoolTV1"
+        android:layout_marginLeft="10dp"
+        android:background="#FFFFFF">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/interSchoolCard1TV1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:text="Upcoming Competition" />
+
+
+            <TextView
+                android:id="@+id/interSchoolCard1TV2"
+                android:layout_below="@+id/interSchoolCard1TV1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Syllabus" />
+
+            <TextView
+                android:id="@+id/interSchoolCard1TV3"
+                android:layout_below="@+id/interSchoolCard1TV2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Duration" />
+
+            <TextView
+                android:id="@+id/interSchoolCard1TV4"
+                android:layout_below="@+id/interSchoolCard1TV3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Date and Time" />
+
+            <TextView
+                android:id="@+id/interSchoolCard1TV5"
+                android:layout_below="@+id/interSchoolCard1TV4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Pattern" />
+
+            <TextView
+                android:id="@+id/interSchoolCard1TV6"
+                android:layout_below="@+id/interSchoolCard1TV5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Eligibility Criteria" />
+
+            <TextView
+                android:id="@+id/iinterSchoolCard1TV7"
+                android:layout_below="@+id/interSchoolCard1TV6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Rewards" />
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>

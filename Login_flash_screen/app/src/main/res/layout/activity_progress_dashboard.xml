@@ -66,95 +66,95 @@
 
         </androidx.appcompat.widget.Toolbar>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_below="@+id/view1"
-            android:orientation="horizontal"
-            android:id="@+id/h1layout"
-            android:layout_height="match_parent">
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_below="@+id/view1"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:id="@+id/h1layout"-->
+<!--            android:layout_height="match_parent">-->
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent">-->
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="130dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    app:cardBackgroundColor="@android:color/transparent"
-                    app:cardElevation="0dp"
-                    android:id="@+id/h1card"
-                    android:layout_marginLeft="10dp"
-                    android:background="#FFFFFF">
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:layout_width="130dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    app:cardBackgroundColor="@android:color/transparent"-->
+<!--                    app:cardElevation="0dp"-->
+<!--                    android:id="@+id/h1card"-->
+<!--                    android:layout_marginLeft="10dp"-->
+<!--                    android:background="#FFFFFF">-->
 
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <TextView
-                            android:id="@+id/h1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginTop="20dp"
-                            android:layout_marginLeft="5dp"
-                            android:textColor="#000000"
-                            android:textSize="8pt"
-                            android:text="Competitions" />
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="vertical">-->
+<!--                        <TextView-->
+<!--                            android:id="@+id/h1"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_centerHorizontal="true"-->
+<!--                            android:layout_marginTop="20dp"-->
+<!--                            android:layout_marginLeft="5dp"-->
+<!--                            android:textColor="#000000"-->
+<!--                            android:textSize="8pt"-->
+<!--                            android:text="Competitions" />-->
 
-                        <TableRow
-                            android:id="@+id/h1b"
-                            android:layout_width="match_parent"
-                            android:layout_marginTop="10dp"
-                            android:layout_below="@+id/h1"
-                            android:layout_height="2dp"
-                            android:background="#d3d3d3"></TableRow>
+<!--                        <TableRow-->
+<!--                            android:id="@+id/h1b"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_marginTop="10dp"-->
+<!--                            android:layout_below="@+id/h1"-->
+<!--                            android:layout_height="2dp"-->
+<!--                            android:background="#d3d3d3"></TableRow>-->
 
-                    </RelativeLayout>
+<!--                    </RelativeLayout>-->
 
-                </androidx.cardview.widget.CardView>
+<!--                </androidx.cardview.widget.CardView>-->
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="120dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    app:cardBackgroundColor="@android:color/transparent"
-                    app:cardElevation="0dp"
-                    android:id="@+id/h2card"
-                    android:layout_marginLeft="20dp"
-                    android:background="#FFFFFF">
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:layout_width="120dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    app:cardBackgroundColor="@android:color/transparent"-->
+<!--                    app:cardElevation="0dp"-->
+<!--                    android:id="@+id/h2card"-->
+<!--                    android:layout_marginLeft="20dp"-->
+<!--                    android:background="#FFFFFF">-->
 
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <TextView
-                            android:id="@+id/h2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginTop="20dp"
-                            android:layout_marginLeft="5dp"
-                            android:textColor="#000000"
-                            android:textSize="8pt"
-                            android:text="Content" />
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="vertical">-->
+<!--                        <TextView-->
+<!--                            android:id="@+id/h2"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_centerHorizontal="true"-->
+<!--                            android:layout_marginTop="20dp"-->
+<!--                            android:layout_marginLeft="5dp"-->
+<!--                            android:textColor="#000000"-->
+<!--                            android:textSize="8pt"-->
+<!--                            android:text="Content" />-->
 
-                        <TableRow
-                            android:id="@+id/h2b"
-                            android:layout_width="match_parent"
-                            android:layout_marginTop="10dp"
-                            android:layout_below="@+id/h2"
-                            android:layout_height="2dp"
-                            android:background="#d3d3d3"></TableRow>
+<!--                        <TableRow-->
+<!--                            android:id="@+id/h2b"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_marginTop="10dp"-->
+<!--                            android:layout_below="@+id/h2"-->
+<!--                            android:layout_height="2dp"-->
+<!--                            android:background="#d3d3d3"></TableRow>-->
 
-                    </RelativeLayout>
+<!--                    </RelativeLayout>-->
 
-                </androidx.cardview.widget.CardView>
+<!--                </androidx.cardview.widget.CardView>-->
 
 
-            </LinearLayout>
+<!--            </LinearLayout>-->
 
-        </RelativeLayout>
+<!--        </RelativeLayout>-->
 
 
         <HorizontalScrollView
@@ -162,7 +162,7 @@
             android:layout_height="match_parent"
             android:id="@+id/layout_select"
             android:scrollbars="none"
-            android:layout_below="@+id/h1layout">
+            android:layout_below="@+id/view1">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -205,13 +205,17 @@
                             android:textSize="6pt"
                             android:text="Overall" />
 
-                        <TableRow
-                            android:id="@+id/hr"
+
+                        <ProgressBar
+                            android:id="@+id/pB1"
                             android:layout_width="match_parent"
-                            android:layout_marginTop="10dp"
+                            android:layout_height="3dp"
+                            android:layout_marginTop="5dp"
+                            android:progressDrawable="@drawable/custom_proogressbar"
                             android:layout_below="@+id/t1"
-                            android:layout_height="2dp"
-                            android:background="#d3d3d3"></TableRow>
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_centerHorizontal="true"
+                            android:max="36"/>
 
                     </RelativeLayout>
 
@@ -254,13 +258,16 @@
                             android:id="@+id/t2"
                             android:text="Skill" />
 
-                        <TableRow
-                            android:id="@+id/hr2"
+                        <ProgressBar
+                            android:id="@+id/pB2"
                             android:layout_width="match_parent"
-                            android:layout_marginTop="10dp"
+                            android:layout_height="3dp"
+                            android:layout_marginTop="5dp"
+                            android:progressDrawable="@drawable/custom_proogressbar"
                             android:layout_below="@+id/t2"
-                            android:layout_height="2dp"
-                            android:background="#d3d3d3"></TableRow>
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_centerHorizontal="true"
+                            android:max="12"/>
 
                     </RelativeLayout>
 
@@ -303,13 +310,16 @@
                             android:id="@+id/t3"
                             android:text="Career"/>
 
-                        <TableRow
-                            android:id="@+id/hr3"
+                        <ProgressBar
+                            android:id="@+id/pB3"
                             android:layout_width="match_parent"
-                            android:layout_marginTop="10dp"
+                            android:layout_height="3dp"
+                            android:layout_marginTop="5dp"
+                            android:progressDrawable="@drawable/custom_proogressbar"
                             android:layout_below="@+id/t3"
-                            android:layout_height="2dp"
-                            android:background="#d3d3d3"></TableRow>
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_centerHorizontal="true"
+                            android:max="12"/>
 
                     </RelativeLayout>
 
@@ -352,13 +362,16 @@
                             android:id="@+id/t4"
                             android:text="Programming" />
 
-                        <TableRow
-                            android:id="@+id/hr4"
+                        <ProgressBar
+                            android:id="@+id/pB4"
                             android:layout_width="match_parent"
-                            android:layout_marginTop="10dp"
+                            android:layout_height="3dp"
+                            android:layout_marginTop="5dp"
+                            android:progressDrawable="@drawable/custom_proogressbar"
                             android:layout_below="@+id/t4"
-                            android:layout_height="2dp"
-                            android:background="#d3d3d3"></TableRow>
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_centerHorizontal="true"
+                            android:max="12"/>
 
                     </RelativeLayout>
 
@@ -463,7 +476,6 @@
                     android:layout_toRightOf="@+id/logo1"
                     android:progressDrawable="@drawable/custom_proogressbar"
                     style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                    android:max="4"
                     android:layout_centerHorizontal="true"/>
 
                 <TextView
@@ -511,7 +523,6 @@
                     android:layout_toRightOf="@+id/logo2"
                     android:layout_below="@+id/textViewSubHeading2"
                     style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                    android:max="4"
                     android:layout_centerHorizontal="true"/>
 
                 <TextView
@@ -559,7 +570,6 @@
                     android:layout_below="@+id/textViewSubHeading3"
                     android:layout_toRightOf="@+id/logo3"
                     style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                    android:max="4"
                     android:layout_centerHorizontal="true"/>
 
             </RelativeLayout>
@@ -677,6 +687,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
             android:textSize="15dp"
+            android:id="@+id/buttonContinueLearning"
             android:textAllCaps="false"
             android:layout_below="@+id/hbelowlayout"
             android:layout_marginBottom="20dp"
