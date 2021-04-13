@@ -40,7 +40,7 @@
             android:theme="?attr/actionBarTheme"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:navigationIcon="@drawable/ic_left_arrow"/>
+            app:navigationIcon="@drawable/back"/>
 
 
         <TextView

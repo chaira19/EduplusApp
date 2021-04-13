@@ -40,7 +40,7 @@
             android:theme="?attr/actionBarTheme"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:navigationIcon="@drawable/ic_left_arrow"/>
+            app:navigationIcon="@drawable/back"/>
 
         <TextView
             android:textSize="28dp"
@@ -105,7 +105,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="20dp"
-                    app:srcCompat="@drawable/ic_accounting" />
+                    app:srcCompat="@drawable/monitor" />
 
 
                 <TextView
@@ -185,7 +185,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="20dp"
-                    app:srcCompat="@drawable/ic_robot" />
+                    app:srcCompat="@drawable/programming_basics" />
 
 
                 <TextView
@@ -266,7 +266,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="20dp"
-                    app:srcCompat="@drawable/ic_accounting" />
+                    app:srcCompat="@drawable/practice" />
 
 
                 <TextView
@@ -346,7 +346,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="20dp"
-                    app:srcCompat="@drawable/ic_robot" />
+                    app:srcCompat="@drawable/layers" />
 
 
                 <TextView
@@ -426,7 +426,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="20dp"
-                    app:srcCompat="@drawable/ic_accounting" />
+                    app:srcCompat="@drawable/time" />
 
 
                 <TextView
@@ -506,7 +506,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="20dp"
-                    app:srcCompat="@drawable/ic_robot" />
+                    app:srcCompat="@drawable/file" />
 
 
                 <TextView
@@ -587,7 +587,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="20dp"
-                    app:srcCompat="@drawable/ic_accounting" />
+                    app:srcCompat="@drawable/algorithm"/>
 
 
                 <TextView
@@ -667,7 +667,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="20dp"
-                    app:srcCompat="@drawable/ic_robot" />
+                    app:srcCompat="@drawable/ic_launch" />
 
 
                 <TextView

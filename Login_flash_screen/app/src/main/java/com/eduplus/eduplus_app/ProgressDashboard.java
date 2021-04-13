@@ -2,10 +2,17 @@ package com.eduplus.eduplus_app;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -23,15 +30,87 @@ import com.google.firebase.storage.StorageReference;
 
 import java.util.Map;
 
-public class ProgressDashboard extends AppCompatActivity {
+public class ProgressDashboard extends AppCompatActivity implements View.OnClickListener {
+
+    private int selectedCard = 0;
+
+    private TextView heading;
+    private TextView subHeading1;
+    private TextView subHeading2;
+    private TextView subHeading3;
+    private TextView progTV1;
+    private TextView progTV2;
+    private TextView progTV3;
+    private TextView progTV4;
+
+    private ProgressBar progressBar1;
+    private ProgressBar progressBar2;
+    private ProgressBar progressBar3;
+
+    private ProgressBar pB1;
+    private ProgressBar pB2;
+    private ProgressBar pB3;
+    private ProgressBar pB4;
+
+    private int progProgramming = 0;
+    private int progSkills = 0;
+    private int progCareer = 0;
+
+    private int progProgrammingM1 = 0;
+    private int progSkillsM1 = 0;
+    private int progCareerM1 = 0;
+
+    private int progProgrammingM2 = 0;
+    private int progSkillsM2 = 0;
+    private int progCareerM2 = 0;
+
+    private int progProgrammingM3 = 0;
+    private int progSkillsM3 = 0;
+    private int progCareerM3 = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_progress_dashboard);
-/*
-        setUserData();
 
+        heading = (TextView) findViewById(R.id.textViewHeading);
+        subHeading1 = (TextView) findViewById(R.id.textViewSubHeading1);
+        subHeading2 = (TextView) findViewById(R.id.textViewSubHeading2);
+        subHeading3 = (TextView) findViewById(R.id.textViewSubHeading3);
+
+        pB1 = (ProgressBar) findViewById(R.id.pB1);
+        pB2 = (ProgressBar) findViewById(R.id.pB2);
+        pB3 = (ProgressBar) findViewById(R.id.pB3);
+        pB4 = (ProgressBar) findViewById(R.id.pB4);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+        setUserData();
+        setProgressDashboard();
+
+        Button continueLearning = (Button) findViewById(R.id.buttonContinueLearning);
+        continueLearning.setOnClickListener((View.OnClickListener) this);
+
+        CardView c1 = (CardView) findViewById(R.id.c1);
+        CardView c2 = (CardView) findViewById(R.id.c2);
+        CardView c3 = (CardView) findViewById(R.id.c3);
+        CardView c4 = (CardView) findViewById(R.id.c4);
+
+        c1.setOnClickListener((View.OnClickListener) this);
+        c2.setOnClickListener((View.OnClickListener) this);
+        c3.setOnClickListener((View.OnClickListener) this);
+        c4.setOnClickListener((View.OnClickListener) this);
+
+    }
+
+    private void setProgressDashboard()
+    {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
@@ -43,58 +122,73 @@ public class ProgressDashboard extends AppCompatActivity {
                     public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                         DocumentSnapshot doc = task.getResult();
 
-                        Map<String, Object> finPlanProg = (Map<String, Object>)((Map<String, Object>)doc.get("Skills")).get("FinancialPlanning");
-                        Map<String, Object> entshipProg = (Map<String, Object>)((Map<String, Object>)doc.get("Career")).get("Entrepreneurship");
-                        Map<String, Object> progProg = (Map<String, Object>)((Map<String, Object>)doc.get("Programming"));
+                        Map<String, Object> finPlanProg = (Map<String, Object>) ((Map<String, Object>) doc.get("Skills")).get("FinancialPlanning");
+                        Map<String, Object> entshipProg = (Map<String, Object>) ((Map<String, Object>) doc.get("Career")).get("Entrepreneurship");
+                        Map<String, Object> progProg = (Map<String, Object>) ((Map<String, Object>) doc.get("Programming"));
 
-                        int progProgramming = 0;
-                        if(progProg != null)
-                        {
-                            progProgramming = getMonthProgress((Map<String, Boolean>)progProg.get("Month1"));
+
+                        if (progProg != null) {
+                            progProgrammingM1 = getMonthProgress((Map<String, Boolean>) progProg.get("Month1"));
+                            progProgrammingM2 = getMonthProgress((Map<String, Boolean>) progProg.get("Month2"));
+                            progProgrammingM3 = getMonthProgress((Map<String, Boolean>) progProg.get("Month3"));
+                            progProgramming = progProgrammingM1 + progProgrammingM2 + progProgrammingM3;
                         }
-                        int progSkills = 0;
-                        if(finPlanProg != null)
-                        {
-                            progSkills = getMonthProgress((Map<String, Boolean>)finPlanProg.get("Month1"));
+                        if (finPlanProg != null) {
+                            progSkillsM1 = getMonthProgress((Map<String, Boolean>) finPlanProg.get("Month1"));
+                            progSkillsM2 = getMonthProgress((Map<String, Boolean>) finPlanProg.get("Month2"));
+                            progSkillsM3 = getMonthProgress((Map<String, Boolean>) finPlanProg.get("Month3"));
+                            progSkills = progSkillsM1 + progSkillsM2 + progSkillsM3;
                         }
-                        int progCareer = 0;
-                        if(entshipProg != null)
-                        {
-                            progCareer = getMonthProgress((Map<String, Boolean>)entshipProg.get("Month1"));
+                        if (entshipProg != null) {
+                            progCareerM1 = getMonthProgress((Map<String, Boolean>) entshipProg.get("Month1"));
+                            progCareerM2 = getMonthProgress((Map<String, Boolean>) entshipProg.get("Month2"));
+                            progCareerM3 = getMonthProgress((Map<String, Boolean>) entshipProg.get("Month3"));
+                            progCareer = progCareerM1 + progCareerM2 + progCareerM3;
                         }
 
-                        final ProgressBar progressBar1 = (ProgressBar) findViewById(R.id.progressBar1);
+                        progressBar1 = (ProgressBar) findViewById(R.id.progressBar1);
+                        progressBar1.setMax(12);
                         progressBar1.setProgress(progProgramming);
+                        pB4.setProgress(progProgramming);
 
-                        final ProgressBar progressBar2 = (ProgressBar) findViewById(R.id.progressBar2);
+                        progressBar2 = (ProgressBar) findViewById(R.id.progressBar2);
+                        progressBar2.setMax(12);
                         progressBar2.setProgress(progSkills);
+                        pB2.setProgress(progSkills);
 
-                        final ProgressBar progressBar3 = (ProgressBar) findViewById(R.id.progressBar3);
+                        progressBar3 = (ProgressBar) findViewById(R.id.progressBar3);
+                        progressBar3.setMax(12);
                         progressBar3.setProgress(progCareer);
+                        pB3.setProgress(progCareer);
 
                         final ProgressBar overallProgress = (ProgressBar) findViewById(R.id.circular_progress);
                         overallProgress.setProgress(progProgramming + progSkills + progCareer);
 
-                        final TextView progTV1 = (TextView) findViewById(R.id.textViewRightSubHeading1);
-                        final TextView progTV2 = (TextView) findViewById(R.id.textViewRightSubHeading2);
-                        final TextView progTV3 = (TextView) findViewById(R.id.textViewRightSubHeading3);
-                        final TextView progTV4 = (TextView) findViewById(R.id.textViewOverall);
+                        progTV1  = (TextView) findViewById(R.id.textViewRightSubHeading1);
+                        progTV2 = (TextView) findViewById(R.id.textViewRightSubHeading2);
+                        progTV3 = (TextView) findViewById(R.id.textViewRightSubHeading3);
+                        progTV4 = (TextView) findViewById(R.id.textViewOverall);
 
-                        progTV1.setText(((progProgramming*100)/4) + "%");
-                        progTV2.setText(((progSkills*100)/4) + "%");
-                        progTV3.setText(((progCareer*100)/4) + "%");
-                        progTV4.setText(((progProgramming + progSkills + progCareer)*100)/12 + "%\n Overall Progress");
+                        progTV1.setText(((progProgramming * 100) / 12) + "%");
+                        progTV2.setText(((progSkills * 100) / 12) + "%");
+                        progTV3.setText(((progCareer * 100) / 12) + "%");
+                        progTV4.setText(((progProgramming + progSkills + progCareer) * 100) / 36 + "%\n Overall Progress");
+                        pB1.setProgress(progProgramming + progSkills + progCareer);
+
+                        final TextView modCom = (TextView) findViewById(R.id.mod_total2);
+                        modCom.setText((progProgramming + progSkills + progCareer) + "");
                     }
                 });
     }
 
-    private int getMonthProgress(Map<String, Boolean> monthMap)
-    {
-        int progress = 0;
-        for(Map.Entry<String,Boolean> week :  monthMap.entrySet())
+    private int getMonthProgress(Map<String, Boolean> monthMap) {
+        if(monthMap == null)
         {
-            if(week.getValue() == true)
-            {
+            return 0;
+        }
+        int progress = 0;
+        for (Map.Entry<String, Boolean> week : monthMap.entrySet()) {
+            if (week.getValue() == true) {
                 progress++;
             }
         }
@@ -105,7 +199,7 @@ public class ProgressDashboard extends AppCompatActivity {
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         //We are creating phone numbers as userIds
-         String userId = user.getPhoneNumber();
+        String userId = user.getPhoneNumber();
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection("Users").document(userId).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
@@ -118,18 +212,17 @@ public class ProgressDashboard extends AppCompatActivity {
                     String schoolName = (String) document.get("SchoolName");
                     String photoId = (String) document.get("PhotoId");
 
-                    TextView nameTextView = findViewById(R.id.tv1);
-                    nameTextView.setText(name.toUpperCase());
+//                    TextView nameTextView = findViewById(R.id.tv1);
+//                    nameTextView.setText(name.toUpperCase());
 
-                    TextView schoolNameText = findViewById(R.id.tv2);
-                    schoolNameText.setText(schoolName.toUpperCase());
-
-                    TextView classTextView = findViewById(R.id.tv3);
-                    classTextView.setText("CLASS X");
-
-                    setImageInImageView(findViewById(R.id.studentImage), photoId, "userImages/");
-                }
-                else {
+//                    TextView schoolNameText = findViewById(R.id.tv2);
+//                    schoolNameText.setText(schoolName.toUpperCase());
+//
+//                    TextView classTextView = findViewById(R.id.tv3);
+//                    classTextView.setText("CLASS X");
+//
+//                    setImageInImageView(findViewById(R.id.studentImage), photoId, "userImages/");
+                } else {
                     Log.e("Error", "Task is not successful");
                 }
 
@@ -138,15 +231,11 @@ public class ProgressDashboard extends AppCompatActivity {
     }
 
     // set image from storage
-    private void setImageInImageView(final ImageView imageView, String imageId, String imageFolder)
-    {
-        if(imageId == null || imageId.isEmpty())
-        {
+    private void setImageInImageView(final ImageView imageView, String imageId, String imageFolder) {
+        if (imageId == null || imageId.isEmpty()) {
 //            imageView.setImageResource(R.drawable.app_logo);
             return;
-        }
-        else
-        {
+        } else {
             FirebaseStorage storage = FirebaseStorage.getInstance();
             StorageReference storageRef = storage.getReference();
             StorageReference imageRef = storageRef.child(imageFolder + imageId);
@@ -155,8 +244,7 @@ public class ProgressDashboard extends AppCompatActivity {
                 @Override
                 public void onSuccess(byte[] bytes) {
 
-                    if(imageView != null)
-                    {
+                    if (imageView != null) {
                         imageView.setImageBitmap(BitmapFactory.decodeByteArray(bytes, 0, bytes.length));
                         //Glide.with(imageView).load(bytes).into(imageView);
                     }
@@ -168,6 +256,138 @@ public class ProgressDashboard extends AppCompatActivity {
                 }
             });
         }
-    }*/
+    }
+
+    @Override
+    public void onClick(View v) {
+
+        SharedPreferences sharedPreferences = getBaseContext().getSharedPreferences("DATA", Context.MODE_PRIVATE);
+
+        switch (v.getId()){
+            case R.id.buttonContinueLearning:
+                Intent i;
+                switch (selectedCard) {
+                    case 0:
+                        i = new Intent(ProgressDashboard.this, Home.class);
+                        startActivity(i);
+                        break;
+                    case 1:
+                        String skillPage = sharedPreferences.getString("SkillPage",null);
+
+                        if(skillPage == null)
+                        {
+                            Log.e("Error", "is this fucking null");
+                            i = new Intent(ProgressDashboard.this, SkillFP.class);
+                        }
+                        else
+                        {
+                            try {
+                                i = new Intent(ProgressDashboard.this, Class.forName("com.eduplus.eduplus_app." + skillPage));
+                            } catch (ClassNotFoundException e) {
+                                Log.e("Error", "attempt failed");
+                                i = new Intent(ProgressDashboard.this, SkillFP.class);
+                            }
+                        }
+                        startActivity(i);
+                        break;
+                    case 2:
+                        String careerPage = sharedPreferences.getString("CareerPage",null);
+
+                        if(careerPage == null)
+                        {
+                            i = new Intent(ProgressDashboard.this, CareerEP.class);
+                        }
+                        else
+                        {
+                            try {
+                                i = new Intent(ProgressDashboard.this, Class.forName("com.eduplus.eduplus_app." + careerPage));
+                            } catch (ClassNotFoundException e) {
+                                i = new Intent(ProgressDashboard.this, CareerEP.class);
+                            }
+                        }
+                        startActivity(i);
+                        break;
+                    case 3:
+                        String progPdf = sharedPreferences.getString("pdfLink",null);
+                        i = new Intent(ProgressDashboard.this, Prog_M1W1_Activity.class);
+                        i.putExtra("pdfLink", progPdf);
+                        startActivity(i);
+                        break;
+
+                }
+
+                break;
+
+            case R.id.c1:
+                selectedCard = 0;
+                heading.setText("Overall Progress");
+                progTV1.setText(((progProgramming * 100) / 12) + "%");
+                progTV2.setText(((progSkills * 100) / 12) + "%");
+                progTV3.setText(((progCareer * 100) / 12) + "%");
+                progTV4.setText(((progProgramming + progSkills + progCareer) * 100) / 36 + "%\n Overall Progress");
+                progressBar1.setMax(32);
+                progressBar2.setMax(32);
+                progressBar3.setMax(32);
+                progressBar1.setProgress(progProgramming);
+                progressBar2.setProgress(progSkills);
+                progressBar3.setProgress(progCareer);
+                subHeading1.setText("Programming");
+                subHeading2.setText("Skills");
+                subHeading3.setText("Career");
+                break;
+
+            case R.id.c2:
+                selectedCard = 1;
+                heading.setText("Progress in Skills");
+                progTV1.setText(((progSkillsM1 * 100) / 4) + "%");
+                progTV2.setText(((progSkillsM2 * 100) / 4) + "%");
+                progTV3.setText(((progSkillsM3 * 100) / 4) + "%");
+                progTV4.setText(((progSkills) * 100) / 12 + "%\n Prog in Skills");
+                progressBar1.setMax(4);
+                progressBar2.setMax(4);
+                progressBar3.setMax(4);
+                progressBar1.setProgress(progSkillsM1);
+                progressBar2.setProgress(progSkillsM2);
+                progressBar3.setProgress(progSkillsM3);
+                subHeading1.setText("Financial Planning");
+                subHeading2.setText("Artificial Intelligence");
+                subHeading3.setText("Photography");
+                break;
+
+            case R.id.c3:
+                selectedCard = 2;
+                heading.setText("Progress in Career");
+                progTV1.setText(((progCareerM1 * 100) / 4) + "%");
+                progTV2.setText(((progCareerM2 * 100) / 4) + "%");
+                progTV3.setText(((progCareerM3 * 100) / 4) + "%");
+                progTV4.setText(((progCareer) * 100) / 12 + "%\n Prog in Career");
+                progressBar1.setMax(4);
+                progressBar2.setMax(4);
+                progressBar3.setMax(4);
+                progressBar1.setProgress(progCareerM1);
+                progressBar2.setProgress(progCareerM2);
+                progressBar3.setProgress(progCareerM3);
+                subHeading1.setText("Entrepreneurship");
+                subHeading2.setText("Financial Broker");
+                subHeading3.setText("Wildlife Photographer");
+                break;
+
+            case R.id.c4:
+                selectedCard = 3;
+                heading.setText("Progress in Programming");
+                progTV1.setText(((progProgrammingM1 * 100) / 4) + "%");
+                progTV2.setText(((progProgrammingM2 * 100) / 4) + "%");
+                progTV3.setText(((progProgrammingM3 * 100) / 4) + "%");
+                progTV4.setText(((progProgramming) * 100) / 12 + "%\n Prog in Programming");
+                progressBar1.setMax(4);
+                progressBar2.setMax(4);
+                progressBar3.setMax(4);
+                progressBar1.setProgress(progProgrammingM1);
+                progressBar2.setProgress(progProgrammingM2);
+                progressBar3.setProgress(progProgrammingM3);
+                subHeading1.setText("Introduction");
+                subHeading2.setText("Basics");
+                subHeading3.setText("Practice Problems");
+                break;}
     }
 }
