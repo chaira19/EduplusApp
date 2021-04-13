@@ -234,7 +234,7 @@
                     android:layout_below="@+id/week"
                     android:layout_marginTop="40dp"
                     android:layout_marginBottom="7dp"
-                    android:src="@drawable/ic_right_arrow_black"/>
+                    android:src="@drawable/ic_lock"/>
 
             </RelativeLayout>
 
@@ -314,7 +314,7 @@
                     android:layout_below="@+id/week"
                     android:layout_marginTop="40dp"
                     android:layout_marginBottom="7dp"
-                    android:src="@drawable/ic_right_arrow_black"/>
+                    android:src="@drawable/ic_lock"/>
 
             </RelativeLayout>
 
@@ -394,7 +394,7 @@
                     android:layout_below="@+id/week"
                     android:layout_marginTop="40dp"
                     android:layout_marginBottom="7dp"
-                    android:src="@drawable/ic_right_arrow_black"/>
+                    android:src="@drawable/ic_lock"/>
 
             </RelativeLayout>
 
@@ -474,7 +474,7 @@
                     android:layout_below="@+id/week"
                     android:layout_marginTop="40dp"
                     android:layout_marginBottom="7dp"
-                    android:src="@drawable/ic_right_arrow_black"/>
+                    android:src="@drawable/ic_lock"/>
 
             </RelativeLayout>
 
@@ -555,7 +555,7 @@
                     android:layout_below="@+id/week"
                     android:layout_marginTop="40dp"
                     android:layout_marginBottom="7dp"
-                    android:src="@drawable/ic_right_arrow_black"/>
+                    android:src="@drawable/ic_lock"/>
 
             </RelativeLayout>
 
@@ -635,7 +635,7 @@
                     android:layout_below="@+id/week"
                     android:layout_marginTop="40dp"
                     android:layout_marginBottom="7dp"
-                    android:src="@drawable/ic_right_arrow_black"/>
+                    android:src="@drawable/ic_lock"/>
 
             </RelativeLayout>
 
@@ -716,7 +716,7 @@
                     android:layout_below="@+id/week"
                     android:layout_marginTop="40dp"
                     android:layout_marginBottom="7dp"
-                    android:src="@drawable/ic_right_arrow_black"/>
+                    android:src="@drawable/ic_lock"/>
 
             </RelativeLayout>
 

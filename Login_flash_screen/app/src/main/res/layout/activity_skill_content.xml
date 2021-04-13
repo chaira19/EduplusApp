@@ -80,6 +80,7 @@
             android:textSize="25sp"
             app:fontFamily="@font/baloo"/>
 
+
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:id="@+id/s_fp"
@@ -235,7 +236,412 @@
                     android:layout_below="@+id/week"
                     android:layout_marginTop="40dp"
                     android:layout_marginBottom="7dp"
-                    android:src="@drawable/ic_right_arrow_black"/>
+                    android:src="@drawable/ic_lock"/>
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:id="@+id/s_HF"
+            android:layout_below="@+id/s_AI"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="10dp"
+            android:elevation="4dp"
+            app:cardCornerRadius="20dp"
+            android:layout_marginRight="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#F8F8F8">
+
+
+                <ImageView
+                    android:id="@+id/p3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    app:srcCompat="@drawable/ic_exercise" />
+
+
+                <TextView
+                    android:textSize="22dp"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginRight="30dp"
+                    android:textColor="#000000"
+                    android:id="@+id/topic3"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:justificationMode="inter_word"
+                    android:text="Health &amp; Wellness"></TextView>
+
+                <ProgressBar
+                    android:layout_width="190dp"
+                    android:layout_height="10dp"
+                    android:outlineSpotShadowColor="#FFA500"
+                    android:id="@+id/bar3"
+                    android:layout_below="@+id/topic3"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="2dp"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+
+                <TextView
+                    android:textSize="16dp"
+                    android:layout_below="@+id/bar3"
+                    android:id="@+id/s3"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="2dp"
+                    android:textColor="#000000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="3 Modules | 1 Activty"></TextView>
+
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/np3"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_below="@+id/week"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="7dp"
+                    android:src="@drawable/ic_lock"/>
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:id="@+id/s_DT"
+            android:layout_below="@+id/s_HF"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="10dp"
+            android:elevation="4dp"
+            app:cardCornerRadius="20dp"
+            android:layout_marginRight="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#F8F8F8">
+
+
+                <ImageView
+                    android:id="@+id/p4"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    app:srcCompat="@drawable/ic_design_thinking" />
+
+
+                <TextView
+                    android:textSize="22dp"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginRight="30dp"
+                    android:textColor="#000000"
+                    android:id="@+id/topic4"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:justificationMode="inter_word"
+                    android:text="Design Thinking"></TextView>
+
+                <ProgressBar
+                    android:layout_width="190dp"
+                    android:layout_height="10dp"
+                    android:outlineSpotShadowColor="#FFA500"
+                    android:id="@+id/bar4"
+                    android:layout_below="@+id/topic4"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="2dp"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+
+                <TextView
+                    android:textSize="16dp"
+                    android:layout_below="@+id/bar4"
+                    android:id="@+id/s4"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="2dp"
+                    android:textColor="#000000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="3 Modules | 1 Activty"></TextView>
+
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/np4"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_below="@+id/week"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="7dp"
+                    android:src="@drawable/ic_lock"/>
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:id="@+id/s_OF"
+            android:layout_below="@+id/s_DT"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="10dp"
+            android:elevation="4dp"
+            app:cardCornerRadius="20dp"
+            android:layout_marginRight="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#F8F8F8">
+
+
+                <ImageView
+                    android:id="@+id/p5"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    app:srcCompat="@drawable/ic_organic" />
+
+
+                <TextView
+                    android:textSize="22dp"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginRight="30dp"
+                    android:textColor="#000000"
+                    android:id="@+id/topic5"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:justificationMode="inter_word"
+                    android:text="Organic Farming"></TextView>
+
+                <ProgressBar
+                    android:layout_width="190dp"
+                    android:layout_height="10dp"
+                    android:outlineSpotShadowColor="#FFA500"
+                    android:id="@+id/bar5"
+                    android:layout_below="@+id/topic5"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="2dp"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+
+                <TextView
+                    android:textSize="16dp"
+                    android:layout_below="@+id/bar5"
+                    android:id="@+id/s5"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="2dp"
+                    android:textColor="#000000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="3 Modules | 1 Activty"></TextView>
+
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/np5"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_below="@+id/week"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="7dp"
+                    android:src="@drawable/ic_lock"/>
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:id="@+id/s_A"
+            android:layout_below="@+id/s_OF"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="10dp"
+            android:elevation="4dp"
+            app:cardCornerRadius="20dp"
+            android:layout_marginRight="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#F8F8F8">
+
+
+                <ImageView
+                    android:id="@+id/p6"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    app:srcCompat="@drawable/ic_animation" />
+
+
+                <TextView
+                    android:textSize="22dp"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginRight="30dp"
+                    android:textColor="#000000"
+                    android:id="@+id/topic6"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:justificationMode="inter_word"
+                    android:text="Animation"></TextView>
+
+                <ProgressBar
+                    android:layout_width="190dp"
+                    android:layout_height="10dp"
+                    android:outlineSpotShadowColor="#FFA500"
+                    android:id="@+id/bar6"
+                    android:layout_below="@+id/topic6"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="2dp"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+
+                <TextView
+                    android:textSize="16dp"
+                    android:layout_below="@+id/bar6"
+                    android:id="@+id/s6"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="2dp"
+                    android:textColor="#000000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="3 Modules | 1 Activty"></TextView>
+
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/np6"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_below="@+id/week"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="7dp"
+                    android:src="@drawable/ic_lock"/>
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:id="@+id/s_CS"
+            android:layout_below="@+id/s_A"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="10dp"
+            android:elevation="4dp"
+            app:cardCornerRadius="20dp"
+            android:layout_marginRight="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#F8F8F8">
+
+
+                <ImageView
+                    android:id="@+id/p7"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    app:srcCompat="@drawable/ic_chat" />
+
+
+                <TextView
+                    android:textSize="20dp"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginRight="30dp"
+                    android:textColor="#000000"
+                    android:id="@+id/topic7"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:justificationMode="inter_word"
+                    android:text="Communication Skills"></TextView>
+
+                <ProgressBar
+                    android:layout_width="190dp"
+                    android:layout_height="10dp"
+                    android:outlineSpotShadowColor="#FFA500"
+                    android:id="@+id/bar7"
+                    android:layout_below="@+id/topic7"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="2dp"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+
+                <TextView
+                    android:textSize="16dp"
+                    android:layout_below="@+id/bar7"
+                    android:id="@+id/s7"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="2dp"
+                    android:textColor="#000000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="3 Modules | 1 Activty"></TextView>
+
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/np7"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_below="@+id/week"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="7dp"
+                    android:src="@drawable/ic_lock"/>
 
             </RelativeLayout>
 
