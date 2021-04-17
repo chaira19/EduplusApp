@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:animateLayoutChanges="true"
-    android:background="@drawable/bg_content1"
+    android:background="@drawable/bg_home"
     tools:context=".MainActivity">
 
   <RelativeLayout
@@ -100,7 +100,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:text="Login with Phone"
             android:background="@drawable/btn_bg"
@@ -127,18 +127,22 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/footer_text"
         android:text="Trouble Logging in?"
         android:layout_centerHorizontal="true"
         android:textAllCaps="false"
         android:fontFamily="sans-serif-light"
         android:textSize="15sp"
-        android:paddingBottom="10dp"
         android:textColor="@color/white" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/transparent"
+        android:id="@+id/btn_contact"
         android:text="Contact Us"
+        android:layout_marginTop="-2dp"
+        android:layout_marginBottom="30dp"
+        android:layout_below="@+id/footer_text"
         android:layout_centerHorizontal="true"
         android:textAllCaps="false"
         android:textColor="@color/white"
