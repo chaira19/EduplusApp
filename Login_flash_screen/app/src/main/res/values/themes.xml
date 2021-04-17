@@ -7,7 +7,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/backgroundColor</item>
         <!-- Customize your theme here. -->
     </style>
 
@@ -17,7 +17,6 @@
         <item name="windowNoTitle">true</item>
         <item name="android:windowBackground">@drawable/grad_bg</item>
         <item name="android:icon">@drawable/eduplus</item>
-
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryDark</item>
     </style>
 

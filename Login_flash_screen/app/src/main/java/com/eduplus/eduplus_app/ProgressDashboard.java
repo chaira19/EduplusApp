@@ -12,6 +12,7 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -72,6 +73,7 @@ public class ProgressDashboard extends AppCompatActivity implements View.OnClick
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_progress_dashboard);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 
         heading = (TextView) findViewById(R.id.textViewHeading);
         subHeading1 = (TextView) findViewById(R.id.textViewSubHeading1);
@@ -114,7 +116,7 @@ public class ProgressDashboard extends AppCompatActivity implements View.OnClick
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
-        db.collection("Users").document(user.getPhoneNumber());
+        db.collection("Users").document("+919410571687");
         db.collection("Users").document("+919410571687")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
@@ -199,7 +201,7 @@ public class ProgressDashboard extends AppCompatActivity implements View.OnClick
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         //We are creating phone numbers as userIds
-        String userId = user.getPhoneNumber();
+        String userId = "+919410571687";
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection("Users").document(userId).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
