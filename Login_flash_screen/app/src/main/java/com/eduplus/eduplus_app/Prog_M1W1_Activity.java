@@ -1,12 +1,15 @@
 package com.eduplus.eduplus_app;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.widget.TextView;
 
 import com.github.barteksc.pdfviewer.PDFView;
 import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle;
@@ -25,6 +28,14 @@ public class Prog_M1W1_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prog__m1_w1_);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
 //        WebView webView = (WebView) findViewById(R.id.webviewM1W1);
 //
@@ -86,6 +97,20 @@ public class Prog_M1W1_Activity extends AppCompatActivity {
         if(pdfLink == null || pdfLink.isEmpty())
         {
             pdfLink = "https://firebasestorage.googleapis.com/v0/b/eduplus-8497a.appspot.com/o/pdfs%2FM1Week1.pdf?alt=media&token=4d76e201-384f-4106-bc46-87c97201e786";
+        }
+
+        TextView textView = (TextView) findViewById(R.id.heading);
+        if(pdfLink.contains("Week1"))
+        {
+            textView.setText("Introduction to Computer Science");
+        }
+        if(pdfLink.contains("Week3"))
+        {
+            textView.setText("Programming Languages");
+        }
+        if(pdfLink.contains("W4"))
+        {
+            textView.setText("Setting up for C++");
         }
 //
 //        Log.e("Error", "The value of pdfName string is " + pdfName);
