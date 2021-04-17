@@ -123,6 +123,7 @@
                     android:layout_width="190dp"
                     android:layout_height="10dp"
                     android:outlineSpotShadowColor="#FFA500"
+                    android:progressDrawable="@drawable/custom_proogressbar"
                     android:id="@+id/bar1"
                     android:layout_below="@+id/topic"
                     android:layout_marginLeft="80dp"

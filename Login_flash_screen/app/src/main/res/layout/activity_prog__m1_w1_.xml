@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Prog_M1W1_Activity">
 
 <!--    <WebView-->
@@ -10,8 +11,44 @@
 <!--        android:layout_width="fill_parent"-->
 <!--        android:layout_height="wrap_content"/>-->
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:id="@+id/v1"
+        android:background="@drawable/bg_content1"/>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:navigationIcon="@drawable/back"/>
+
+    <TextView
+        android:textSize="25dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/toolbar"
+        android:textColor="#ffff"
+        android:id="@+id/heading"
+        android:fontFamily="@font/arial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
+
     <com.github.barteksc.pdfviewer.PDFView
         android:id="@+id/pdfView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:layout_below="@id/heading"/>
+
+    </RelativeLayout>
 </RelativeLayout>

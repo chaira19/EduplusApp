@@ -65,11 +65,11 @@
                 android:layout_below="@+id/toolbar"
                 app:civ_border_color="#ffffff"
                 app:civ_border_width="2dp"
-                android:backgroundTint="@android:color/transparent"
-                android:background="@color/transparent"
+                android:background="@color/fui_transparent"
                 app:civ_shadow="true"
                 app:civ_shadow_radius="2dp"
                 app:civ_shadow_color="#3f51b5" />
+<!--                android:backgroundTint="@android:color/transparent"-->
 
             <TextView
                 android:id="@+id/textView"

@@ -127,6 +127,7 @@
                     android:id="@+id/bar1"
                     android:layout_below="@+id/topic"
                     android:layout_marginLeft="80dp"
+                    android:progressDrawable="@drawable/custom_proogressbar"
                     android:layout_marginTop="2dp"
                     style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
 

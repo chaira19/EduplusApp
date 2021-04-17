@@ -2,6 +2,7 @@ package com.eduplus.eduplus_app;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 
 import android.content.Context;
@@ -35,6 +36,14 @@ public class SkillFP extends AppCompatActivity implements View.OnClickListener {
         setContentView(R.layout.activity_skill_planning);
         //getWindow().setStatusBarColor(Color.TRANSPARENT);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         fp_w1 = (CardView)findViewById(R.id.fp_w1);
         fp_w2 = (CardView)findViewById(R.id.fp_w2);
