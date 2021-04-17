@@ -1,7 +1,7 @@
 <!DOCTYPE resources
     [<!ENTITY rsquo "&#8217;" ><!ENTITY nbsp "&#xA0;"><!ENTITY ldquo "&#8220;"><!ENTITY rdquo "&#8221;"><!ENTITY ndash "&#8211;">]>
 <resources>
-    <string name="app_name" translatable="false">Login_flash_screen</string>
+    <string name="app_name" translatable="false">Eduplus</string>
     <string name="navigation_drawer_open" translatable="false">Open Navigation Drawer</string>
     <string name="navigation_drawer_close" translatable="false">Close Navigation Drawer</string>
     <string name="this_month_s_content" translatable="false">This Month\'s Content</string>
