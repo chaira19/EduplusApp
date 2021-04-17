@@ -215,7 +215,8 @@
                             android:layout_below="@+id/t1"
                             style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                             android:layout_centerHorizontal="true"
-                            android:max="36"/>
+                            android:max="1"
+                            android:progress="1"/>
 
                     </RelativeLayout>
 

@@ -42,6 +42,8 @@ public class ProgressDashboard extends AppCompatActivity implements View.OnClick
     private TextView progTV2;
     private TextView progTV3;
     private TextView progTV4;
+    private TextView modCom;
+    private TextView modTot;
 
     private ProgressBar progressBar1;
     private ProgressBar progressBar2;
@@ -77,6 +79,8 @@ public class ProgressDashboard extends AppCompatActivity implements View.OnClick
         subHeading1 = (TextView) findViewById(R.id.textViewSubHeading1);
         subHeading2 = (TextView) findViewById(R.id.textViewSubHeading2);
         subHeading3 = (TextView) findViewById(R.id.textViewSubHeading3);
+        modCom = (TextView) findViewById(R.id.mod_total2);
+        modTot = (TextView) findViewById(R.id.mod_total);
 
         pB1 = (ProgressBar) findViewById(R.id.pB1);
         pB2 = (ProgressBar) findViewById(R.id.pB2);
@@ -149,17 +153,17 @@ public class ProgressDashboard extends AppCompatActivity implements View.OnClick
                         progressBar1 = (ProgressBar) findViewById(R.id.progressBar1);
                         progressBar1.setMax(12);
                         progressBar1.setProgress(progProgramming);
-                        pB4.setProgress(progProgramming);
+                        //pB4.setProgress(progProgramming);
 
                         progressBar2 = (ProgressBar) findViewById(R.id.progressBar2);
                         progressBar2.setMax(12);
                         progressBar2.setProgress(progSkills);
-                        pB2.setProgress(progSkills);
+                        //pB2.setProgress(progSkills);
 
                         progressBar3 = (ProgressBar) findViewById(R.id.progressBar3);
                         progressBar3.setMax(12);
                         progressBar3.setProgress(progCareer);
-                        pB3.setProgress(progCareer);
+                        //pB3.setProgress(progCareer);
 
                         final ProgressBar overallProgress = (ProgressBar) findViewById(R.id.circular_progress);
                         overallProgress.setProgress(progProgramming + progSkills + progCareer);
@@ -173,9 +177,8 @@ public class ProgressDashboard extends AppCompatActivity implements View.OnClick
                         progTV2.setText(((progSkills * 100) / 12) + "%");
                         progTV3.setText(((progCareer * 100) / 12) + "%");
                         progTV4.setText(((progProgramming + progSkills + progCareer) * 100) / 36 + "%\n Overall Progress");
-                        pB1.setProgress(progProgramming + progSkills + progCareer);
+                        //pB1.setProgress(progProgramming + progSkills + progCareer);
 
-                        final TextView modCom = (TextView) findViewById(R.id.mod_total2);
                         modCom.setText((progProgramming + progSkills + progCareer) + "");
                     }
                 });
@@ -331,9 +334,19 @@ public class ProgressDashboard extends AppCompatActivity implements View.OnClick
                 progressBar1.setProgress(progProgramming);
                 progressBar2.setProgress(progSkills);
                 progressBar3.setProgress(progCareer);
+                pB1.setMax(1);
+                pB1.setProgress(1);
+                pB2.setMax(1);
+                pB2.setProgress(0);
+                pB3.setMax(1);
+                pB3.setProgress(0);
+                pB4.setMax(1);
+                pB4.setProgress(0);
                 subHeading1.setText("Programming");
                 subHeading2.setText("Skills");
                 subHeading3.setText("Career");
+                modCom.setText((progProgramming + progSkills + progCareer) + "");
+                modTot.setText("96");
                 break;
 
             case R.id.c2:
@@ -349,9 +362,19 @@ public class ProgressDashboard extends AppCompatActivity implements View.OnClick
                 progressBar1.setProgress(progSkillsM1);
                 progressBar2.setProgress(progSkillsM2);
                 progressBar3.setProgress(progSkillsM3);
+                pB1.setMax(1);
+                pB1.setProgress(0);
+                pB2.setMax(1);
+                pB2.setProgress(1);
+                pB3.setMax(1);
+                pB3.setProgress(0);
+                pB4.setMax(1);
+                pB4.setProgress(0);
                 subHeading1.setText("Financial Planning");
                 subHeading2.setText("Artificial Intelligence");
                 subHeading3.setText("Photography");
+                modCom.setText((progSkills) + "");
+                modTot.setText("32");
                 break;
 
             case R.id.c3:
@@ -367,9 +390,19 @@ public class ProgressDashboard extends AppCompatActivity implements View.OnClick
                 progressBar1.setProgress(progCareerM1);
                 progressBar2.setProgress(progCareerM2);
                 progressBar3.setProgress(progCareerM3);
+                pB1.setMax(1);
+                pB1.setProgress(0);
+                pB2.setMax(1);
+                pB2.setProgress(0);
+                pB3.setMax(1);
+                pB3.setProgress(1);
+                pB4.setMax(1);
+                pB4.setProgress(0);
                 subHeading1.setText("Entrepreneurship");
                 subHeading2.setText("Financial Broker");
                 subHeading3.setText("Wildlife Photographer");
+                modCom.setText((progCareer) + "");
+                modTot.setText("32");
                 break;
 
             case R.id.c4:
@@ -385,9 +418,19 @@ public class ProgressDashboard extends AppCompatActivity implements View.OnClick
                 progressBar1.setProgress(progProgrammingM1);
                 progressBar2.setProgress(progProgrammingM2);
                 progressBar3.setProgress(progProgrammingM3);
+                pB1.setMax(1);
+                pB1.setProgress(0);
+                pB2.setMax(1);
+                pB2.setProgress(0);
+                pB3.setMax(1);
+                pB3.setProgress(0);
+                pB4.setMax(1);
+                pB4.setProgress(1);
                 subHeading1.setText("Introduction");
                 subHeading2.setText("Basics");
                 subHeading3.setText("Practice Problems");
+                modCom.setText((progProgramming) + "");
+                modTot.setText("32");
                 break;}
     }
 }

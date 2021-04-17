@@ -116,12 +116,15 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                         }
 
                         final ProgressBar progressBar1 = (ProgressBar) findViewById(R.id.progressBar1);
+                        progressBar1.setMax(12);
                         progressBar1.setProgress(progProgramming);
 
                         final ProgressBar progressBar2 = (ProgressBar) findViewById(R.id.progressBar2);
+                        progressBar2.setMax(12);
                         progressBar2.setProgress(progSkills);
 
                         final ProgressBar progressBar3 = (ProgressBar) findViewById(R.id.progressBar3);
+                        progressBar3.setMax(12);
                         progressBar3.setProgress(progCareer);
 
                         final ProgressBar overallProgress = (ProgressBar) findViewById(R.id.circular_progress);
@@ -132,10 +135,10 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                         final TextView progTV3 = (TextView) findViewById(R.id.textViewRightSubHeading3);
                         final TextView progTV4 = (TextView) findViewById(R.id.textViewOverall);
 
-                        progTV1.setText(((progProgramming * 100) / 4) + "%");
-                        progTV2.setText(((progSkills * 100) / 4) + "%");
-                        progTV3.setText(((progCareer * 100) / 4) + "%");
-                        progTV4.setText(((progProgramming + progSkills + progCareer) * 100) / 12 + "%\n Overall Progress");
+                        progTV1.setText(((progProgramming * 100) / 12) + "%");
+                        progTV2.setText(((progSkills * 100) / 12) + "%");
+                        progTV3.setText(((progCareer * 100) / 12) + "%");
+                        progTV4.setText(((progProgramming + progSkills + progCareer) * 100) / 36 + "%\n Overall Progress");
                     }
                 });
     }
