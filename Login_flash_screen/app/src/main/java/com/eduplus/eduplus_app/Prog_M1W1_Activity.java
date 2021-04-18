@@ -4,11 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.github.barteksc.pdfviewer.PDFView;
@@ -23,6 +27,8 @@ import java.net.URL;
 public class Prog_M1W1_Activity extends AppCompatActivity {
 
     PDFView pdfView;
+    String pdfLink;
+    String newPdfLink = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,9 +39,67 @@ public class Prog_M1W1_Activity extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+
+                SharedPreferences sharedPreferences = getBaseContext().getSharedPreferences("DATA", Context.MODE_PRIVATE);
+                if(pdfLink.contains("Week3"))
+                {
+                    newPdfLink = "https://firebasestorage.googleapis.com/v0/b/eduplus-8497a.appspot.com/o/pdfs%2FM1Week1.pdf?alt=media&token=4d76e201-384f-4106-bc46-87c97201e786";
+                    pdfLink = newPdfLink;
+                    loadPdf(newPdfLink);
+                    sharedPreferences.edit().putString("pdfLink", pdfLink).apply();
+                    sharedPreferences.edit().commit();
+                }
+                else if(pdfLink.contains("W4"))
+                {
+                    newPdfLink = "https://firebasestorage.googleapis.com/v0/b/eduplus-8497a.appspot.com/o/pdfs%2FM1Week3.pdf?alt=media&token=3f27cb1c-88dd-40a3-b32e-e6e1fbd34ecf";
+                    pdfLink = newPdfLink;
+                    loadPdf(newPdfLink);
+                    sharedPreferences.edit().putString("pdfLink", pdfLink).apply();
+                    sharedPreferences.edit().commit();
+                }
+                else
+                {
+                    finish();
+                }
             }
         });
+
+        ImageView imageView = findViewById(R.id.rightNavigate);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences sharedPreferences = getBaseContext().getSharedPreferences("DATA", Context.MODE_PRIVATE);
+                if(pdfLink.contains("Week1"))
+                {
+                    newPdfLink = "https://firebasestorage.googleapis.com/v0/b/eduplus-8497a.appspot.com/o/pdfs%2FM1Week3.pdf?alt=media&token=3f27cb1c-88dd-40a3-b32e-e6e1fbd34ecf";
+                    pdfLink = newPdfLink;
+                    loadPdf(newPdfLink);
+                    sharedPreferences.edit().putString("pdfLink", pdfLink).apply();
+                    sharedPreferences.edit().commit();
+                }
+                else if(pdfLink.contains("Week3"))
+                {
+                    newPdfLink = "https://firebasestorage.googleapis.com/v0/b/eduplus-8497a.appspot.com/o/pdfs%2FM1W4.pdf?alt=media&token=3537ca47-b08e-431a-872f-5adf9e650255";
+                    pdfLink = newPdfLink;
+                    loadPdf(newPdfLink);
+                    sharedPreferences.edit().putString("pdfLink", pdfLink).apply();
+                    sharedPreferences.edit().commit();
+                }
+                else if(pdfLink.contains("W4"))
+                {
+                    finish();
+                    startActivity(new Intent(Prog_M1W1_Activity.this, ProgrammingContent.class));
+                }
+
+            }
+        });
+
+        pdfLink = (String)getIntent().getSerializableExtra("pdfLink");
+        loadPdf(pdfLink);
+    }
+
+    public void loadPdf(String pdfLink)
+    {
 
 //        WebView webView = (WebView) findViewById(R.id.webviewM1W1);
 //
@@ -92,7 +156,6 @@ public class Prog_M1W1_Activity extends AppCompatActivity {
         //String html = "<p><iframe src=\"https://docs.google.com/document/d/e/2PACX-1vQkrH3bxEByVKsuxBeHavsiS9msKGvtthyldDQNaGQHgsPZAn38n1udV3MLCDmPAO4VyA2Jrlx1Read/pub?embedded=false\" width=\"100%\"></iframe></p>";
         //webView.loadUrl("https://docs.google.com/document/d/e/2PACX-1vQkrH3bxEByVKsuxBeHavsiS9msKGvtthyldDQNaGQHgsPZAn38n1udV3MLCDmPAO4VyA2Jrlx1Read/pub?embedded=false");
 //        Log.e("Error", "It's coming here fuck");
-        String pdfLink = (String)getIntent().getSerializableExtra("pdfLink");
 
         if(pdfLink == null || pdfLink.isEmpty())
         {
@@ -160,6 +223,7 @@ public class Prog_M1W1_Activity extends AppCompatActivity {
 
         pdfView=findViewById(R.id.pdfView);
         new Prog_M1W1_Activity.RetrievePDFStream().execute(pdfLink);
+
     }
 
     class RetrievePDFStream extends AsyncTask<String, Void, InputStream> {
