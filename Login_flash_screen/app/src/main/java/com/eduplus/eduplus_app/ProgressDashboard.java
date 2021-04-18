@@ -89,6 +89,7 @@ public class ProgressDashboard extends AppCompatActivity implements View.OnClick
         pB3 = (ProgressBar) findViewById(R.id.pB3);
         pB4 = (ProgressBar) findViewById(R.id.pB4);
 
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
