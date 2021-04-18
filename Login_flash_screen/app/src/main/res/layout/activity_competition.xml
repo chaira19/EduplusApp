@@ -614,14 +614,21 @@
 
         </HorizontalScrollView>
 
+        <TableRow
+            android:id="@+id/hrbottom2"
+            android:layout_width="match_parent"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/hbelowlayout2"
+            android:layout_height="1.5dp"
+            android:background="#d3d3d3"></TableRow>
 
         <TextView
             android:id="@+id/textViewHeading3"
-            android:layout_below="@+id/hbelowlayout2"
+            android:layout_below="@+id/hrbottom2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:layout_marginLeft="5dp"
             android:textColor="#a9a9a9"
             android:textStyle="bold"
