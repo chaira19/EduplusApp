@@ -1,16 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Contact">
-
+    android:layout_height="match_parent">
     <TextView
-        android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Conatact Us"
-        tools:layout_editor_absoluteX="176dp"
-        tools:layout_editor_absoluteY="323dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:text="Please help us improve through your valuable suggestions or any issues that you faced:"
+        android:textStyle="bold"
+        android:id="@+id/tvfb"
+        android:textSize="21dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/tvfb"
+        android:hint="Please enter your name"
+        android:textSize="18dp"
+        android:inputType="textCapSentences|textMultiLine"
+        android:lines="2"
+        android:maxLength="1000"
+        android:maxLines="4"
+        android:id="@+id/name_feedback"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/name_feedback"
+        android:hint="Please enter your contact number here"
+        android:textSize="18dp"
+        android:inputType="textCapSentences|textMultiLine"
+        android:lines="2"
+        android:maxLength="1000"
+        android:maxLines="4"
+        android:id="@+id/number_feedback"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/number_feedback"
+        android:hint="Write feedback/issues here"
+        android:textSize="18dp"
+        android:inputType="textCapSentences|textMultiLine"
+        android:lines="12"
+        android:maxLength="2000"
+        android:maxLines="4"
+        android:id="@+id/feedback_txt"/>
+    <Button
+        android:id="@+id/send_button"
+        android:layout_below="@id/feedback_txt"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="25dp"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_home"
+        android:text="Send Feedback"
+        android:layout_marginBottom="25dp"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        />
+
+</RelativeLayout>

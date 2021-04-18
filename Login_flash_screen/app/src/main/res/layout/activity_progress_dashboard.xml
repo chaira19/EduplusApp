@@ -19,15 +19,14 @@
         <TextView
             android:textSize="20dp"
             android:layout_marginLeft="80dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginRight="2dp"
             android:layout_marginTop="30dp"
             android:layout_below="@+id/toolbar"
             android:textColor="#ffff"
             android:id="@+id/head"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:justificationMode="inter_word"
-            android:text="Track your learning performance and progress reports">
+            android:text="Track your progress and performance">
 
         </TextView>
 
@@ -57,7 +56,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Analysis Reports"
+                android:text="Progress Dashboard"
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:textColor="#FFFFFF"
