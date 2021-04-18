@@ -38,7 +38,6 @@ public class SignInActivity extends AppCompatActivity {
                         .createSignInIntentBuilder()
                         .setAvailableProviders(providers)
                         .setTheme(R.style.LoginTheme)
-                        .setLogo(R.drawable.eduplus)
                         .build(),
                 RC_SIGN_IN);
     }
