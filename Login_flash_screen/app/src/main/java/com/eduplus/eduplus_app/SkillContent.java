@@ -46,7 +46,7 @@ public class SkillContent extends AppCompatActivity implements View.OnClickListe
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
-        db.collection("Users").document(user.getPhoneNumber());
+        db.collection("Users").document("+919410571687");
         db.collection("Users").document("+919410571687")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {

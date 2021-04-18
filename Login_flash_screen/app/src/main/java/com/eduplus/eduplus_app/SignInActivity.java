@@ -2,6 +2,7 @@ package com.eduplus.eduplus_app;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -22,6 +23,7 @@ public class SignInActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         createSignInIntent();
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         //startActivity(new Intent(com.eduplus.eduplus_app.SignInActivity.this, Home.class));
 
     }

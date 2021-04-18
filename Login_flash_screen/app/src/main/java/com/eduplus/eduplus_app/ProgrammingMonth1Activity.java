@@ -113,7 +113,7 @@ public class ProgrammingMonth1Activity extends AppCompatActivity implements View
                     setMarkAsCompleted("Month1", "Week1", true);
                 }
                 else{
-                    check.setTextColor(getResources().getColor(R.color.colorAccent));
+                    check.setTextColor(getResources().getColor(R.color.black));
                     setMarkAsCompleted("Month1", "Week1", false);
                 }
             }
@@ -127,7 +127,7 @@ public class ProgrammingMonth1Activity extends AppCompatActivity implements View
                     setMarkAsCompleted("Month1", "Week2", true);
                 }
                 else{
-                    check1.setTextColor(getResources().getColor(R.color.colorAccent));
+                    check1.setTextColor(getResources().getColor(R.color.black));
                     setMarkAsCompleted("Month1", "Week2", false);
                 }
 
@@ -143,7 +143,7 @@ public class ProgrammingMonth1Activity extends AppCompatActivity implements View
                     setMarkAsCompleted("Month1", "Week3", true);
                 }
                 else{
-                    check2.setTextColor(getResources().getColor(R.color.colorAccent));
+                    check2.setTextColor(getResources().getColor(R.color.black));
                     setMarkAsCompleted("Month1", "Week3", false);
                 }
 
@@ -159,7 +159,7 @@ public class ProgrammingMonth1Activity extends AppCompatActivity implements View
                     setMarkAsCompleted("Month1", "Week4", true);
                 }
                 else{
-                    check3.setTextColor(getResources().getColor(R.color.colorAccent));
+                    check3.setTextColor(getResources().getColor(R.color.black));
                     setMarkAsCompleted("Month1", "Week4", false);
                 }
 
@@ -207,7 +207,8 @@ public class ProgrammingMonth1Activity extends AppCompatActivity implements View
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
-        db.collection("Users").document(user.getPhoneNumber())
+       // db.collection("Users").document(user.getPhoneNumber())
+        db.collection("Users").document("+918006491339")
                 .update("Programming." + month + "." + week, completed)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override

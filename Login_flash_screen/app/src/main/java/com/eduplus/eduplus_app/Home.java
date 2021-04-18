@@ -90,7 +90,8 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
-        db.collection("Users").document(user.getPhoneNumber());
+      // db.collection("Users").document(user.getPhoneNumber());
+        db.collection("Users").document("+919410571687");
         db.collection("Users").document("+919410571687")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
