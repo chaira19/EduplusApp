@@ -92,6 +92,7 @@ public class ProgrammingContent extends AppCompatActivity implements View.OnClic
             case R.id.s_fp:
                 i = new Intent(ProgrammingContent.this, ProgrammingMonth1Activity.class);
                 startActivity(i);
+                i.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                 break;
 
         }

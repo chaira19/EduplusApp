@@ -24,14 +24,24 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="15dp"
-        android:layout_width="40dp"
+        android:layout_marginLeft="5dp"
+        android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:navigationIcon="@drawable/back"/>
+
+        <ImageView
+            android:id="@+id/rightNavigate"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/right_arrow_angle">
+        </ImageView>
 
     <TextView
         android:textSize="25dp"
