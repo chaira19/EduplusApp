@@ -1,16 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".FP_W3_Module">
 
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Week3 Module"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="305dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:id="@+id/v1"
+            android:background="@drawable/bg_content1"/>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:navigationIcon="@drawable/back"/>
+
+        <TextView
+            android:textSize="25dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/toolbar"
+            android:textColor="#ffff"
+            android:id="@+id/heading"
+            android:fontFamily="@font/arial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:justificationMode="inter_word"
+            android:text="Activity - Virtual Market"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Subheading1"
+            android:layout_below="@+id/heading"
+            android:fontFamily="@font/arial"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="20dp"
+            android:textColor="#666666"
+            android:text="Activity Aim"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text1"
+            android:layout_below="@+id/Subheading1"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:justificationMode="inter_word"
+            android:textSize="15dp"
+            android:textColor="#000000"
+            android:text="@string/fp_w3_t1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Subheading2"
+            android:layout_below="@+id/text1"
+            android:fontFamily="@font/arial"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="20dp"
+            android:textColor="#006400"
+            android:layout_marginRight="10dp"
+            android:justificationMode="inter_word"
+            android:text="Detailed Information on the activity will be conveyed by the Mentor in the weekly class."/>
+
+
+
+
+
+    </RelativeLayout>
+</ScrollView>

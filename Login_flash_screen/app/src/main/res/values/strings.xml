@@ -766,4 +766,18 @@
     </string>
 
 
+
+    <string name="fp_w3_t1" translatable="false">
+
+    <p><span style="font-weight: 400;">Through this activity students will learn:&nbsp;</span></p>
+        <p>&nbsp;</p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">How important is it to develop savings habits in order to achieve&nbsp; your personal financial goals</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">How to keep track of your expenses</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Importance of investment inorder to generate passive income from savings</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">How to invest smartly by making their own investment portfolio</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">How to maximise returns and minimise risk</span></li>
+</ul>
+    </string>
+
 </resources>
