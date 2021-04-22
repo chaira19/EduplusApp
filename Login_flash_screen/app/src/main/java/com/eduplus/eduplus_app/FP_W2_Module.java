@@ -4,11 +4,15 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class FP_W2_Module extends AppCompatActivity {
@@ -22,10 +26,26 @@ public class FP_W2_Module extends AppCompatActivity {
         setContentView(R.layout.activity_f_p__w2__module);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+        ImageView toolbarLeft = (ImageView) findViewById(R.id.leftNavigate);
+        toolbarLeft.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SharedPreferences sharedPreferences = getBaseContext().getSharedPreferences("DATA", Context.MODE_PRIVATE);
+                sharedPreferences.edit().putString("SkillPage", "FP_W1_Module").apply();
+                sharedPreferences.edit().commit();
+                startActivity(new Intent(FP_W2_Module.this, FP_W1_Module.class));
+                finish();
+            }
+        });
+
+        ImageView toolbarLRight = (ImageView) findViewById(R.id.rightNavigate);
+        toolbarLRight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences sharedPreferences = getBaseContext().getSharedPreferences("DATA", Context.MODE_PRIVATE);
+                sharedPreferences.edit().putString("SkillPage", "FP_W3_Module").apply();
+                sharedPreferences.edit().commit();
+                startActivity(new Intent(FP_W2_Module.this, FP_W3_Module.class));
                 finish();
             }
         });

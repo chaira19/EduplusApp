@@ -8,7 +8,8 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
 
     <View
         android:layout_width="match_parent"
@@ -123,7 +124,7 @@
                                     android:layout_marginTop="10dp"
                                     android:layout_below="@+id/intra1"
                                     android:layout_height="2dp"
-                                    android:background="#d3d3d3"></TableRow>
+                                    android:background="#fe616a"></TableRow>
 
                             </RelativeLayout>
 
@@ -134,8 +135,27 @@
         </RelativeLayout>
 
         <TextView
-            android:id="@+id/textViewHeading"
+            android:id="@+id/textViewInterSchool"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="300dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:textColor="#fe616a"
+            android:textStyle="bold"
+            android:textSize="10pt"
+            android:text="Students qualified in Intra School Contests will be eligible for Inter School Competiiton"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/l_heading"
+            android:id="@+id/intraSchoolLayout">
+
+        <TextView
+            android:id="@+id/textViewHeading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -245,7 +265,8 @@
                             android:layout_marginRight="2dp"
                             android:layout_marginLeft="5dp"
                             android:layout_below="@+id/hbelow1"
-                            android:layout_toRightOf="@+id/logo1"
+                            android:max="100"
+                            android:progress="50"
                             android:progressDrawable="@drawable/custom_proogressbar"
                             style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                             android:layout_centerHorizontal="true"/>
@@ -261,7 +282,7 @@
                             android:layout_marginLeft="5dp"
                             android:textColor="#000000"
                             android:textSize="7pt"
-                            android:text="X/100" />
+                            android:text="50/100" />
 
 
                     </RelativeLayout>
@@ -301,7 +322,8 @@
                             android:layout_marginRight="2dp"
                             android:layout_marginLeft="5dp"
                             android:layout_below="@+id/hbelow2"
-                            android:layout_toRightOf="@+id/logo1"
+                            android:max="100"
+                            android:progress="75"
                             android:progressDrawable="@drawable/custom_proogressbar"
                             style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                             android:layout_centerHorizontal="true"/>
@@ -316,7 +338,7 @@
                             android:layout_marginLeft="5dp"
                             android:textColor="#000000"
                             android:textSize="7pt"
-                            android:text="X/100"/>
+                            android:text="75/100"/>
 
                     </RelativeLayout>
 
@@ -673,6 +695,7 @@
     </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
+    </RelativeLayout>
     </RelativeLayout>
 
 </ScrollView>

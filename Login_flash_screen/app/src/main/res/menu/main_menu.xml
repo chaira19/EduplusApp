@@ -44,10 +44,10 @@
                     android:id="@+id/Competitions"
                     android:icon="@drawable/competition_icon"
                     android:title="Competitions" />
-                <item
-                    android:id="@+id/feedback"
-                    android:icon="@drawable/ic_feedback"
-                    android:title="Monthly Feedback" />
+<!--                <item-->
+<!--                    android:id="@+id/feedback"-->
+<!--                    android:icon="@drawable/ic_feedback"-->
+<!--                    android:title="Monthly Feedback" />-->
 
                 <item
                     android:id="@+id/contact"

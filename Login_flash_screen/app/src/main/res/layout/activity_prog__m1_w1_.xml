@@ -13,52 +13,52 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="115dp"
-        android:id="@+id/v1"
-        android:background="@drawable/bg_content1"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/v1"
+            android:background="@drawable/bg_content1">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="5dp"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:navigationIcon="@drawable/back"/>
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/leftNavigate"
+                android:src="@drawable/back"></ImageView>
 
-        <ImageView
-            android:id="@+id/rightNavigate"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="5dp"
-            android:layout_alignParentRight="true"
-            android:src="@drawable/right_arrow_angle">
-        </ImageView>
+            <ImageView
+                android:id="@+id/rightNavigate"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:scaleX="-1"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/back">
+            </ImageView>
 
-    <TextView
-        android:textSize="25dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/toolbar"
-        android:textColor="#ffff"
-        android:id="@+id/heading"
-        android:fontFamily="@font/arial"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"></TextView>
+            <TextView
+                android:textSize="25dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/leftNavigate"
+                android:textColor="#ffff"
+                android:id="@+id/heading"
+                android:fontFamily="@font/arial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></TextView>
+
+        </RelativeLayout>
 
     <com.github.barteksc.pdfviewer.PDFView
         android:id="@+id/pdfView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/heading"/>
+        android:layout_below="@id/v1"/>
 
     </RelativeLayout>
 </RelativeLayout>

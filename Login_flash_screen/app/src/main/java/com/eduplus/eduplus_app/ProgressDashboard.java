@@ -12,6 +12,7 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -46,6 +47,10 @@ public class ProgressDashboard extends AppCompatActivity implements View.OnClick
     private TextView modCom;
     private TextView modTot;
 
+    private ImageView logo1;
+    private ImageView logo2;
+    private ImageView logo3;
+
     private ProgressBar progressBar1;
     private ProgressBar progressBar2;
     private ProgressBar progressBar3;
@@ -74,8 +79,10 @@ public class ProgressDashboard extends AppCompatActivity implements View.OnClick
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_progress_dashboard);
+        Window g = getWindow();
+        g.setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION, WindowManager.LayoutParams.TYPE_STATUS_BAR);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        setContentView(R.layout.activity_progress_dashboard);
 
         heading = (TextView) findViewById(R.id.textViewHeading);
         subHeading1 = (TextView) findViewById(R.id.textViewSubHeading1);
@@ -83,6 +90,10 @@ public class ProgressDashboard extends AppCompatActivity implements View.OnClick
         subHeading3 = (TextView) findViewById(R.id.textViewSubHeading3);
         modCom = (TextView) findViewById(R.id.mod_total2);
         modTot = (TextView) findViewById(R.id.mod_total);
+
+        logo1 = findViewById(R.id.logo1);
+        logo2 = findViewById(R.id.logo2);
+        logo3 = findViewById(R.id.logo3);
 
         pB1 = (ProgressBar) findViewById(R.id.pB1);
         pB2 = (ProgressBar) findViewById(R.id.pB2);
@@ -350,6 +361,9 @@ public class ProgressDashboard extends AppCompatActivity implements View.OnClick
                 subHeading3.setText("Career");
                 modCom.setText((progProgramming + progSkills + progCareer) + "");
                 modTot.setText("96");
+                logo1.setImageDrawable(getDrawable(R.drawable.ic_prog));
+                logo2.setImageDrawable(getDrawable(R.drawable.skill_icon2));
+                logo3.setImageDrawable(getDrawable(R.drawable.career_icon2));
                 break;
 
             case R.id.c2:
@@ -378,6 +392,9 @@ public class ProgressDashboard extends AppCompatActivity implements View.OnClick
                 subHeading3.setText("Photography");
                 modCom.setText((progSkills) + "");
                 modTot.setText("32");
+                logo1.setImageDrawable(getDrawable(R.drawable.ic_accounting));
+                logo2.setImageDrawable(getDrawable(R.drawable.ic_robot));
+                logo3.setImageDrawable(getDrawable(R.drawable.ic_exercise));
                 break;
 
             case R.id.c3:
@@ -406,6 +423,9 @@ public class ProgressDashboard extends AppCompatActivity implements View.OnClick
                 subHeading3.setText("Wildlife Photographer");
                 modCom.setText((progCareer) + "");
                 modTot.setText("32");
+                logo1.setImageDrawable(getDrawable(R.drawable.ic_idea_black));
+                logo2.setImageDrawable(getDrawable(R.drawable.ic_broker));
+                logo3.setImageDrawable(getDrawable(R.drawable.ic_theatre));
                 break;
 
             case R.id.c4:
@@ -434,6 +454,9 @@ public class ProgressDashboard extends AppCompatActivity implements View.OnClick
                 subHeading3.setText("Practice Problems");
                 modCom.setText((progProgramming) + "");
                 modTot.setText("32");
+                logo1.setImageDrawable(getDrawable(R.drawable.monitor));
+                logo2.setImageDrawable(getDrawable(R.drawable.programming_basics));
+                logo3.setImageDrawable(getDrawable(R.drawable.practice));
                 break;}
     }
 }

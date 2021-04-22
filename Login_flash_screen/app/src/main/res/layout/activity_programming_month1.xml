@@ -12,6 +12,7 @@
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
         android:orientation="vertical">
 
         <View
@@ -115,7 +116,7 @@
                     android:layout_marginRight="30dp"
                     android:layout_alignParentRight="true"
                     android:layout_marginTop="30dp"
-                    android:src="@drawable/ic_accounting" />
+                    android:src="@drawable/computer" />
 
 
                 <ImageView
@@ -206,7 +207,7 @@
                     android:layout_marginRight="30dp"
                     android:layout_alignParentRight="true"
                     android:layout_marginTop="30dp"
-                    android:src="@drawable/ic_accounting" />
+                    android:src="@drawable/debate" />
 
 
                 <ImageView
@@ -297,7 +298,7 @@
                     android:layout_marginRight="30dp"
                     android:layout_alignParentRight="true"
                     android:layout_marginTop="30dp"
-                    android:src="@drawable/ic_accounting" />
+                    android:src="@drawable/langugages" />
 
 
                 <ImageView
@@ -388,7 +389,7 @@
                     android:layout_marginRight="30dp"
                     android:layout_alignParentRight="true"
                     android:layout_marginTop="30dp"
-                    android:src="@drawable/ic_accounting" />
+                    android:src="@drawable/setup" />
 
 
                 <ImageView
