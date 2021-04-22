@@ -4,6 +4,9 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -11,6 +14,7 @@ import android.text.Html;
 import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class EP_S1_Module extends AppCompatActivity {
@@ -25,10 +29,31 @@ public class EP_S1_Module extends AppCompatActivity {
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+//        ZoomLayout zoomlayout= findViewbyId(R.id.zoomLayout);
+//        zoomlayout.setOnTouchListener(FullScreenVideoActivity.this);
+//        public boolean onTouch(View v, MotionEvent event) {
+//            linear.init(FullScreenVideoActivity.this);
+//            return false;
+//        }
+
+        ImageView toolbarLeft = (ImageView) findViewById(R.id.leftNavigate);
+        toolbarLeft.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                startActivity(new Intent(EP_S1_Module.this, CareerEP.class));
+                finish();
+            }
+        });
+
+        ImageView toolbarLRight = (ImageView) findViewById(R.id.rightNavigate);
+        toolbarLRight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences sharedPreferences = getBaseContext().getSharedPreferences("DATA", Context.MODE_PRIVATE);
+                sharedPreferences.edit().putString("CareerPage", "EP_S2_Module").apply();
+                sharedPreferences.edit().commit();
+                startActivity(new Intent(EP_S1_Module.this, EP_S2_Module.class));
                 finish();
             }
         });

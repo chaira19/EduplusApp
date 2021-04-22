@@ -35,8 +35,8 @@ public class Prog_M1W1_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prog__m1_w1_);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+        ImageView toolbarLeft = (ImageView) findViewById(R.id.leftNavigate);
+        toolbarLeft.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 

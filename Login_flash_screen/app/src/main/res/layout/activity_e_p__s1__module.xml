@@ -6,50 +6,60 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
+    android:fitsSystemWindows="true"
     tools:context=".EP_S1_Module">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
-        <View
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="115dp"
-            android:id="@+id/v1"
-            android:background="@drawable/bg_content1"/>
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="15dp"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:minHeight="?attr/actionBarSize"
-            android:theme="?attr/actionBarTheme"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:navigationIcon="@drawable/back"/>
-
-        <TextView
-            android:textSize="25dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="20dp"
-            android:layout_below="@+id/toolbar"
-            android:textColor="#ffff"
-            android:id="@+id/heading"
-            android:fontFamily="@font/arial"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:justificationMode="inter_word"
-            android:text="Understanding Entrepreneurship"></TextView>
+            android:id="@+id/v1"
+            android:background="@drawable/bg_content1">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/leftNavigate"
+                android:src="@drawable/back"></ImageView>
+
+            <ImageView
+                android:id="@+id/rightNavigate"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:scaleX="-1"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/back">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/heading"
+                android:layout_marginLeft="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/leftNavigate"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/arial"
+                android:text="Understanding Entrepreneurship"
+                android:textColor="#ffff"
+                android:textSize="25dp"></TextView>
+
+        </RelativeLayout>
+
+
 
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/Subheading1"
-            android:layout_below="@+id/heading"
+            android:layout_below="@+id/v1"
             android:fontFamily="@font/arial"
             android:layout_marginTop="30dp"
             android:layout_marginLeft="10dp"
@@ -195,5 +205,4 @@
 
 
     </RelativeLayout>
-
 </ScrollView>
