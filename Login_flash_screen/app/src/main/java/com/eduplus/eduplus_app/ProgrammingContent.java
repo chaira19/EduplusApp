@@ -37,8 +37,8 @@ public class ProgrammingContent extends AppCompatActivity implements View.OnClic
             }
         });
 
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-
+        /*getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+*/
         CardView cardView = (CardView) findViewById(R.id.s_fp);
 
         cardView.setOnClickListener(this);

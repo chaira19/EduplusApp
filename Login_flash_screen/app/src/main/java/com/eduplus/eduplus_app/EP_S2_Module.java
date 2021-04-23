@@ -27,8 +27,8 @@ public class EP_S2_Module extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_e_p__s2__module);
 
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-
+       /* getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+*/
         ImageView toolbarLeft = (ImageView) findViewById(R.id.leftNavigate);
         toolbarLeft.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -37,7 +37,8 @@ public class CareerContent extends AppCompatActivity implements View.OnClickList
             }
         });
 
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        /*getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        */
         CardView cardView = (CardView) findViewById(R.id.c_ep);
 
         cardView.setOnClickListener(this);

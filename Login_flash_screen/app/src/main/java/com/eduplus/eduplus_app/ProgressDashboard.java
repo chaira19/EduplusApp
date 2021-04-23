@@ -79,9 +79,11 @@ public class ProgressDashboard extends AppCompatActivity implements View.OnClick
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Window g = getWindow();
+
+        /*Window g = getWindow();
         g.setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION, WindowManager.LayoutParams.TYPE_STATUS_BAR);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        */
         setContentView(R.layout.activity_progress_dashboard);
 
         heading = (TextView) findViewById(R.id.textViewHeading);
@@ -389,7 +391,7 @@ public class ProgressDashboard extends AppCompatActivity implements View.OnClick
                 pB4.setProgress(0);
                 subHeading1.setText("Financial Planning");
                 subHeading2.setText("Artificial Intelligence");
-                subHeading3.setText("Photography");
+                subHeading3.setText("Health & Wellness");
                 modCom.setText((progSkills) + "");
                 modTot.setText("32");
                 logo1.setImageDrawable(getDrawable(R.drawable.ic_accounting));
