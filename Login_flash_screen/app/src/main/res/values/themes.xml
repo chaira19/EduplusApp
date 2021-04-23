@@ -37,4 +37,9 @@
     <style name="FirebaseUI.Text.Link">
         <item name="android:textColor">@color/black</item>
     </style>
+
+    <style name="WhiteCheck">
+        <item name="colorAccent">#9ACD32</item>
+    </style>
+
 </resources>

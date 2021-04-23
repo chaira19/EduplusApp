@@ -27,8 +27,8 @@ public class EP_S1_Module extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_e_p__s1__module);
 
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-
+       /* getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+*/
 //        ZoomLayout zoomlayout= findViewbyId(R.id.zoomLayout);
 //        zoomlayout.setOnTouchListener(FullScreenVideoActivity.this);
 //        public boolean onTouch(View v, MotionEvent event) {
