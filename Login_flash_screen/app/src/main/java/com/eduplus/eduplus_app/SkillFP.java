@@ -215,8 +215,7 @@ public class SkillFP extends AppCompatActivity implements View.OnClickListener {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
-            //db.collection("Users").document(user.getPhoneNumber())
-            db.collection("Users").document("+919410571687")
+            db.collection("Users").document(user.getPhoneNumber())
                     .update("Skills.FinancialPlanning." + month + "." + week, completed)
                     .addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override

@@ -53,16 +53,18 @@ public class CareerContent extends AppCompatActivity implements View.OnClickList
                     public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                         DocumentSnapshot doc = task.getResult();
 
-                        Map<String, Object> finPlanProg = (Map<String, Object>) ((Map<String, Object>) doc.get("Career")).get("Entrepreneurship");
+                        Map<String, Object> careerProg = (Map<String, Object>) doc.get("Career");
 
+                        if(careerProg != null)
+                        {
+                            Map<String, Object> finPlanProg = (Map<String, Object>) (careerProg.get("Entrepreneurship"));
 
-                        if (finPlanProg != null) {
-                            ProgressBar bar1 = (ProgressBar) findViewById(R.id.bar1);;
-                            bar1.setMax(4);
-                            bar1.setProgress(getMonthProgress((Map<String, Boolean>) finPlanProg.get("Month1")));
+                            if (finPlanProg != null) {
+                                ProgressBar bar1 = (ProgressBar) findViewById(R.id.bar1);;
+                                bar1.setMax(4);
+                                bar1.setProgress(getMonthProgress((Map<String, Boolean>) finPlanProg.get("Month1")));
+                            }
                         }
-
-
                     }
                 });
     }

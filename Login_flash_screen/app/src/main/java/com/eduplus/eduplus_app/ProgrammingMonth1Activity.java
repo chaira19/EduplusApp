@@ -204,8 +204,7 @@ public class ProgrammingMonth1Activity extends AppCompatActivity implements View
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
-       // db.collection("Users").document(user.getPhoneNumber())
-        db.collection("Users").document("+918006491339")
+        db.collection("Users").document(user.getPhoneNumber())
                 .update("Programming." + month + "." + week, completed)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override

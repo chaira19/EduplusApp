@@ -188,8 +188,7 @@ public class CareerEP extends AppCompatActivity implements View.OnClickListener 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
-        //db.collection("Users").document(user.getPhoneNumber())
-        db.collection("Users").document("+918006491339")
+        db.collection("Users").document(user.getPhoneNumber())
                 .update("Career.Entrepreneurship." + month + "." + week, completed)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
