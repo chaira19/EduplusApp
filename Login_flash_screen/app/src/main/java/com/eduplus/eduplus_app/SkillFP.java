@@ -61,9 +61,8 @@ public class SkillFP extends AppCompatActivity implements View.OnClickListener {
         check2 = findViewById(R.id.check2);
         check3 = findViewById(R.id.check3);
 
-        //FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        //String userId = user.getPhoneNumber();
-        String userId = "+919410571687";
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        String userId = user.getPhoneNumber();
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection("Users").document(userId).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
@@ -216,8 +215,7 @@ public class SkillFP extends AppCompatActivity implements View.OnClickListener {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
-            //db.collection("Users").document(user.getPhoneNumber())
-            db.collection("Users").document("+919410571687")
+            db.collection("Users").document(user.getPhoneNumber())
                     .update("Skills.FinancialPlanning." + month + "." + week, completed)
                     .addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override

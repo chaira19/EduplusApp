@@ -90,30 +90,38 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
-      // db.collection("Users").document(user.getPhoneNumber());
-        db.collection("Users").document("+919410571687");
-        db.collection("Users").document("+919410571687")
+       db.collection("Users").document(user.getPhoneNumber())
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                         DocumentSnapshot doc = task.getResult();
 
-                        Map<String, Object> finPlanProg = (Map<String, Object>) ((Map<String, Object>) doc.get("Skills")).get("FinancialPlanning");
-                        Map<String, Object> entshipProg = (Map<String, Object>) ((Map<String, Object>) doc.get("Career")).get("Entrepreneurship");
-                        Map<String, Object> progProg = (Map<String, Object>) ((Map<String, Object>) doc.get("Programming"));
-
+                        int progSkills = 0;
                         int progProgramming = 0;
+                        int progCareer = 0;
+
+                        Map<String, Object> skillsProg = (Map<String, Object>) doc.get("Skills");
+                        if(skillsProg != null)
+                        {
+                            Map<String, Object> finPlanProg = (Map<String, Object>) skillsProg.get("FinancialPlanning");
+                            if (finPlanProg != null) {
+                                progSkills = getMonthProgress((Map<String, Boolean>) finPlanProg.get("Month1"));
+                            }
+                        }
+
+                        Map<String, Object> careerProg = (Map<String, Object>) doc.get("Career");
+                        if(careerProg != null)
+                        {
+                            Map<String, Object> entshipProg = (Map<String, Object>) careerProg.get("Entrepreneurship");
+                            if (entshipProg != null) {
+                                progCareer = getMonthProgress((Map<String, Boolean>) entshipProg.get("Month1"));
+                            }
+                        }
+
+                        Map<String, Object> progProg = (Map<String, Object>) ((Map<String, Object>) doc.get("Programming"));
                         if (progProg != null) {
                             progProgramming = getMonthProgress((Map<String, Boolean>) progProg.get("Month1"));
-                        }
-                        int progSkills = 0;
-                        if (finPlanProg != null) {
-                            progSkills = getMonthProgress((Map<String, Boolean>) finPlanProg.get("Month1"));
-                        }
-                        int progCareer = 0;
-                        if (entshipProg != null) {
-                            progCareer = getMonthProgress((Map<String, Boolean>) entshipProg.get("Month1"));
                         }
 
                         final ProgressBar progressBar1 = (ProgressBar) findViewById(R.id.progressBar1);
@@ -146,6 +154,10 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
     private int getMonthProgress(Map<String, Boolean> monthMap) {
         int progress = 0;
+        if(monthMap == null)
+        {
+            return progress;
+        }
         for (Map.Entry<String, Boolean> week : monthMap.entrySet()) {
             if (week.getValue() == true) {
                 progress++;
@@ -277,8 +289,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
          //We are creating phone numbers as userIds
-       // String userId = user.getPhoneNumber();
-        String userId = "+919410571687";
+        String userId = user.getPhoneNumber();
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection("Users").document(userId).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {

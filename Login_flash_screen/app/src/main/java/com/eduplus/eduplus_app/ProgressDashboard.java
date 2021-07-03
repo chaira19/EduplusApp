@@ -134,36 +134,43 @@ public class ProgressDashboard extends AppCompatActivity implements View.OnClick
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
-        db.collection("Users").document("+919410571687");
-        db.collection("Users").document("+919410571687")
+        db.collection("Users").document(user.getPhoneNumber())
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                         DocumentSnapshot doc = task.getResult();
 
-                        Map<String, Object> finPlanProg = (Map<String, Object>) ((Map<String, Object>) doc.get("Skills")).get("FinancialPlanning");
-                        Map<String, Object> entshipProg = (Map<String, Object>) ((Map<String, Object>) doc.get("Career")).get("Entrepreneurship");
-                        Map<String, Object> progProg = (Map<String, Object>) ((Map<String, Object>) doc.get("Programming"));
+                        Map<String, Object> skillsProg = (Map<String, Object>) doc.get("Skills");
+                        if(skillsProg != null)
+                        {
+                            Map<String, Object> finPlanProg = (Map<String, Object>) skillsProg.get("FinancialPlanning");
+                            if (finPlanProg != null) {
+                                progSkillsM1 = getMonthProgress((Map<String, Boolean>) finPlanProg.get("Month1"));
+                                progSkillsM2 = getMonthProgress((Map<String, Boolean>) finPlanProg.get("Month2"));
+                                progSkillsM3 = getMonthProgress((Map<String, Boolean>) finPlanProg.get("Month3"));
+                                progSkills = progSkillsM1 + progSkillsM2 + progSkillsM3;
+                            }
+                        }
 
+                        Map<String, Object> careerProg = (Map<String, Object>) doc.get("Career");
+                        if(careerProg != null)
+                        {
+                            Map<String, Object> entshipProg = (Map<String, Object>) careerProg.get("Entrepreneurship");
+                            if (entshipProg != null) {
+                                progCareerM1 = getMonthProgress((Map<String, Boolean>) entshipProg.get("Month1"));
+                                progCareerM2 = getMonthProgress((Map<String, Boolean>) entshipProg.get("Month2"));
+                                progCareerM3 = getMonthProgress((Map<String, Boolean>) entshipProg.get("Month3"));
+                                progCareer = progCareerM1 + progCareerM2 + progCareerM3;
+                            }
+                        }
 
+                        Map<String, Object> progProg = ((Map<String, Object>) doc.get("Programming"));
                         if (progProg != null) {
                             progProgrammingM1 = getMonthProgress((Map<String, Boolean>) progProg.get("Month1"));
                             progProgrammingM2 = getMonthProgress((Map<String, Boolean>) progProg.get("Month2"));
                             progProgrammingM3 = getMonthProgress((Map<String, Boolean>) progProg.get("Month3"));
                             progProgramming = progProgrammingM1 + progProgrammingM2 + progProgrammingM3;
-                        }
-                        if (finPlanProg != null) {
-                            progSkillsM1 = getMonthProgress((Map<String, Boolean>) finPlanProg.get("Month1"));
-                            progSkillsM2 = getMonthProgress((Map<String, Boolean>) finPlanProg.get("Month2"));
-                            progSkillsM3 = getMonthProgress((Map<String, Boolean>) finPlanProg.get("Month3"));
-                            progSkills = progSkillsM1 + progSkillsM2 + progSkillsM3;
-                        }
-                        if (entshipProg != null) {
-                            progCareerM1 = getMonthProgress((Map<String, Boolean>) entshipProg.get("Month1"));
-                            progCareerM2 = getMonthProgress((Map<String, Boolean>) entshipProg.get("Month2"));
-                            progCareerM3 = getMonthProgress((Map<String, Boolean>) entshipProg.get("Month3"));
-                            progCareer = progCareerM1 + progCareerM2 + progCareerM3;
                         }
 
                         progressBar1 = (ProgressBar) findViewById(R.id.progressBar1);

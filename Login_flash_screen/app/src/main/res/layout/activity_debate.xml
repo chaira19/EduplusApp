@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    tools:context=".DebateActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/v1"
+            android:background="@drawable/bg_content1">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/leftNavigate"
+                android:src="@drawable/back"></ImageView>
+
+<!--            <ImageView-->
+<!--                android:id="@+id/rightNavigate"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:scaleX="-1"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginRight="5dp"-->
+<!--                android:layout_alignParentRight="true"-->
+<!--                android:src="@drawable/back">-->
+<!--            </ImageView>-->
+
+            <TextView
+                android:id="@+id/heading"
+                android:layout_marginLeft="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/leftNavigate"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/arial"
+                android:text="Let's Debate"
+                android:textColor="#ffff"
+                android:textSize="25dp"></TextView>
+
+        </RelativeLayout>
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Subheading1"
+            android:layout_below="@+id/v1"
+            android:fontFamily="@font/arial"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="20dp"
+            android:textColor="#666666"
+            android:text="Topics:"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text1"
+            android:layout_below="@+id/Subheading1"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:justificationMode="inter_word"
+            android:textSize="15dp"
+            android:textColor="#000000"
+            android:text="1. Can computers be conscious? What will be the impact?"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text2"
+            android:layout_below="@+id/text1"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:justificationMode="inter_word"
+            android:textSize="15dp"
+            android:textColor="#000000"
+            android:text="2. Impact of Social Media"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text3"
+            android:layout_below="@+id/text2"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:justificationMode="inter_word"
+            android:textSize="15dp"
+            android:textColor="#000000"
+            android:text="You need to select one topic out of these before going to the class and also whether you will be speaking against of for."/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text4"
+            android:layout_below="@+id/text3"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:justificationMode="inter_word"
+            android:textSize="15dp"
+            android:textColor="#000000"
+            android:text="You will have to come prepared with at least 10 opinions/points you would like to say in class. Each point will get marks based on fact-based, attractivity, importance, creativity and uniqueness. "/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text5"
+            android:layout_below="@+id/text4"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:justificationMode="inter_word"
+            android:textSize="15dp"
+            android:textColor="#000000"
+            android:text="Every topic will get 20 minutes.
+In the first 10 minutes, every student will say his/her top 2 points in the class. Every student will get 30 seconds for that.
+After that students can raise their hands if they have any counterpoints for the spoken in points in the first round.
+One by one, they can speak their counterpoints once only.
+In the end, the mentor will end the topic with a conclusion.
+"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Subheading2"
+            android:layout_below="@+id/text5"
+            android:fontFamily="@font/arial"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="20dp"
+            android:textColor="#666666"
+            android:text="At last, Winners from each topic will be declared and can be rewarded."/>
+
+    </RelativeLayout>
+</ScrollView>

@@ -62,9 +62,7 @@ public class ProgrammingMonth1Activity extends AppCompatActivity implements View
         check3 = findViewById(R.id.check3);
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        //String userId = user.getPhoneNumber();
-
-        String userId = "+919410571687";
+        String userId = user.getPhoneNumber();
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection("Users").document(userId).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
@@ -181,8 +179,7 @@ public class ProgrammingMonth1Activity extends AppCompatActivity implements View
                 break;
 
             case R.id.fp_w2:
-                i = new Intent(ProgrammingMonth1Activity.this, FP_W2_Module.class);
-                startActivity(i);
+                i = new Intent(ProgrammingMonth1Activity.this, DebateActivity.class);
                 break;
 
             case R.id.fp_w3:
@@ -207,8 +204,7 @@ public class ProgrammingMonth1Activity extends AppCompatActivity implements View
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
-       // db.collection("Users").document(user.getPhoneNumber())
-        db.collection("Users").document("+918006491339")
+        db.collection("Users").document(user.getPhoneNumber())
                 .update("Programming." + month + "." + week, completed)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override

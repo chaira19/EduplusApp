@@ -59,8 +59,7 @@ public class CareerEP extends AppCompatActivity implements View.OnClickListener 
         check3 = findViewById(R.id.check3);
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        //String userId = user.getPhoneNumber();
-        String userId = "+918006491339";
+        String userId = user.getPhoneNumber();
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection("Users").document(userId).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
@@ -189,8 +188,7 @@ public class CareerEP extends AppCompatActivity implements View.OnClickListener 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
-        //db.collection("Users").document(user.getPhoneNumber())
-        db.collection("Users").document("+918006491339")
+        db.collection("Users").document(user.getPhoneNumber())
                 .update("Career.Entrepreneurship." + month + "." + week, completed)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override

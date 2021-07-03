@@ -46,8 +46,7 @@ public class ProgrammingContent extends AppCompatActivity implements View.OnClic
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
-        db.collection("Users").document("+919410571687");
-        db.collection("Users").document("+919410571687")
+        db.collection("Users").document(user.getPhoneNumber())
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                     @Override
