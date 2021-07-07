@@ -1,0 +1,782 @@
+<!DOCTYPE resources
+    [<!ENTITY rsquo "&#8217;" ><!ENTITY nbsp "&#xA0;"><!ENTITY ldquo "&#8220;"><!ENTITY rdquo "&#8221;"><!ENTITY ndash "&#8211;">]>
+<resources>
+    <string name="app_name" translatable="false">Eduplus</string>
+    <string name="navigation_drawer_open" translatable="false">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close Navigation Drawer</string>
+    <string name="this_month_s_content" translatable="false">This Month\'s Content</string>
+
+    <string name="fp_w1_t1" translatable="false">
+        <ol>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">Either you completely cut down all your expenses for the next month.&#xA0;</span></li>
+        </ol>
+        <ol>
+            <li style="font-weight: 400;"><span style="font-weight: 400;">You can start saving some part of your pocket money (30%) from this month itself in order to meet the requirement for the next month.&#xA0;</span></li>
+        </ol>
+        <p><span style="font-weight: 400;">Personal finance is all about managing your money and meeting your financial goals. Let us consider an example to understand this concept:&#xA0;</span></p>
+        <p>&#xA0;</p>
+        <p><span style="font-weight: 400;">Consider a scenario where you receive a pocket money of 500 INR every week. Now, you are supposed to meet all your expenses such as buying stationary, spending it on friends birthday parties, dining out with your friends, etc within this amount of money. You found out that your old cricket bat is broken and you want to buy a new one worth RS. 2000. You decided to buy the Bat next month. There are two ways you can achieve your goal:&#xA0;</span></p>
+        <p>&#xA0;</p>
+        <p style="text-align: center;"><strong>Or</strong></p>
+        <p>&#xA0;</p>
+        <p><span style="font-weight: 400;">Now, in both the scenarios you will be able to buy the bat, but completely cutting down on your expenses would mean that you&#8217;ll not be well prepared for any emergency situation. What if you have to buy a textbook to prepare for your exams? What if you want to buy a gift for your best friend&#8217;s birthday? See, following the first method doesn&#8217;t prepare you for all these situations. Method 2 on the other hand will allow you to operate on 70% of your pocket money since you are already saving money from the previous month. Yes, you will have to cut down on some unnecessary expenses, you will have to plan your monthly expenses and this is what we call </span><span style="font-weight: 400;">&#xA0;</span><strong>Financial planning.</strong></p>
+        <p>&#xA0;</p>
+        <p><span style="font-weight: 400;">Planning your personal finances beforehand have several benefits such as, it makes you ready for an emergency situation, it prepares you for the ups and downs of the future. Some of the well known benefits of financial literacy are described in the chart below:&#xA0;</span></p>
+    </string>
+
+    <string name="fp_w1_t2" translatable="false">
+        <p style="text-align: justify;">Financial planning also involves setting up personal financial goals that you want&#xA0; to achieve. To take control of the financial life one requires planning and that starts with setting goals. In this section we will discuss some of the ways in which you can set your financial goals.&#xA0;</p>
+        <p style="text-align: justify;">&#xA0;</p>
+        <p style="text-align: justify;"><span style="text-decoration: underline; color: #008000;"><strong>SMART Goals:</strong></span></p>
+        <p style="text-align: justify;">&#xA0;</p>
+        <p style="text-align: justify;"><span style="font-weight: 400;">When it comes to setting goals, be it any life goal or financial goal, you can follow the SMART goal strategy. For any goal to be S.M.A.R.T it need to fulfill certain conditions that are as follows:</span></p>
+        <p style="text-align: justify;"><span style="font-weight: 400;">The goal must be Specific, Measurable, Attainable, Relevant and Time based. Before setting any goal you should judge it on these basis. </span><span style="font-weight: 400;"> Consider the above case where you wanted to buy a cricket bat, now let us analyse whether this goal is SMART or not. Let us begin by asking the following questions:&#xA0;</span><strong>For Ex:</strong></p>
+        <ul>
+        <li style="font-weight: 400; text-align: left;"><span style="font-weight: 400;">&#xA0;</span><strong>Is it Specific?</strong></li>
+        <ul>
+        <li style="font-weight: 400;"><span style="font-weight: 400;">I want a cricket bat v/s I want a cricket bat worth RS 2000 next month as my old bat is broken. The latter is more specific and a better way to set well defined goals.&#xA0;</span></li>
+        </ul>
+        </ul>
+    </string>
+
+    <string name="fp_w1_t3" translatable="false">
+        <ol>
+        <li><span style="font-weight: 400;">Budgeting helps you control your spending, track your expenses and increases your savings. It also helps you make better financial decisions, get out of debt, prepare for emergencies, and meet your long term financial goals. The 50/30/20 budgeting framework is a great example, it breaks down like this:</span><strong>Make a Budget: </strong></li>
+        </ol>
+        <p>&#xA0;</p>
+        <p>&#xA0;</p>
+        <p>&#xA0;</p>
+        <p>&#xA0;</p>
+        <p>&#xA0;</p>
+        <p>&#xA0;</p>
+        <p><span style="text-decoration: underline;"><span style="color: #008000; text-decoration: underline;"><span style="font-weight: 400;">&#xA0;</span><strong>Personal Finance Strategies:</strong></span></span></p>
+        <p>&#xA0;</p>
+        <p><span style="font-weight: 400;">The sooner you start financial planning the better it is. But it is never too late to create your financial goals to give yourself a sense of financial freedom. In this section we will discuss some of the strategies that will help you keep track of your goals.&#xA0;</span></p>
+        <p>&#xA0;</p>
+        <ul>
+        <li><strong>Is it Measurable?</strong>
+        <ul>
+        <li style="font-weight: 400;"><span style="font-weight: 400;">Since you have to buy the bat next month, if you save 250 RS every week for 2 months, you will be able to buy it. If you can measure your progress this way, it will help you stay focused and motivated.&#xA0;</span></li>
+        </ul>
+        </li>
+        </ul>
+        <ul>
+        <li><strong><strong>Is it Attainable and Relevant</strong></strong>
+        <ul>
+        <li><span style="font-weight: 400;">Is your goal attainable? Do you have the time, money and resources to achieve it? And is it relevant? Do you really need to buy a cricket bat or maybe you can play with your friend&#8217;s bat if you don&#8217;t play that often. Considering these questions will save you a lot of time, money and efforts.&#xA0;</span></li>
+        </ul>
+        </li>
+        </ul>
+        <ul>
+        <li><strong><strong>Is your goal Time based?</strong></strong>
+        <ul>
+        <li>Time is money. Set deadlines for your goals and try to achieve it within the specified time.&#xA0;</li>
+        </ul>
+        </li>
+        </ul>
+    </string>
+
+
+    <string name="fp_w1_t4" translatable="false">
+      <p><span style="font-weight: 400;">Let us fit this framework in the above mentioned scenario of cricket bat:</span></p>
+<p>Just like the above example you can also create your own budgeting framework that fits your requirements and goals. Later in this module you will create your own budgeting framework that will help you achieve your financial goal.&nbsp;&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">&nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+<p style="text-align: center;"><span style="font-weight: 400;">&nbsp;&nbsp;<strong>&nbsp;&nbsp;</strong></span><strong>Net Savings =&nbsp; Income - Expenses</strong></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Let us look at the savings statement of Joe, who is a college student,&nbsp; and estimate his net savings for this month:&nbsp;</span></p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><strong>&nbsp;Joe&rsquo;s&nbsp; Savings Statement for the current month</strong></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Maximum 50% of your pocket money goes towards meeting your essential requirements such as buying your stationary, commutation expenses, e.t.c&nbsp;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">30% of your pocket money will cover your lifestyle expenses such as dining out,attending birthday parties, e.t.c.&nbsp;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">And at least 20% of your pocket money you can save to buy a cricket bat.&nbsp;</span></li>
+</ul>
+<ul>
+<li><span style="font-weight: 400;">Your personal savings statement is nothing but a list of all your expenses and income. It helps to keep track of your expenses and maximise your savings. By comparing your current savings statement with the savings statement of your previous years, you can keep track of your financial progress. Your net expense minus your income will be your </span><span style="font-weight: 400;"> for that period.</span><strong>Net savings</strong><strong>Maintain your personal Savings Statement:&nbsp;</strong><strong><span style="font-weight: 400;">&nbsp;</span></strong></li>
+</ul>
+    </string>
+
+
+    <string name="fp_w1_t5" translatable="false">
+        <p><span style="font-weight: 400;">Maximise your savings by calculating your current savings and &nbsp; comparing it with that of previous months</span></p>
+<p><span style="font-weight: 400;">&nbsp;</span></p>
+<ul>
+<li><strong>Develop Saving Habits:</strong>&nbsp;&nbsp;The key to achieve your money goals is to build a collection of smaller everyday habits. Let us look at some of the smaller habits you can develop today that will eventually help you grow your money.</li>
+</ul>
+    </string>
+
+    <string name="fp_w1_t6" translatable="false">
+
+        <ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Reviewing your monthly bills can help you cut down on your unnecessary expenses</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Maximising your tax savings can help you repay your past debts</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">It&rsquo;s very important to set aside some money for unexpected expenses such as medical emergencies, a big car car repair, e.t.c.&nbsp;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Record everything that you purchase on a weekly basis so that you can look back on each expenditure.&nbsp;</span></li>
+</ul>
+    </string>
+
+    <string name="fp_w1_t7" translatable="false">
+
+<p style="text-align: center;"><strong><span style="color: #339966;"><a style="color: #339966;" href="https://docs.google.com/forms/d/1Nd4F30T5eEx1kjyFUx5MJkKPhdtMWDtMwrr4SQ90B1o/edit">Take the Money Personality Quiz Now!</a></span><span style="color: #339966;">&nbsp;</span>&nbsp;&nbsp;</strong></p>
+<ul>
+<li style="font-weight: 400;">
+<br />
+<p><span style="font-weight: 400;">Understanding your money personality is the first step towards financial health. We have listed down some of the extreme behaviours and the traits associated with them that people show when it comes to money. Most of the people don&rsquo;t exhibit these extremes most of the time, rather they have traits of each of these behaviours.&nbsp;</span></p>
+<p><span style="font-weight: 400;">&nbsp;</span><strong>Fun Activity:</strong></p>
+<p><span style="font-weight: 400;">Take the questionnaire given below to identify your money personality. Answer each question as per the instruction and at the end you will receive a score that will indicate which money personality best describes you.</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</li>
+</ul>
+
+    </string>
+
+    <string name="fp_w2_t1" translatable="false">
+
+        <p><span style="font-weight: 400;">Cash flow is nothing but movement of money </span><span style="font-weight: 400;"> and </span><span style="font-weight: 400;"> of your wallet. Positive cash flow indicates your net worth is increasing. Let us look at some of the sources of inflow and outflow of money:</span><strong>out</strong><strong>in</strong></p>
+
+    </string>
+
+    <string name="fp_w2_t2" translatable="false">
+
+       <p><strong><span style="text-decoration: underline; color: #339966;">Assets:</span></strong></p>
+        <p>&nbsp;</p>
+<p><span style="font-weight: 400;">The sources that put money in your wallet are assets. These sources add to your income. </span><span style="font-weight: 400; color: #993300;">The money kept in the bank is an asset since the bank pays you interest on that money. That interest adds to your cash inflow and hence it is an asset. </span><strong>Ex: </strong></p>
+
+    </string>
+
+    <string name="fp_w2_t3" translatable="false">
+
+    <p><span style="text-decoration: underline; color: #008000;"><strong>Liabilities:</strong></span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">The sources that take money out of your wallet are liabilities. These are the things that require additional cost of operation or maintenance. </span><span style="font-weight: 400; color: #993300;"> When you have a car, you need fuel to drive it, it requires maintenance and insurance as well. Now the cost of all this&nbsp; is outflow of cash and hence the car is a liability.&nbsp;</span><strong>Ex:</strong></p>
+<p>&nbsp;</p>
+<p><span style="text-decoration: underline; color: #808080;"><strong>Difference between Assets &amp; Liabilities:</strong><strong>&nbsp;</strong></span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Inorder to make the most out of your financial resources, one needs to know the fundamental difference between&nbsp; an asset and liability. Let us understand this difference with the help of a simple example.&nbsp;</span></p>
+<p><span style="color: #993300;"><span style="font-weight: 400;">Consider a scenario where you are the owner of a house. Now, that house can be an asset or a liability depending upon how much positive or negative cash flow is contributed by that property. It is explained in the diagram below:</span><span style="font-weight: 400;">&nbsp;</span></span> <strong>Ex:</strong></p>
+
+    </string>
+
+    <string name="fp_w2_t4" translatable="false">
+
+        <p style="text-align: justify;"><span style="font-weight: 400;">In case I, the house is an asset since the rent received exceeds the mortgage and maintenance cost, hence contributing to a positive cashflow. However, the same house in case II is a liability since it contributes to a negative cashflow.&nbsp;</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="text-decoration: underline; color: #808080;"><span style="font-weight: 400;">&nbsp;</span><strong>Types of Income Sources:</strong></span></p>
+<p style="text-align: justify;"><span style="font-weight: 400;">There are mainly two types of income sources:&nbsp;</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-weight: 400;">Financial freedom is a stage where you can meet all your expenses from the&nbsp;</span><span style="font-weight: 400;">money generated by your passive sources of income. The more assets you&nbsp;</span><span style="font-weight: 400;">accumulate, greater will be your passive income. This cycle is explained well in&nbsp;</span><span style="font-weight: 400;">the diagram below:</span></p>
+<ul style="text-align: justify;">
+<li><span style="color: #008000;"><strong>Active income sources: </strong></span><span style="font-weight: 400;">It is the hard earned money that one gets in exchange for performing a service. </span><span style="color: #993300;"> <span style="font-weight: 400;">Salary from Job.</span><span style="font-weight: 400;">&nbsp;</span></span><strong>Ex:</strong></li>
+</ul>
+<ul>
+<li><span style="color: #008000;"><strong>Passive income sources:</strong></span><span style="font-weight: 400;"> It is the money that requires little work or no active engagement to earn. </span><span style="font-weight: 400;">: </span><span style="color: #993300;"><span style="font-weight: 400;">Money earned via interest from the bank.</span><span style="font-weight: 400;">&nbsp;</span></span><strong>Ex</strong></li>
+</ul>
+
+    </string>
+
+    <string name="fp_w2_t5" translatable="false">
+
+        <p style="text-align: justify;"><span style="font-weight: 400;">One can increase his income from passive sources by investing the money earned via active sources. Let us learn more about investment in the next section.&nbsp;</span></p>
+
+    </string>
+
+    <string name="fp_w2_t6" translatable="false">
+
+    <p><span style="font-weight: 400;">Investment is basically an asset that is purchased with the intention that it will generate income at some point in future. When you buy a commodity as an investment, the intent is not to utilise that commodity, but rather wait for its value to go higher inorder to receive greater returns.&nbsp;</span></p>
+    <p style="text-align: justify;">&nbsp;</p>
+    <p><span style="font-weight: 400; color: #993300;">Let say you bought 10gm of 24 carat pure gold today at a price of 50,000 INR and after 5 years the price of gold went high and you sold it for 60,000 INR, this would mean that you invested 50,000 Rs on gold and you got 10,000 Rs as a return on that investment after 5 years.&nbsp;</span><strong>Ex: </strong></p>
+    <p style="text-align: justify;"><br /><br /></p>
+    <p><span style="font-weight: 400;">Depending upon the type of returns, there are mainly two types of investments:&nbsp;</span></p>
+    <p style="text-align: justify;">&nbsp;</p>
+    <p><span style="text-decoration: underline; color: #008000;"><strong>Fixed Return Investments:</strong></span></p>
+    <p>&nbsp;</p>
+    <p><span style="font-weight: 400;">These are the types of investments where the principal amount of investment is fixed and the interest rate you receive on that amount is also known and is fixed. Most common examples of these investments are:&nbsp;</span></p>
+    <p style="text-align: justify;">&nbsp;</p>
+    <p style="text-align: justify;">&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p style="text-align: justify;"><br /><br /></p>
+    <p><span style="text-decoration: underline;"><strong>When to use:</strong></span>&nbsp;<span style="font-weight: 400;">The risk associated with these investments is low but at the same time the return rate is also on the lower side. They are beneficial when you want to invest your money for the short term and keep the money safe.&nbsp;</span></p>
+    <p style="text-align: justify;">&nbsp;</p>
+    <p><span style="text-decoration: underline; color: #008000;"><strong>Variable Return Investments:</strong></span></p>
+    <p>&nbsp;</p>
+    <p><span style="font-weight: 400;">These are the types of investments where the return rate is variable and depends upon the performance of the market.&nbsp;</span></p>
+    <p><span style="font-weight: 400;">Examples of these investments are:&nbsp;</span></p>
+    <p style="text-align: justify;">&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p style="text-align: justify;">&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p style="text-align: justify;">&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p style="text-align: justify;">&nbsp;</p>
+    <p><span style="font-weight: 400;">The risk associated with these investments is high but the return </span><span style="font-weight: 400;">rate is also on the higher side. They are most beneficial when you want to invest your money for a long term and willing to accept fluctuations.&nbsp;</span> <strong>When to use: </strong></p>
+    <p style="text-align: justify;">&nbsp;</p>
+    <p><span style="font-weight: 400;">Difference between fixed return and variable return investment will become more clear with the help of the table given below:&nbsp;</span></p>
+    <ul>
+        <li style="font-weight: 400;"><span style="font-weight: 400;">&nbsp;A FD is an investment offered by banks where you can deposit a lump sum of money for a specific&nbsp; period of time and the bank will offer you interest on that amount compounded annually. </span><span style="font-weight: 400; color: #993300;"> If you deposit 1,00,000 Rs in FD for a tenure of 5 years at a rate of 5%, you will receive 1,27,000 Rs at the end of 5 years.&nbsp;</span><strong>Ex:</strong><strong>Fix Deposit:</strong></li>
+    </ul>
+    <ul>
+        <li><strong><strong>Recurring Deposit:&nbsp;&nbsp;</strong></strong>A RD is similar to FD except that in RD you can deposit a fixed amount of money each month and earn interest on it.&nbsp;</li>
+    </ul>
+    <ul>
+        <li><span style="color: #993300;">If you would have bought a plot for 1,00,000 Rs in 2015 the value of that plot in 2020 would be around 1,61,000 Rs considering a 10% rise in property prices every year.</span>This involves purchase of land and property inorder to earn profit. Ex: <strong><strong>Real Estate: </strong></strong> Returns in real estate are mostly dependent on the development of the nearby area which is likely to happen in the long term.</li>
+    </ul>
+    <ul>
+        <li><span style="color: #993300;"> Consider the case of Dell itself. The stock price of Dell in 2018 was around 40$ whereas its stock price in 2020 is around 60$. Which means that if you would have bought Dell stock in 2018 then you would have received a 50% return on that stock in 2020.&nbsp;</span>In order to understand stocks, consider a company called Dell. Now Dell is a company that manufactured Computers. In order to run their business, companies raise funds by issuing stocks which are nothing but shares that represent ownership of a fraction of a company. If a company issues 1000 stocks and you bought 500 stocks of that company, then you are the owner of 50% of that company. If you own 50% of the stocks in that company, that means you are entitled to 50% of the total profit that the company will make. At the same time if the company suffers any loss, you will have to bear 50% of that loss. That is why investing in stocks is risky but yields greater returns. Ex:<strong><strong>Stocks:</strong> </strong></li>
+    </ul>
+    <ul>
+        <li><strong><strong>Mutual Fund: </strong></strong>To understand Mutual funds, one needs to understand that investing in stocks is tricky and requires expertise. Now, if you don&rsquo;t have expertise to analyse the market trends and you want to save your time, this is where mutual funds come into play. Mutual fund is a pool which collects money from different people who want to invest in any asset. The mutual fund manager, who has the required expertise in this field, then collects all the money and reinvest that money, on your behalf, in different investing opportunities. The profit gained by those investments is then redistributed to all the people who invested in the mutual fund. Some part of the profit is also kept by the fund manager as the management fees.</li>
+    </ul>
+
+    </string>
+
+
+    <string name="fp_w2_t7" translatable="false">
+
+      <p><span style="font-weight: 400;">There is definitely some risk associated when it comes to investments but either you can step back from taking risks or you can learn to manage risks. Let us discuss some of the ways in which we can manage these risks and come up with a successful investment strategy. </span></p>
+
+    </string>
+
+
+    <string name="fp_w2_t8" translatable="false">
+
+<p><span style="font-weight: 400;">An investment portfolio is simply a collection of all your financial investments like FD, stocks, Mutual funds, etc. Let us understand this with the help of an example:&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Consider a person A whose active income from his job is 30,000 Rs/month. His monthly expenses like electricity bill, water bill, house maintenance, e.t.c amounts to 20,000 Rs/month. So his net savings will be 10,000 Rs/month.&nbsp;</span></p>
+
+    </string>
+
+
+    <string name="fp_w2_t9" translatable="false">
+
+     <ol>
+<li style="font-weight: 400;"><span style="font-weight: 400;">, where there are higher returns but at the cost of high risk.&nbsp;</span><strong>Variable return investment</strong></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Or he can invest his money on</span><span style="font-weight: 400;"> where his money will be safe but will yield lower returns.&nbsp;</span><strong> Fixed return investments</strong></li>
+</ol>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Now, let us consider the choices he has in front of him:&nbsp;</span></p>
+<p><span style="font-weight: 400;">Now if he decided to keep his 10,000 Rs in his savings account, he will receive very low interest on that money and his savings won&rsquo;t be able to generate any passive income. So he decided to invest his money in assets that will generate passive income for him.&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">But person A wants a higher return but at the same time he doesn&rsquo;t want to risk all his savings on one particular type of investment. This is where making your own investment portfolio is helpful.&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Rather than investing in a single type of asset, he decided to invest in multiple assets at the same time. Here is the portfolio of all his investments:</span></p>
+
+    </string>
+
+    <string name="fp_w2_t10" translatable="false">
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Now by diversifying his investment he has minimized a significant risk of loss from his high risk investment in stocks. Even if he incurs a loss from stocks, his returns from the FD and Real estate assets will be enough to mitigate the effect of that loss. This is how managing your own investment portfolio helps you to minimize the risks related to the investment.&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Let us quickly recap the benefits of maintaining an investment portfolio:&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><span style="text-decoration: underline;"><span style="color: #008000;"><strong>Benefits of Investment Portfolio:</strong></span></span></p>
+<p>&nbsp;</p>
+<p><br /><br /></p>
+<p><span style="font-weight: 400;">This is how a better investment strategy can really help you boost your passive income from assets and help you achieve financial freedom early in your life.&nbsp;</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">He invested 40% (4,000 Rs) of his savings in Fixed deposit where he will receive a return rate of 6%, which is on a lower side but his money will be safe.&nbsp;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">35%(3,500 Rs) of his savings is invested in Real estate where he can potentially get a return rate of 8-12% depending upon the fluctuations. He can potentially receive a higher return at the cost of slightly higher risk.&nbsp;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Lastly, 25%(2,500 Rs) of his savings he invested in stocks of multinational companies where he can potentially get a return of 15-20% but at the same time his principal amount can also go down significantly depending upon the market fluctuations.&nbsp;</span></li>
+</ul>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Helps you to do </span><span style="font-weight: 400;">.</span><strong>optimal allocation of funds</strong></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Helps in </span><span style="font-weight: 400;"> related to variable return investments</span><strong>reducing risks</strong></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Maintaining all your investment at one place helps you to </span><strong>track the performances of the assets</strong></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Managing your portfolio allows you to </span><span style="font-weight: 400;"> with time depending upon your financial goals.&nbsp;</span><strong>readjust your investments</strong></li>
+</ul>
+
+    </string>
+
+    <string name="fp_w4_t1" translatable="false">
+
+<p><span style="font-weight: 400;">Let us understand about insurance with the help of an example:&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">In this example the students are being </span><span style="font-weight: 400;">, that is, if in case they get stung by the bee, their medical expenses will be covered by the teacher who, in this case, is the </span><span style="font-weight: 400;">. Also, paying 10 Rs every year will make them less nervous, as now they will be able to afford the 50 Rs medicine in case of emergency. This 10 Rs is called the </span><span style="font-weight: 400;">.&nbsp;&nbsp;</span><strong>insured</strong><strong>premium of the insurance</strong><strong>insurer</strong></p>
+<p><span style="font-weight: 400;">&nbsp; Insurance is a legal agreement between two parties where the insurance company(insurer) promises to cover the losses of the individual(insured). These losses can be death of the individual, damage or destruction of the property, etc. The individual pays a premium in return of the promise made by the insurer.&nbsp;&nbsp;</span><strong>In formal terms:</strong></p>
+<p><span style="text-decoration: underline;"><span style="color: #008000;"><strong>Why is Insurance important?</strong></span></span></p>
+<p><span style="font-weight: 400;">As we move through life, the importance of insurance in a long term plan increases because insurance is all about providing financial security to yourself and to your loved ones. Let us look at four key reasons why insurance is important:&nbsp;</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Consider there are 40 kids in a class. At the beginning of the year, the teacher asks everyone to pay 10 Rs into her bowl.&nbsp;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">She told all her students that if anyone got stung by a bee, he or she can take 50 Rs from the bowl to buy medicine.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Let say this year, 5 kids got stung buy the bee, the teacher will give 20*5 = 250 Rs to them to buy the medicine and the remaining money, that is, 40*10 - 250 = 150 will be kept for the future. This way next year she will have&nbsp; 40*10 + 150 = 550 Rs.&nbsp;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">In case if a crazy year of bee stung happens and 10 students get stung by the bee, the teacher can pay for everyone&#8217;s medical expenses.&nbsp;</span></li>
+</ul>
+
+
+    </string>
+
+
+    <string name="fp_w4_t2" translatable="false">
+
+<p><span style="text-decoration:underline; color: #008000;"><strong>Types of Insurance</strong></span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">There are various types of insurances that are available, but in this module we will cover the 2 most important ones:&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;</span></p>
+<p>&nbsp;</p>
+<p><strong>Life Insurance:&nbsp;</strong></p>
+        <p><span style="font-weight: 400;">As the name suggests, life insurance is the insurance on your life. You buy life insurance to ensure that in case of your untimely demise, your family will be financially secured. It becomes even more important if you are the only earning member and your whole family is financially dependent upon you for their living. Life insurance is the best investment that you can make because it protects you and your family from financial hardships if something unexpected happens.&nbsp;</span></p>
+<p>&nbsp;</p>
+
+<p><span style="text-decoration:underline; color: #666666;"><strong>Example of a Life insurance policy:
+</strong></span></p>
+<p><span style="font-weight: 400;">Let us consider an example where&nbsp; a bank &ldquo;B&rdquo;
+    offers a life cover of 1 crore Rs upto 70 years and has a claim settlement ratio of 98%. All this at a premium of 600 Rs./month.&nbsp;&nbsp;</span></p>
+        <ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Life Insurance&nbsp;</span></li>
+</ul>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Health Insurance&nbsp;</span></li>
+</ul>
+
+
+    </string>
+
+
+    <string name="fp_w4_t3" translatable="false">
+
+<p><span style="font-weight: 400;">Let us understand what each of these term means:&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;"> This is the amount that the insurance company will provide to your family in case of your untimely death. In this example, the amount of life cover is 1cr Rs.&nbsp;</span><strong>Life Cover:</strong></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;"> This is the amount you will have to pay to the insurance company in the form of monthly installment. In the above example that amount is 600 Rs/month.&nbsp;</span><strong>Premium:</strong></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;"> It is the maximum age of the individual upot which he can claim the insurance amount. In this example, if the person died after he or she is 70 years of age, they won&rsquo;t be able to claim the insurance money.&nbsp;</span><strong>Limit:</strong></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;"> It is defined as the percentage of insurance claims settled by the company to the total number of claims received by them. Insurance claims can be rejected under certain conditions such as death due to suicide, drug overdose, or by accident due to intoxication. Under these conditions the claim does not come under any valid category and is rejected by the insurance company. </span><span style="font-weight: 400;"> In the above scenario, the CSR is 98% which means that out of every 100 claims, 98 are paid by the insurer and remaining 2 are rejected.&nbsp;</span><strong>For Ex:</strong><strong>Claim Settlement Ratio(CSR):</strong></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Getting your life insurance early is very beneficial because when you are in your 20&rsquo;s, the premium of insurance policy is generally low and the life cover is high.&nbsp;</span><strong>Note: </strong></p>
+<p><br /><br /></p>
+<p><strong>Health Insurance:&nbsp;</strong></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Health insurance covers medical expenses that arise due to an illness. These expenses could be doctor&rsquo;s consultation fees, medicine or hospitalization expenses.&nbsp;</span></p>
+<p>&nbsp;</p>
+
+
+    </string>
+
+
+    <string name="fp_w4_t4" translatable="false">
+
+<p><span style="font-weight: 400;"> A serious illness can strike anyone at any time. Also, the cost of treating severe illness can cause a serious financial impact on the savings you have accumulated over time.&nbsp; Treatment of a disease like cancer can take upto 25 Lakhs of Rs. Spending such a huge amount means you might have to compromise on your child&rsquo;s quality education, or your retirement plans, which is not the kind of future you would want for yourself and your family. So getting a health insurance cover is a great way to secure yourself from any kind of medical expenses that may arise due to severe illness.&nbsp;</span><strong>Need for health insurance:</strong></p>
+<p>&nbsp;</p>
+<p><strong>Following are the tips on how to choose a good health insurance:&nbsp;</strong></p>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<ul>
+<li><span style="font-weight: 400;">The insurance must cover protection against a large number of diseases.&nbsp;</span></li>
+<li><span style="font-weight: 400;">Policy cover should be long enough to cover you even in your old age.&nbsp;</span></li>
+<li><span style="font-weight: 400;">You should have the flexibility to choose your health cover.&nbsp;</span></li>
+<li><span style="font-weight: 400;">You should be able to claim your insurance across a large hospital network.&nbsp;</span></li>
+</ul>
+
+    </string>
+
+    <string name="fp_w4_t5" translatable="false">
+<p>&nbsp;</p>
+<ul>
+<li><strong>O.M.G: Official money guide for Teenagers (by Susan &amp; Michael beacham)</strong></li>
+</ul>
+    </string>
+
+    <string name="fp_w4_t6" translatable="false">
+<p>&nbsp;</p>
+<ul>
+<li><strong>Rich Dad Poor Dad (by Robert Kiyosaki)</strong></li>
+</ul>
+    </string>
+
+
+    <string name="fp_w4_t7" translatable="false">
+<p>&nbsp;</p>
+<ul>
+<li><strong>Financial Basics: A money management guide for students (by Susan Knox)</strong></li>
+</ul>
+    </string>
+
+
+    <string name="ep_s1_t1" translatable="false">
+
+        <p><span style="font-weight: 400;">Entrepreneurship</span> <span style="font-weight: 400;">is nothing but the process of creating, launching and running a new business which often starts as a small business but has the potential to scale in the future. The people who create these businesses are referred to as </span><span style="font-weight: 400;">. Let us understand this with the help of an example.&nbsp;</span><strong>Entrepreneurs</strong></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Ever heard of the Mickey Mouse? It is the character that was created by Walt Disney which led to the creation of a huge company name </span><span style="font-weight: 400;">&nbsp;</span><strong>The Walt Disney Company.</strong></p>
+
+    </string>
+
+
+    <string name="ep_s1_t2" translatable="false">
+
+        <p><span style="font-weight: 400;">Walt Disney grew up on a farm and spent time drawing pictures of farm animals. As an adult, he continued to draw and created a cartoon character for a major movie company he worked for. When that company decided to reduce his pay, Disney quit his job and created another cartoon character that led to the start of a huge company and that character was Mickey Mouse. Today, Disney company produces many animated movies and has a net worth of around 200 Billion USD as of 2020. This story shows how Disney turned his passion of drawing cartoons into a multi billion dollar company through his </span><span style="font-weight: 400;"> skills.&nbsp;</span><strong>entrepreneurial</strong></p>
+<p>&nbsp;</p>
+<p><span style="text-decoration: underline; color: #008000;"><strong>Importance of Entrepreneurship:</strong></span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Entrepreneurship is as important as innovation for the economic growth of any country.</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="text-decoration: underline; color: #008000;"><strong>Why Choose Entrepreneurship?</strong></span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Pursuing entrepreneurship as a career has many positives to it. Let us discuss some of the benefits in detail:&nbsp;</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><br /><br /></p>
+<p><span style="text-decoration: underline; color: #008000;"><strong>Types of Entrepreneurship:</strong></span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Entrepreneurship can be classified mainly into 4 types:&nbsp;</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<ul>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;"> Entrepreneurs are the people who create customers and customers, in turn, create jobs and economic growth.</span><strong>Creation of Employment:</strong></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">: You can think of innovation as a cart which is driven by a horse named entrepreneurship. Creativity, ideas, discovery and innovation are one side of the growth coin &ndash;
+    the other side is commercialisation and entrepreneurship helps in commercialisation of these ideas.&nbsp;</span><strong>Entrepreneurship drives innovation</strong></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Entrepreneurship promotes facilities like better education, better sanitation, fewer slums, a higher level of homeownership, etc.&nbsp;</span><strong>Society and Community Development: </strong></li>
+</ul>
+</ul>
+<ul>
+<li><span style="font-weight: 400;">Starting a company forces you to constantly improve your skill set, from creating innovative products to marketing to closing deals. There is always more to learn and apply to your business, which can prevent complacency and encourage constant professional growth.</span><strong>Constant growth and development: </strong></li>
+</ul>
+<ul>
+<li><span style="font-weight: 400;">Being able to see how your business has contributed to the local economy and provided jobs is incredibly rewarding. Your role as a business leader in your community is important and respectable.</span><strong>You become a business leader: </strong></li>
+</ul>
+<ul>
+<li><span style="font-weight: 400;">Part of what makes entrepreneurship so alluring is that it&rsquo;s both dynamic and exciting. The company is growing and adapting constantly, keeping everyone on their toes.</span><strong>Excitement: </strong></li>
+</ul>
+<ul>
+<li><span style="font-weight: 400;">You have a large degree of say and control in what&rsquo;s happening when you&rsquo;re starting your own company.</span><strong>You&rsquo;re the boss: </strong></li>
+</ul>
+<ul>
+<li><span style="font-weight: 400;">These are the kind of businesses where people run and own their business with the help of their family members or local employees. For them making profit means to be able to meet the demands of their families and make a decent living out of their business. People take small financial risk in setting up these businesses initially but after setting up, they can earn from that business for life. </span><span style="font-weight: 400;">Businesses like local Kirana Stores, Medical stores, travel agents, etc, fall under this category.&nbsp;</span><strong>Ex: </strong><strong>Small Business: </strong></li>
+</ul>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;"> Startup refers to a company which is still in its first stage of operation and is founded by one or more entrepreneurs who build products for which they believe there is a demand in the market. Their initial cost of operation might be high and revenue may be limited and that is why they take money from investors to scale their business. We will learn about this in detail in the next module. </span><span style="font-weight: 400;"> Zomato, Swiggy, Ola, OYO, etc are examples of some of the successful Indian startups.&nbsp;</span><strong>Ex:</strong><strong>Startup:</strong></li>
+</ul>
+
+    </string>
+
+
+    <string name="ep_s1_t3" translatable="false">
+
+        <ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">These are big companies that build new and innovative products and services that are used by millions of people worldwide. These companies constantly evolve themselves depending upon the technological advancements and market competitions.</span><span style="font-weight: 400;"> Companies like Google, Microsoft, etc fall under this category.&nbsp;</span><strong> Ex:</strong><strong>Large Company: </strong></li>
+</ul>
+
+    </string>
+
+
+    <string name="ep_s1_t4" translatable="false">
+
+        <ul>
+            <li style="font-weight: 400;"><span style="font-weight: 400;"> These are types of organisations whose main motive is to work for the betterment of society and not for profit. They focus on solving the existing social problems. NGOs are the best example of this type of entrepreneurship. Most of the NGOs raise money through crowdfund raising i.e. they ask people to donate money for the cause they are working. </span><span style="color: #339966;"><a style="color: #339966;" href="https://www.teachforindia.org/">Teach for India</a></span><span style="color: #339966;"><a style="color: #339966;" href="https://www.smilefoundationindia.org/">Smile Foundation</a></span><strong>Social Entrepreneurship:</strong>, <strong>Ex: </strong>.</li>
+</ul>
+
+    </string>
+
+    <string name="ep_s1_t5" translatable="false">
+
+        <p><span style="font-weight: 400;">The success of any enterprise largely depends upon the person who runs it. So creative and risk taking entrepreneurs are most important for any kind of business to be successful. Let us discuss some of the qualities that make&nbsp; a successful entrepreneur:&nbsp; </span></p>
+
+    </string>
+
+    <string name="ep_s1_t6" translatable="false">
+
+<p><span style="font-weight: 400;">Entrepreneurs are often creative, daring people, and the businesses they operate are very important to communities. Entrepreneurs take risks and turn an idea into a company. An idea that makes people&rsquo;s lives easier and better. Let us look at some of the qualities and what it takes to become a successful entrepreneur:&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><span style="text-decoration: underline; color: #008000;"><strong>Risk Taking Ability</strong></span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Entrepreneurship is all about taking risks. Entrepreneurs have the ability to take greater risks to achieve greater success. Let us discuss some of the scenarios where entrepreneurs take potential risks:&nbsp;</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">All entrepreneurs plan before taking risks and make a plan B (in case of any loss of mishap) and establish a suitable ground for the results of the risks.</span></p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ldquo;With great risks, comes great rewards&rdquo;</strong></p>
+<p><br /><br /></p>
+<p><span style="text-decoration: underline; color: #008000;"><strong>Delegator</strong></span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Delegation is simply the ability to assign specific tasks and purpose to a person or a group of people. This is the one quality which is very important if you want to succeed in your entrepreneurial journey.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">A successful entrepreneur:&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><br /><br /></p>
+<p><span style="text-decoration: underline;"><span style="color: #008000;"><strong>Knowledge Seeker</strong></span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Entrepreneurs always need to keep their mind active and increase their knowledge.</span></p>
+<p>&nbsp;</p>
+<p><br /><br /></p>
+<p><span style="text-decoration: underline;"><span style="color: #008000;"><strong>Vision</strong></span></span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">A successful entrepreneurial leader has a clear vision. He knows exactly where he wants to go and how to get there. They communicate their vision to the team and work with them to make the vision a reality.</span> <span style="font-weight: 400;">Most of the successful companies in the world were started with a vision that now has changed the way the world functions.</span><span style="font-weight: 400;">&nbsp;</span><strong> Ex:</strong></p>
+<p>&nbsp;</p>
+<p><br /><br /></p>
+<p><span style="text-decoration: underline; color: #008000;"><strong>Persistence</strong></span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Persistence is the most basic and essential quality of a successful entrepreneur because even good entrepreneurs experience failures and hurdles. But with persistence, you&rsquo;re able to pick yourself back up and keep moving towards your goals.&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;"> Jack Ma&rsquo;s life is perhaps the greatest example of success through failure. He failed primary school twice and middle school three times. He also failed his university entry exam three times. He was rejected by the police force and even KFC. He applied for Harvard ten times and was rejected each and every time. Now, he is one of the richest people in the world as the founder of Alibaba, one of the biggest e-commerce companies on the planet.&nbsp;</span><strong>Ex:</strong></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Jack Ma&rsquo;s story teaches us the importance of persistence and never giving up on our dreams.&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Apart from these, there are many other qualities that an entrepreneur should have like </span><span style="font-weight: 400;"> etc. Inculcating these qualities in your personality is hard but once you develop these qualities, your chances of getting success in your entrepreneurial journey increase multi-folds.&nbsp;&nbsp;&nbsp;</span><strong>Self-confidence, Patience, Leadership quality, Managerial skill,</strong></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">In the next module we will learn how we can explore entrepreneurship as a career option.</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">An entrepreneur takes risk when he quits his job to work on his idea. If the idea becomes successful he will receive far greater returns but at the same time if the idea didn&rsquo;t work he will have to struggle to find another job.&nbsp;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">An entrepreneur takes risk when he spends his time and money on a product that can explode the market but at the same time has a chance that it might underperform. </span><span style="font-weight: 400;"> In 2019, the failure rate of startups was around 90%. Research concludes that 21.5% of startups fail in the first year, 30% in the second year, 50% in the fifth year, and 70% in their 10th year.</span><strong>Ex:</strong></li>
+</ul>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Collaborate, recognise and draw on people&rsquo;s abilities.&nbsp;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Encourages team contribution.&nbsp;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Understands people&rsquo;s skills and provides them tasks that suit them best.&nbsp;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Gives constructive feedback to his employees.&nbsp;</span></li>
+</ul>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">They always keep themselves updated about any recent technological advancements.&nbsp;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">They write and share ideas and collaborate with others to get different perspectives on any subject.&nbsp;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Most of the successful entrepreneurs are great readers. They read a variety of books to keep themselves updated with lots of new things happening around the world.&nbsp;</span></li>
+</ul>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;"> started google with the vision of, &ldquo;</span><span style="font-weight: 400;">To organize the world&rsquo;s information and make it universally accessible and useful&rdquo;
+    and now Google dominates 75% of the U.S. online search market. Every month millions of unique users perform billions of searches.</span><strong>Larry Page and Sergey Brin</strong></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;"> started Microsoft with the vision of, &ldquo;Computer on every Desk&rdquo;
+    and now it is almost impossible to imagine our lives without computers.&nbsp;</span><strong>Bill Gates</strong></li>
+</ul>
+
+    </string>
+
+
+    <string name="ep_s2_t1" translatable="false">
+
+      <p><span style="font-weight: 400;">In this module we will explore entrepreneurship as a career option. We will learn about the difference between small business and a startup. We will also look into the process of how to convert your idea into a potential business model. So let&rsquo;s get started.&nbsp;</span></p>
+
+    </string>
+
+
+    <string name="ep_s2_t2" translatable="false">
+
+        <p><span style="font-weight: 400;">To understand the difference between startups and small scale businesses, we first need to understand what is a startup?&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><strong>&ldquo;A startup is basically an organized form to search for a repeatable and scalable business model&rdquo;</strong></p>
+<p style="text-align: right;"><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong>&nbsp;- Steve Blank</strong></p>
+<p><br /><span style="font-weight: 400;">This means that a startup is a company that is not only looking to execute their business model but they are also looking to do so very quickly in a way that will significantly change the market.</span><span style="font-weight: 400;">Consider the case of Uber. Before Uber most of the people used to commute using Auto Rickshaw and would have to </span><strong> For Ex: </strong></p>
+
+    </string>
+
+
+    <string name="ep_s2_t3" translatable="false">
+
+ <p><span style="font-weight: 400;">wait for the Rickshaw to arrive. But after the arrival of Uber, people can now book the Taxi by their phone app and don&ldquo;t have to wait for a long time. So, Uber significantly changed the transportation market in a very short span of time and hence it can be categorised a startup.&nbsp;</span></p>
+<p><span style="font-weight: 400;">So now that you have understood what a startup is, let us now look at the some of the characteristics that differentiates between a startup and&nbsp; a small business:</span></p>
+
+    </string>
+
+
+    <string name="ep_s2_t4" translatable="false">
+
+        <p><span style="font-weight: 400;">It is important to make the distinction between startup and small business because making the distinction early on will help define the path for your future business: what your early expectations are, how you plan on growing, who you plan on partnering with, and how you&rsquo;ll define success in the end.</span></p>
+
+    </string>
+
+
+    <string name="ep_s2_t5" translatable="false">
+
+        <p><span style="font-weight: 400;">In this section we look at what it really takes to come with a startup idea and turn it into a scalable business model. Let us now look at the various stages involved in starting a startup step by step:</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">The first and the foremost thing is to come up with a business idea. A business idea is nothing but a problem that you are trying to solve and by solving it you will make people&rsquo;s life easier and in turn people can pay you money in return for your product or service. Let us understand this with the help of an example:&nbsp;</span></p>
+<p><span style="font-weight: 400;"> Before Google started the service of Gmail, people used to send Mails offline via Post. Sending mails by post would take several days to reach its destination and the person would have to wait for another 2-3 days to receive the reply. Also sending Mails via post would require efforts to go to the post office and also involved post chargers. But after google started the Gmail Service people could literally send mails to any person in the world within seconds. Gmail saved people&rsquo;s time and efforts. As a result, today, billions of people across the globe are using Gmail in their day to day life.</span><strong>Ex:</strong></p>
+<ul>
+<li><span style="color: #008000;"><strong><strong><span style="text-decoration: underline;">Coming up with the Idea</span>&nbsp;</strong></strong></span></li>
+</ul>
+
+    </string>
+
+
+    <string name="ep_s2_t6" translatable="false">
+
+        <p><strong>How do I find a startup Idea?&nbsp;</strong></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">The right approach is not to run blindly behind finding a startup idea but to look for the problems that you are facing in your day to day life. The best startups ideas have two things in common:&nbsp;</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Facebook, google, microsoft all started in the same way. The key is to be active enough to identify the problems you are passionate about and should be able to solve them in an effective and innovative way. </span><span style="font-weight: 400;"> Once you identify a problem, you must validate it by talking to people whether or not they are actually facing that problem and would want someone to solve it.&nbsp;</span><strong>And do not make the mistake of solving problems no one has.</strong></p>
+<p><br /><br /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Once you have identified a problem and validated it, the next step is to build the solution. Your solution can be a product or service that people need and would pay for. Now no product is complete in itself when you are just starting to build it. It will keep getting better after several iterations. So how do you decide what shall be the minimum features that the product should have at the time of launching?&nbsp;</span></p>
+<p><span style="font-weight: 400;">This where MVP comes into picture. </span><span style="font-weight: 400;"> MVP is that version of a new product which allows a startup team to collect the maximum amount of validated learning about customers with the least effort. This validated learning comes in the form of whether your customers will actually purchase your product or not.&nbsp;</span><strong>MVP is Minimum Viable Product.</strong></p>
+<p><span style="font-weight: 400;">&nbsp;When Facebook was starting out in 2004, it was just for the purpose of connecting students at Harvard university allowing them to post messages online on their facebook profile.</span><strong>For Ex: </strong></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">They are something that the founders themselves want. Or</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">It is something the founders themselves can build or have expertise in it</span></li>
+</ul>
+<ul>
+<li><span style="text-decoration: underline; color: #008000;"><strong><strong>Building an MVP (Minimum Viable Product)</strong></strong></span></li>
+</ul>
+
+    </string>
+
+
+    <string name="ep_s2_t7" translatable="false">
+
+        <p><span style="font-weight: 400;">But in no time, most of the students at Harvard started using Thefacebook and the website became popular in the university. Once it became&nbsp; popular in Harvard, facebook was expanded into other universities like Cmabridge, Yale, Stanford, etc and on September 26, 2006, Facebook opened its services to everyone with a valid email address aged 13 years or older. This was the official start of the Facebook we know and use today.</span></p>
+<p>&nbsp;</p>
+<p><strong>Benefits of MVP&nbsp;</strong></p>
+<p>&nbsp;</p>
+<p><br /><br /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">After building the MVP, the next step is to search the market for your first base of customers. Listed below are some of the strategies you can use to identify and attract those critical first customers:&nbsp;</span></p>
+<p>&nbsp;</p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">The primary benefit of an MVP is you can gain understanding about your customers&rsquo;
+    interest in your product without fully developing the product.&nbsp;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">The minimum aspect of MVP encourages teams to do the least amount of work possible to useful feedback which helps them avoid working on a product that no one wants.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Proper use of an MVP allows the team to change a product that they deliver to their customers or abandon the product altogether based on feedback they receive from their customers</span></li>
+</ul>
+<ul>
+<li><span style="text-decoration: underline; color: #008000;"><strong><strong>Find your first Customers&nbsp;</strong></strong></span></li>
+</ul>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;"> A quick way to do some customer development is to reach out to your existing network and ask them specific questions about your product and market. You can do so with the help of social media networks like FB, Linkedin, etc.&nbsp;</span><strong>Reach out to your network:</strong></li>
+</ul>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;"> One of the most straightforward ways to get your first customers is through cold email. It&rsquo;s relatively easy to find the email addresses of your potential customers, and it&rsquo;s easy to reach out to a high volume of people relatively quickly.</span><strong>Cold Email:</strong></li>
+</ul>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;"> You can use Google Adwords or Facebook advertising service to run target ads for your product to attract customers.&nbsp;</span><strong>Paid Advertisements:</strong></li>
+</ul>
+
+
+    </string>
+
+    <string name="ep_s2_t8" translatable="false">
+
+ <p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Your first customers are extremely valuable not just because they are buying your physical product but they can teach you how to grow. They show you what your future customers want. They are the guiding light to future success.</span></p>
+<p><br /><br /><br /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Once you have acquired your initial customer base, the next step is to expand your business and for that you&rsquo;ll need to hire more employees, attract specialists in the field, invest in production costs, invest in marketing and keep the operations running steadily in the development phase. For all these things you need more money and that&rsquo;s where funding comes into play. Let us look at some of the funding options for startups:&nbsp;</span></p>
+<ul>
+    <li><span style="font-weight: 400;">You can offer your product or service for free for the first few months and once people develop a habit of it you can start charging for it. </span> <span style="font-weight: 400;"> are some of the best examples that follow this strategy. They offer a 1 month free trial to its new users and once the user is hooked to their content they charge them to continue the services.&nbsp;</span><strong>Netflix, Hotstar</strong><strong>Give it away for Free:</strong></li>
+</ul>
+<ul>
+<li><span style="text-decoration: underline; color: #008000;"><strong><strong>Raise Funding&nbsp;</strong></strong></span></li>
+</ul>
+
+    </string>
+
+    <string name="ep_s2_t9" translatable="false">
+
+        <p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;"> The big advantage is that financing from angel investments is much less risky than debt financing. Unlike a loan, invested capital does not have to be paid back in the event of business failure. And, most angel investors understand business and take a long-term view.</span><strong>Advantage:</strong></p>
+<p><span style="font-weight: 400;"> The primary disadvantage of using angel investors is the loss of complete control as a part-owner. Your angel investor will have a say in how the business is run and will also receive a portion of the profits that the business will make.&nbsp;</span><strong>Disadvantage:</strong></p>
+<p><span style="font-weight: 400;">Some of the Angel investors in India are: </span><span style="color: #339966;"><a style="color: #339966;" href="http://www.mumbaiangels.com/">Mumbai Angels</a></span>, <span style="color: #339966;"><a style="color:#339966;" href="http://indianangelnetwork.com/"> India Angel Network </a></span>
+</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Some of the Angel investors in India are: </span><span style="color: #339966;"><a style="color: #339966;" href=" https://www.kalaari.com/"> Kalaari Capital </a></span>, <span style="color: #339966;"><a style="color:#339966;" href=" https://www.sequoiacap.com/india"> Sequoia Capital</a></span>
+</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Some of the famous startup accelerators are: </span><span style="color: #339966;"><a style="color: #339966;" href="https://www.ycombinator.com"> Y- Combinator </a></span>, <span style="color: #339966;"><a style="color:#339966;" href=" https://www.techstars.com/"> TechStars</a></span><span style="font-weight: 400;">, etc. </span>
+</p>
+<ul>
+<li>Bootstrapping: <span style="font-weight: 400;">Self-funding, also known as bootstrapping, is an effective way of startup financing, especially when you are just starting your business. First-time entrepreneurs often have trouble getting funding without first showing some traction and a plan for potential success. You can invest from your own savings or can get your family and friends to contribute. However, Bootstrapping </span><span style="font-weight: 400;">is suitable only if the initial requirement is small as it might wipe out your savings and the entire risk of the business is on the entrepreneur and his team.&nbsp;</span></li>
+</ul>
+<ul>
+<li><span style="font-weight: 400;">An angel investor is a person who invests in a new or small business venture, providing capital for start-up or expansion. Angel investors are typically individuals who have spare cash available and are looking for a higher rate of return than would be given by more traditional investment. Angel investment is basically equity financing where the investor supplies cash in exchange for company ownership. </span><span style="font-weight: 400;">An angel investor may provide a funding of around 1 Cr Rs to your startup in return for 30% stake in the company.&nbsp;</span><strong>Ex: </strong><strong>Angel Investments: </strong></li>
+</ul>
+<ul>
+<li><span style="font-weight: 400;">Venture capitals are professionally managed funds who invest in companies that have huge potential. They also supply cash in exchange for equity in the company. The difference between Angel investment and venture capital is that angel investors invest their own money however venture capitalists invest money pooled from investment companies, large corporations, and pension funds. Typically, VCs do not use their own money to invest in companies. Also the amount of money invested by VCs is usually more than Angel investors. According to a study, the average venture capital deal is $11.7 million whereas the average angel investment is $330,000.&nbsp;</span><strong>Venture Capital (VC) Funding: </strong></li>
+</ul>
+<ul>
+<li><span style="font-weight: 400;">At a high level, startup accelerators and incubators are organizations that seek to help startups attain success. Startup accelerators tend to focus on providing startups with mentorship, advice, and resources to help the startups succeed. They also help to connect the startups with the potential investors by organizing a demo day where the startup founders can pitch their idea to the investors. There are many startup incubators and accelerators and each of them have their own programs through which they select potential startups and provide them mentorship through their 3-4 week programs.&nbsp;</span><strong>Funding From Business Incubators &amp; Accelerators: </strong></li>
+</ul>
+
+
+    </string>
+
+    <string name="ep_s3_t1" translatable="false">
+
+        <p><span style="font-weight: 400;">In this section we will look at some of the successful entrepreneurship stories that will inspire you to make big in the entrepreneurial world. These success stories are nothing short of inspiring and prove one fact over and over again &ndash;
+            everything is possible; if you have the will to accomplish it.&nbsp;</span></p>
+<p><br /><br /></p>
+<p><span style="text-decoration: underline; color: #008000;"><strong>The Facebook Story</strong></span></p>
+<p><span style="font-weight: 400;">Facebook&nbsp; was founded by Mark Zuckerberg, along with his fellow roommates and students at Harvard College. Originally known as TheFacebook.com. Today Facebook is one of the world&rdquo;s most valuable companies. It is considered one of the Big Five companies in the U.S. information technology industry, along with Google, Apple, Microsoft, and Amazon. Let us look at how it all started.</span></p>
+
+    </string>
+
+    <string name="ep_s3_t2" translatable="false">
+
+
+        <p><span style="text-decoration: underline; color: #008000;"><strong>The OYO Story</strong></span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Oyo Rooms, also known as Oyo Hotels &amp; Homes, is an Indian hospitality chain of leased and franchised hotels, homes and living spaces. OYO was founded by Ritesh Agarwal in 2013 and today OYO is worth $8 Billion. Let us see how Ritesh started OYO and what are the challenges he faced. </span></p>
+
+    </string>
+
+    <string name="ep_s3_t3" translatable="false">
+
+        <p><span style="font-weight: 400;">Here are some of the websites and channels from where you can get updates of what&rsquo;s happening in the entrepreneurship world in India as well as in the outside world.&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><strong>Websites &amp; Magazines</strong></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>Channels</strong></p>
+<p>&nbsp;</p>
+<ul>
+    <li style="font-weight: 400;"><span style="color: #339966;"><a href="https://www.forbes.com/leadership/?sh=6e89ce461d66">Forbes</a></span></li>
+    <li style="font-weight: 400;"><span style="color: #339966;"><a href="https://yourstory.com/">Your Story</a></span><span style="font-weight: 400;">&nbsp;</span></li>
+    <li style="font-weight: 400;"><span style="color: #339966;"><a href="https://www.entrepreneur.com/">Entrepreneur India</a></span></li>
+    <li style="font-weight: 400;"><span style="color: #339966;"><a href="https://hbr.org/">Harvard Business Review</a></span></li>
+</ul>
+<ul>
+    <li style="font-weight: 400;"><span style="color: #339966;"><a href="https://www.youtube.com/user/TEDtalksDirector">TED Talks</a></span></li>
+    <li style="font-weight: 400;"><span style="color: #339966;"><a href="https://www.youtube.com/user/EntrepreneurOnline">Entrepreneur</a></span></li>
+    <li style="font-weight: 400;"><span style="color: #339966;"><a href="https://www.youtube.com/user/slidebean">SlideBean</a></span></li>
+</ul>
+
+    </string>
+
+
+    <string name="fp_w3_t1" translatable="false">
+
+    <p><span style="font-weight: 400;">Through this activity students will learn:&nbsp;</span></p>
+        <p>&nbsp;</p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">How important is it to develop savings habits in order to achieve&nbsp; your personal financial goals</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">How to keep track of your expenses</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Importance of investment inorder to generate passive income from savings</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">How to invest smartly by making their own investment portfolio</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">How to maximise returns and minimise risk</span></li>
+</ul>
+    </string>
+
+</resources>
