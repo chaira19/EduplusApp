@@ -106,7 +106,7 @@
         android:maxLines="4"
         android:id="@+id/feedback_txt"/>
     <Button
-        android:id="@+id/send_button"
+        android:id="@+id/update_button"
         android:layout_below="@id/feedback_txt"
         android:layout_marginRight="20dp"
         android:layout_alignParentRight="true"
