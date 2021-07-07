@@ -174,21 +174,22 @@ public class ProgressDashboard extends AppCompatActivity implements View.OnClick
                         }
 
                         progressBar1 = (ProgressBar) findViewById(R.id.progressBar1);
-                        progressBar1.setMax(12);
+                        progressBar1.setMax(32);
                         progressBar1.setProgress(progProgramming);
                         //pB4.setProgress(progProgramming);
 
                         progressBar2 = (ProgressBar) findViewById(R.id.progressBar2);
-                        progressBar2.setMax(12);
+                        progressBar2.setMax(32);
                         progressBar2.setProgress(progSkills);
                         //pB2.setProgress(progSkills);
 
                         progressBar3 = (ProgressBar) findViewById(R.id.progressBar3);
-                        progressBar3.setMax(12);
+                        progressBar3.setMax(24);
                         progressBar3.setProgress(progCareer);
                         //pB3.setProgress(progCareer);
 
                         final ProgressBar overallProgress = (ProgressBar) findViewById(R.id.circular_progress);
+                        overallProgress.setMax(88);
                         overallProgress.setProgress(progProgramming + progSkills + progCareer);
 
                         progTV1  = (TextView) findViewById(R.id.textViewRightSubHeading1);
@@ -196,10 +197,10 @@ public class ProgressDashboard extends AppCompatActivity implements View.OnClick
                         progTV3 = (TextView) findViewById(R.id.textViewRightSubHeading3);
                         progTV4 = (TextView) findViewById(R.id.textViewOverall);
 
-                        progTV1.setText(((progProgramming * 100) / 12) + "%");
-                        progTV2.setText(((progSkills * 100) / 12) + "%");
-                        progTV3.setText(((progCareer * 100) / 12) + "%");
-                        progTV4.setText(((progProgramming + progSkills + progCareer) * 100) / 36 + "%\n Overall Progress");
+                        progTV1.setText(((progProgramming * 100) / 32) + "%");
+                        progTV2.setText(((progSkills * 100) / 32) + "%");
+                        progTV3.setText(((progCareer * 100) / 24) + "%");
+                        progTV4.setText(((progProgramming + progSkills + progCareer) * 100) / 88 + "%\n Overall Progress");
                         //pB1.setProgress(progProgramming + progSkills + progCareer);
 
                         modCom.setText((progProgramming + progSkills + progCareer) + "");
@@ -347,13 +348,13 @@ public class ProgressDashboard extends AppCompatActivity implements View.OnClick
             case R.id.c1:
                 selectedCard = 0;
                 heading.setText("Overall Progress");
-                progTV1.setText(((progProgramming * 100) / 12) + "%");
-                progTV2.setText(((progSkills * 100) / 12) + "%");
-                progTV3.setText(((progCareer * 100) / 12) + "%");
-                progTV4.setText(((progProgramming + progSkills + progCareer) * 100) / 36 + "%\n Overall Progress");
+                progTV1.setText(((progProgramming * 100) / 32) + "%");
+                progTV2.setText(((progSkills * 100) / 32) + "%");
+                progTV3.setText(((progCareer * 100) / 24) + "%");
+                progTV4.setText(((progProgramming + progSkills + progCareer) * 100) / 88 + "%\n Overall Progress");
                 progressBar1.setMax(32);
                 progressBar2.setMax(32);
-                progressBar3.setMax(32);
+                progressBar3.setMax(24);
                 progressBar1.setProgress(progProgramming);
                 progressBar2.setProgress(progSkills);
                 progressBar3.setProgress(progCareer);
@@ -369,7 +370,7 @@ public class ProgressDashboard extends AppCompatActivity implements View.OnClick
                 subHeading2.setText("Skills");
                 subHeading3.setText("Career");
                 modCom.setText((progProgramming + progSkills + progCareer) + "");
-                modTot.setText("96");
+                modTot.setText("88");
                 logo1.setImageDrawable(getDrawable(R.drawable.ic_prog));
                 logo2.setImageDrawable(getDrawable(R.drawable.skill_icon2));
                 logo3.setImageDrawable(getDrawable(R.drawable.career_icon2));
@@ -381,7 +382,7 @@ public class ProgressDashboard extends AppCompatActivity implements View.OnClick
                 progTV1.setText(((progSkillsM1 * 100) / 4) + "%");
                 progTV2.setText(((progSkillsM2 * 100) / 4) + "%");
                 progTV3.setText(((progSkillsM3 * 100) / 4) + "%");
-                progTV4.setText(((progSkills) * 100) / 12 + "%\n Prog in Skills");
+                progTV4.setText(((progSkills) * 100) / 32 + "%\n Prog in Skills");
                 progressBar1.setMax(4);
                 progressBar2.setMax(4);
                 progressBar3.setMax(4);
@@ -409,13 +410,13 @@ public class ProgressDashboard extends AppCompatActivity implements View.OnClick
             case R.id.c3:
                 selectedCard = 2;
                 heading.setText("Progress in Career");
-                progTV1.setText(((progCareerM1 * 100) / 4) + "%");
-                progTV2.setText(((progCareerM2 * 100) / 4) + "%");
-                progTV3.setText(((progCareerM3 * 100) / 4) + "%");
-                progTV4.setText(((progCareer) * 100) / 12 + "%\n Prog in Career");
-                progressBar1.setMax(4);
-                progressBar2.setMax(4);
-                progressBar3.setMax(4);
+                progTV1.setText(((progCareerM1 * 100) / 3) + "%");
+                progTV2.setText(((progCareerM2 * 100) / 3) + "%");
+                progTV3.setText(((progCareerM3 * 100) / 3) + "%");
+                progTV4.setText(((progCareer) * 100) / 24 + "%\n Prog in Career");
+                progressBar1.setMax(3);
+                progressBar2.setMax(3);
+                progressBar3.setMax(3);
                 progressBar1.setProgress(progCareerM1);
                 progressBar2.setProgress(progCareerM2);
                 progressBar3.setProgress(progCareerM3);
@@ -431,7 +432,7 @@ public class ProgressDashboard extends AppCompatActivity implements View.OnClick
                 subHeading2.setText("Financial Broker");
                 subHeading3.setText("Wildlife Photographer");
                 modCom.setText((progCareer) + "");
-                modTot.setText("32");
+                modTot.setText("24");
                 logo1.setImageDrawable(getDrawable(R.drawable.ic_idea_black));
                 logo2.setImageDrawable(getDrawable(R.drawable.ic_broker));
                 logo3.setImageDrawable(getDrawable(R.drawable.ic_theatre));
@@ -443,7 +444,7 @@ public class ProgressDashboard extends AppCompatActivity implements View.OnClick
                 progTV1.setText(((progProgrammingM1 * 100) / 4) + "%");
                 progTV2.setText(((progProgrammingM2 * 100) / 4) + "%");
                 progTV3.setText(((progProgrammingM3 * 100) / 4) + "%");
-                progTV4.setText(((progProgramming) * 100) / 12 + "%\n Prog in Programming");
+                progTV4.setText(((progProgramming) * 100) / 32 + "%\n Prog in Programming");
                 progressBar1.setMax(4);
                 progressBar2.setMax(4);
                 progressBar3.setMax(4);

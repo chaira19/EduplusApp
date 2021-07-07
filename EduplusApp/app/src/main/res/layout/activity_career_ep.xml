@@ -6,8 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".SkillFP"
-    tools:ignore="MissingDefaultResource">
+    tools:context=".CareerEP">
 
     <RelativeLayout
 
@@ -23,13 +22,13 @@
             android:background="@drawable/bg_content1"/>
 
         <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_below="@+id/toolbar"
-            android:layout_marginRight="20dp"
+            android:layout_marginRight="30dp"
             android:layout_alignRight="@+id/v1"
-            android:layout_marginTop="30dp"
-            android:src="@drawable/ic_risk"/>
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_idea"/>
 
 
         <androidx.appcompat.widget.Toolbar
@@ -44,6 +43,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:navigationIcon="@drawable/back"/>
 
+
         <TextView
             android:textSize="28dp"
             android:layout_marginLeft="20dp"
@@ -55,7 +55,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:justificationMode="inter_word"
-            android:text="Financial Planning"></TextView>
+            android:text="Entrepreneurship"></TextView>
 
         <TextView
             android:textSize="18dp"
@@ -71,11 +71,11 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:id="@+id/fp_w1"
+            android:id="@+id/ep_s1"
             android:layout_below="@+id/v1"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            app:cardCornerRadius="10dp"
+            app:cardCornerRadius="20dp"
             android:layout_marginTop="30dp"
             android:layout_marginRight="20dp">
 
@@ -84,7 +84,6 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:background="#F8F8F8">
-
 
                 <TextView
                     android:textSize="24dp"
@@ -96,7 +95,7 @@
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:justificationMode="inter_word"
-                    android:text="Introduction"></TextView>
+                    android:text="Understanding Entrepreneurship"></TextView>
 
                 <TextView
                     android:textSize="16dp"
@@ -108,7 +107,7 @@
                     android:textColor="#000000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Week1 Module"></TextView>
+                    android:text="Stage1 Module"></TextView>
 
 
                 <ImageView
@@ -118,7 +117,7 @@
                     android:layout_marginRight="30dp"
                     android:layout_alignParentRight="true"
                     android:layout_marginTop="30dp"
-                    android:src="@drawable/ic_accounting" />
+                    android:src="@drawable/ic_launch" />
 
 
                 <ImageView
@@ -137,10 +136,10 @@
                     android:layout_below="@+id/week"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="47dp"
-                    android:text="2 hours to complete"
-                    android:layout_marginBottom="7dp"
+                    android:text="1 hour to complete"
                     android:textSize="15dp"
                     android:layout_marginTop="36dp"
+                    android:layout_marginBottom="7dp"
                     android:textColor="#000000"/>
 
                 <CheckBox
@@ -154,28 +153,33 @@
                     android:textSize="12dp"
                     android:textColor="#000000"
                     android:theme="@style/WhiteCheck"
-                    android:id="@+id/check" />
+                    android:id="@+id/check1" />
+
+
 
 
             </RelativeLayout>
+
 
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:id="@+id/fp_w2"
+            android:id="@+id/ep_s2"
+            android:layout_below="@+id/ep_s1"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            app:cardCornerRadius="10dp"
+            app:cardCornerRadius="20dp"
             android:layout_marginTop="30dp"
-            android:layout_marginRight="20dp"
-            android:layout_below="@+id/fp_w1">
+            android:layout_marginRight="20dp">
+
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:background="#F8F8F8">
+
 
 
                 <TextView
@@ -188,7 +192,7 @@
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:justificationMode="inter_word"
-                    android:text="Cash Flow"></TextView>
+                    android:text="Entrepreneurship as a Career"></TextView>
 
                 <TextView
                     android:textSize="16dp"
@@ -200,7 +204,7 @@
                     android:textColor="#000000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Week2 Module"></TextView>
+                    android:text="Stage2 Module"></TextView>
 
 
                 <ImageView
@@ -210,7 +214,7 @@
                     android:layout_marginRight="30dp"
                     android:layout_alignParentRight="true"
                     android:layout_marginTop="30dp"
-                    android:src="@drawable/ic_money_flow" />
+                    android:src="@drawable/ic_businessman_with_tie" />
 
 
                 <ImageView
@@ -229,9 +233,9 @@
                     android:layout_below="@+id/week1"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="47dp"
-                    android:text="2 hours to complete"
-                    android:layout_marginBottom="7dp"
+                    android:text="1 hour to complete"
                     android:textSize="15dp"
+                    android:layout_marginBottom="7dp"
                     android:layout_marginTop="36dp"
                     android:textColor="#000000"/>
 
@@ -242,12 +246,11 @@
                     android:layout_marginLeft="175dp"
                     android:layout_marginTop="30dp"
                     android:text="Mark as Completed"
-                    android:layout_marginBottom="7dp"
                     android:textSize="12dp"
+                    android:layout_marginBottom="7dp"
                     android:textColor="#000000"
                     android:theme="@style/WhiteCheck"
-                    android:id="@+id/check1" />
-
+                    android:id="@+id/check2" />
 
             </RelativeLayout>
 
@@ -255,11 +258,11 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:id="@+id/fp_w3"
-            android:layout_below="@+id/fp_w2"
-            android:layout_height="173dp"
+            android:id="@+id/ep_s3"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ep_s2"
             android:layout_marginLeft="20dp"
-            app:cardCornerRadius="10dp"
+            app:cardCornerRadius="20dp"
             android:layout_marginTop="30dp"
             android:layout_marginRight="20dp">
 
@@ -268,6 +271,7 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:background="#F8F8F8">
+
 
 
                 <TextView
@@ -280,7 +284,7 @@
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:justificationMode="inter_word"
-                    android:text="Activity"></TextView>
+                    android:text="Entrepreneurial Resources"></TextView>
 
                 <TextView
                     android:textSize="16dp"
@@ -292,7 +296,7 @@
                     android:textColor="#000000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Week3 Module"></TextView>
+                    android:text="Stage3 Module"></TextView>
 
 
                 <ImageView
@@ -302,7 +306,7 @@
                     android:layout_marginRight="30dp"
                     android:layout_alignParentRight="true"
                     android:layout_marginTop="30dp"
-                    android:src="@drawable/ic_setup" />
+                    android:src="@drawable/ic_hiring" />
 
 
                 <ImageView
@@ -321,9 +325,9 @@
                     android:layout_below="@+id/week2"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="47dp"
-                    android:text="2 hours to complete"
-                    android:layout_marginBottom="7dp"
+                    android:text="1 hour to complete"
                     android:textSize="15dp"
+                    android:layout_marginBottom="7dp"
                     android:layout_marginTop="36dp"
                     android:textColor="#000000"/>
 
@@ -334,107 +338,15 @@
                     android:layout_marginLeft="175dp"
                     android:layout_marginTop="30dp"
                     android:text="Mark as Completed"
-                    android:layout_marginBottom="7dp"
                     android:textSize="12dp"
-                    android:textColor="#000000"
-                    android:theme="@style/WhiteCheck"
-                    android:id="@+id/check2" />
-
-
-            </RelativeLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:id="@+id/fp_w4"
-            android:layout_below="@+id/fp_w3"
-            android:layout_height="173dp"
-            android:layout_marginLeft="20dp"
-            app:cardCornerRadius="10dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginRight="20dp">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:background="#F8F8F8">
-
-
-                <TextView
-                    android:textSize="24dp"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginRight="30dp"
-                    android:layout_marginTop="20dp"
-                    android:textColor="#000000"
-                    android:id="@+id/topic3"
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:justificationMode="inter_word"
-                    android:text="Future Planning"></TextView>
-
-                <TextView
-                    android:textSize="16dp"
-                    android:layout_below="@+id/topic3"
-                    android:id="@+id/week3"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginRight="30dp"
-                    android:layout_marginTop="5dp"
-                    android:textColor="#000000"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Week4 Module"></TextView>
-
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="50dp"
-                    android:layout_marginLeft="270dp"
-                    android:layout_marginRight="30dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginTop="30dp"
-                    android:src="@drawable/ic_calendar" />
-
-
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_below="@+id/week3"
-                    android:layout_marginTop="40dp"
                     android:layout_marginBottom="7dp"
-                    android:src="@drawable/ic_stopwatch"/>
-
-
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_below="@+id/week3"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="47dp"
-                    android:text="2 hours to complete"
-                    android:layout_marginBottom="7dp"
-                    android:textSize="15dp"
-                    android:layout_marginTop="36dp"
-                    android:textColor="#000000"/>
-
-                <CheckBox
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/week3"
-                    android:layout_marginLeft="175dp"
-                    android:layout_marginTop="30dp"
-                    android:text="Mark as Completed"
-                    android:layout_marginBottom="7dp"
-                    android:textSize="12dp"
                     android:textColor="#000000"
                     android:theme="@style/WhiteCheck"
                     android:id="@+id/check3" />
+
             </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
-
 
     </RelativeLayout>
 

@@ -609,7 +609,7 @@
                                 android:layout_below="@+id/date"
                                 android:layout_marginLeft="10dp"
                                 android:layout_toRightOf="@+id/logo_date"
-                                android:text="18/04/2021"
+                                android:text="DD/MM/YY"
                                 android:textColor="#fe616a"
                                 android:textSize="7pt"
                                 android:textStyle="bold" />

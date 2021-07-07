@@ -61,7 +61,7 @@ public class CareerContent extends AppCompatActivity implements View.OnClickList
 
                             if (finPlanProg != null) {
                                 ProgressBar bar1 = (ProgressBar) findViewById(R.id.bar1);;
-                                bar1.setMax(4);
+                                bar1.setMax(3);
                                 bar1.setProgress(getMonthProgress((Map<String, Boolean>) finPlanProg.get("Month1")));
                             }
                         }
