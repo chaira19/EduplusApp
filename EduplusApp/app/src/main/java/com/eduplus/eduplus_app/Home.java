@@ -300,11 +300,11 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                     DocumentSnapshot document = task.getResult();
 
                     String firstName = (String) document.get("FirstName");
-                    String name = (String) document.get("Name");
-                    String schoolName = (String) document.get("SchoolName");
+                    String name = (String) document.get("Username");
+                    String schoolName = (String) document.get("School");
                     String schoolLogoId = (String) document.get("SchoolLogoId");
                     String photoId = (String) document.get("PhotoId");
-                    String studentClass = (String) document.get("Class");
+                    String studentClass = (String) document.get("Standard");
 
                     toolbar = (Toolbar) findViewById(R.id.toolbar);
                     TextView mTitle = (TextView) toolbar.findViewById(R.id.toolbar_title);
@@ -314,7 +314,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                     nametxt.setText(name);
 
                     TextView nameTextView = findViewById(R.id.textView);
-                    nameTextView.setText("Hi " + firstName + "!");
+                    nameTextView.setText("Hi " + name + "!");
 
                     TextView schoolNameText = findViewById(R.id.textView2);
                     schoolNameText.setText(schoolName);
