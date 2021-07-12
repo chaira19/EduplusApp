@@ -48,27 +48,7 @@ public class SignInActivity extends AppCompatActivity {
 
         if (requestCode == RC_SIGN_IN && resultCode == RESULT_OK) {
 
-//            FirebaseFirestore db = FirebaseFirestore.getInstance();
-//            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-//
-//            Map<String, String> userData = new HashMap<>();
-//            userData.put("Username", user.getDisplayName());
-//            userData.put("ContactNumber", user.getPhoneNumber());
-//
-//            db.collection("Users").document(user.getUid())
-//                    .set(userData)
-//                    .addOnSuccessListener(new OnSuccessListener<Void>() {
-//                        @Override
-//                        public void onSuccess(Void aVoid) {
-//                            Log.d(TAG, "DocumentSnapshot successfully written!");
-//                        }
-//                    })
-//                    .addOnFailureListener(new OnFailureListener() {
-//                        @Override
-//                        public void onFailure(@NonNull Exception e) {
-//                            Log.w(TAG, "Error writing document", e);
-//                        }
-//                    });
+
 
             //startActivity(new Intent(com.eduplus.eduplus_app.SignInActivity.this, Home.class));
             startActivity(new Intent(com.eduplus.eduplus_app.SignInActivity.this, Profile.class));
