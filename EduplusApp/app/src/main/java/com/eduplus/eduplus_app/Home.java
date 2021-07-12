@@ -303,7 +303,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                     String name = (String) document.get("Username");
                     String schoolName = (String) document.get("School");
                     String schoolLogoId = (String) document.get("SchoolLogoId");
-                    String photoId = (String) document.get("PhotoId");
+                    String photoId = (String) document.get("ImageId");
                     String studentClass = (String) document.get("Standard");
 
                     toolbar = (Toolbar) findViewById(R.id.toolbar);
