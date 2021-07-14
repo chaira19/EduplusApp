@@ -272,6 +272,10 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 Intent intent6 = new Intent(Home.this, Contact.class);
                 startActivity(intent6);
                 break;
+            case R.id.UpdateProfile:
+                Intent intent7 = new Intent(Home.this, Profile.class);
+                startActivity(intent7);
+                break;
             case R.id.Logout:
                 AuthUI.getInstance()
                         .signOut(this)

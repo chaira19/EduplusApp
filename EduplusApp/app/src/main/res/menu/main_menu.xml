@@ -61,6 +61,10 @@
         <menu>
             <group android:checkableBehavior="single">
                 <item
+                    android:id="@+id/UpdateProfile"
+                    android:icon="@drawable/profile_logo"
+                    android:title="Edit Profile" />
+                <item
                     android:id="@+id/Logout"
                     android:icon="@drawable/logout_icon"
                     android:title="Logout" />

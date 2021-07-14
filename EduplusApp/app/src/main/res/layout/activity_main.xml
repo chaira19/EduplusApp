@@ -16,14 +16,14 @@
 
       <ImageView
           android:id="@+id/abc"
-          android:layout_width="150dp"
+          android:layout_width="300dp"
           android:layout_height="150dp"
-          android:layout_marginTop="150dp"
+          android:layout_marginTop="200dp"
           android:adjustViewBounds="true"
           android:layout_centerHorizontal="true"
-          android:src="@drawable/ic_abc_block" />
+          android:src="@drawable/eduplus" />
 
-      <TextView
+     <!-- <TextView
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:id="@+id/learningapp"
@@ -35,9 +35,9 @@
           android:textAllCaps="false"
           android:fontFamily="sans-serif-light"
           android:textSize="25dp"
-          android:textColor="@color/white" />
+          android:textColor="@color/white" />-->
 
-      <TextView
+<!--      <TextView
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:id="@+id/poweredby"
@@ -58,13 +58,14 @@
           android:adjustViewBounds="true"
           android:layout_centerHorizontal="true"
           android:layout_marginTop="-30dp"
-          android:src="@drawable/eduplus" />
+          android:src="@drawable/eduplus" />-->
 
       <RelativeLayout
 
         android:id="@+id/rellay1"
         android:visibility="gone"
-        android:layout_below="@+id/learningapp"
+        android:layout_below="@+id/abc"
+          android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
@@ -160,6 +161,7 @@
     android:layout_marginLeft="10dp"
     android:layout_marginRight="10dp"
     android:layout_alignParentBottom="true"
+    android:layout_marginBottom="70dp"
     android:layout_height="wrap_content">
 
     <TextView
