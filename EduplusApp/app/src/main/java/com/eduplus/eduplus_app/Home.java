@@ -179,8 +179,15 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 break;
             case R.id.card1:
                 String progPdf = sharedPreferences.getString("pdfLink",null);
-                i = new Intent(Home.this, Prog_M1W1_Activity.class);
-                i.putExtra("pdfLink", progPdf);
+                if(progPdf == null || progPdf.isEmpty())
+                {
+                    i = new Intent(Home.this, ProgrammingMonth1Activity.class);
+                }
+                else
+                {
+                    i = new Intent(Home.this, Prog_M1W1_Activity.class);
+                    i.putExtra("pdfLink", progPdf);
+                }
                 startActivity(i);
                 break;
 
@@ -310,9 +317,9 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                     String photoId = (String) document.get("ImageId");
                     String studentClass = (String) document.get("Standard");
 
-                    toolbar = (Toolbar) findViewById(R.id.toolbar);
-                    TextView mTitle = (TextView) toolbar.findViewById(R.id.toolbar_title);
-                    mTitle.setText((String)document.get("ToolbarString"));
+//                    toolbar = (Toolbar) findViewById(R.id.toolbar);
+//                    TextView mTitle = (TextView) toolbar.findViewById(R.id.toolbar_title);
+//                    mTitle.setText((String)document.get("ToolbarString"));
 
                     TextView nametxt = findViewById(R.id.headerName);
                     nametxt.setText(name);
@@ -327,7 +334,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                     classText.setText("Class " + studentClass);
 
                     setImageInImageView(findViewById(R.id.headerImage), photoId, "userImages/");
-                    setImageInImageView(findViewById(R.id.imageView), schoolLogoId, "schoolLogos/");
+                    //setImageInImageView(findViewById(R.id.imageView), schoolLogoId, "schoolLogos/");
                 }
                 else {
                     Log.e("Error", "Task is not successful");
