@@ -318,7 +318,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                     nametxt.setText(name);
 
                     TextView nameTextView = findViewById(R.id.textView);
-                    nameTextView.setText("Hi " + name + "!");
+                    nameTextView.setText("Hi " + name );
 
                     TextView schoolNameText = findViewById(R.id.textView2);
                     schoolNameText.setText(schoolName);
