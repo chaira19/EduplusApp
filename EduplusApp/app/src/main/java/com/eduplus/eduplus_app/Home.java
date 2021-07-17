@@ -310,7 +310,6 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 if (task.isSuccessful()) {
                     DocumentSnapshot document = task.getResult();
 
-                    String firstName = (String) document.get("FirstName");
                     String name = (String) document.get("Username");
                     String schoolName = (String) document.get("School");
                     String schoolLogoId = (String) document.get("SchoolLogoId");
@@ -325,7 +324,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                     nametxt.setText(name);
 
                     TextView nameTextView = findViewById(R.id.textView);
-                    nameTextView.setText("Hi " + name );
+                    nameTextView.setText("Hi " + name.split(" ")[0] );
 
                     TextView schoolNameText = findViewById(R.id.textView2);
                     schoolNameText.setText(schoolName);
