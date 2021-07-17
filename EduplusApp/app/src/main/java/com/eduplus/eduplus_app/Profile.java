@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,16 +13,20 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
@@ -33,16 +38,28 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
+import static com.google.android.gms.common.internal.safeparcel.SafeParcelable.NULL;
+
 public class Profile extends AppCompatActivity implements View.OnClickListener {
 
     private static final String TAG = "ProfileActivity";
     private static final int CROP_PIC_REQUEST_CODE = 0;
     private String imageId = "";
 
+    private EditText input1;
+    private EditText input2;
+    private EditText input3;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
+        input1 = findViewById(R.id.name_feedback);
+        input2 = findViewById(R.id.number_feedback);
+        input3 = findViewById(R.id.feedback_txt);
+
+        setUserData();
 
         Button btn = findViewById(R.id.update_button);
         btn.setOnClickListener((View.OnClickListener) this);
@@ -60,25 +77,95 @@ public class Profile extends AppCompatActivity implements View.OnClickListener {
         });
     }
 
+    private void setUserData() {
+
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        //We are creating phone numbers as userIds
+        String userId = user.getPhoneNumber();
+
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        db.collection("Users").document(userId).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot document = task.getResult();
+
+                    String name = (String) document.get("Username");
+                    String schoolName = (String) document.get("School");
+                    String photoId = (String) document.get("ImageId");
+                    String studentClass = (String) document.get("Standard");
+
+                    input1.setText(name);
+                    input2.setText(studentClass);
+                    input3.setText(schoolName);
+
+                    setImageInImageView(findViewById(R.id.headerImage), photoId, "userImages/");
+                }
+                else {
+                    Log.e("Error", "Task is not successful");
+                }
+            }
+        });
+    }
+
+    // set image from storage
+    private void setImageInImageView(final ImageView imageView, String imageId, String imageFolder)
+    {
+        if(imageId == null || imageId.isEmpty())
+        {
+            return;
+        }
+        else
+        {
+            FirebaseStorage storage = FirebaseStorage.getInstance();
+            StorageReference storageRef = storage.getReference();
+            StorageReference imageRef = storageRef.child(imageFolder + imageId);
+
+            imageRef.getBytes(Long.MAX_VALUE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
+                @Override
+                public void onSuccess(byte[] bytes) {
+
+                    if(imageView != null)
+                    {
+                        imageView.setImageBitmap(BitmapFactory.decodeByteArray(bytes, 0, bytes.length));
+                    }
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception exception) {
+                    Log.e("Error", "Image Task is not successful");
+                }
+            });
+        }
+    }
+
     @Override
     public void onClick(View view) {
 
-        EditText input1 = findViewById(R.id.name_feedback);
-        EditText input2 = findViewById(R.id.number_feedback);
-        EditText input3 = findViewById(R.id.feedback_txt);
+        String username = String.valueOf(input1.getText());
+        String userclass = String.valueOf(input2.getText());
 
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if(username.isEmpty() || username == NULL || userclass.isEmpty() || userclass == NULL)
+        {
+            Toast.makeText(Profile.this,
+                    "Please update your name and class !!",
+                    Toast.LENGTH_SHORT)
+                    .show();
+        }
+        else
+        {
+            FirebaseFirestore db = FirebaseFirestore.getInstance();
+            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
-        Map<String, String> userData = new HashMap<>();
-        userData.put("Username", String.valueOf(input1.getText()));
-        userData.put("Standard", String.valueOf(input2.getText()));
-        userData.put("School", String.valueOf(input3.getText()));
-        userData.put("ImageId", imageId);
+            Map<String, String> userData = new HashMap<>();
+            userData.put("Username", username);
+            userData.put("Standard", userclass);
+            userData.put("School", String.valueOf(input3.getText()));
+            userData.put("ImageId", imageId);
 
-        db.collection("Users").document(user.getPhoneNumber())
-                .set(userData)
-                .addOnSuccessListener(new OnSuccessListener<Void>() {
+            db.collection("Users").document(user.getPhoneNumber())
+                    .set(userData)
+                    .addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void aVoid) {
                             Log.d(TAG, "DocumentSnapshot successfully written!");
@@ -91,8 +178,8 @@ public class Profile extends AppCompatActivity implements View.OnClickListener {
                         }
                     });
 
-        startActivity(new Intent(Profile.this, Home.class));
-
+            startActivity(new Intent(Profile.this, Home.class));
+        }
     }
 
     private void doCrop(Uri picUri) {
