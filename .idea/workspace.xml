@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6bdde4f-4593-4fe9-b1ea-84e9edeaf6bd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/EduplusApp/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/EduplusApp/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EduplusApp/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/EduplusApp/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EduplusApp/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EduplusApp/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/EduplusApp/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EduplusApp/app/release/app-release.aab" beforeDir="false" afterPath="$PROJECT_DIR$/EduplusApp/app/release/app-release.aab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/private_key.pepk" beforeDir="false" afterPath="$PROJECT_DIR$/private_key.pepk" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +27,10 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
